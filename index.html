@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -26,34 +27,35 @@ header {
     background: linear-gradient(135deg, #123c32, #1f6b57);
     color: white;
     text-align: center;
-    padding: 55px 20px;
+    padding: 60px 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 34px;
+    font-size: 36px;
 }
 
 header p {
-    font-size: 19px;
+    font-size: 20px;
     margin-top: 10px;
 }
 
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 25px 15px;
+    padding: 30px 15px;
 }
 
 .section-title {
     text-align: center;
     color: #14513f;
-    margin: 25px 0;
+    margin: 30px 0 20px;
+    font-size: 28px;
 }
 
 .about {
     background: white;
-    border-radius: 15px;
+    border-radius: 16px;
     padding: 30px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     text-align: center;
@@ -62,33 +64,43 @@ header p {
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
+    gap: 22px;
     margin-top: 25px;
 }
 
 .product {
     background: white;
-    padding: 25px;
-    border-radius: 15px;
+    padding: 28px;
+    border-radius: 16px;
     text-align: center;
     box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    transition: transform 0.2s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
 }
 
 .product h3 {
     color: #17634d;
+    margin-top: 0;
+}
+
+.product p {
+    margin-bottom: 0;
 }
 
 .contact {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 22px;
     margin-top: 25px;
 }
 
 .card {
     background: white;
-    padding: 25px;
-    border-radius: 15px;
+    padding: 28px;
+    border-radius: 16px;
     box-shadow: 0 5px 18px rgba(0,0,0,0.07);
 }
 
@@ -101,50 +113,68 @@ header p {
     font-size: 18px;
     direction: ltr;
     text-align: center;
+    margin: 8px 0;
+}
+
+.address {
+    text-align: center;
+    margin-top: 15px;
 }
 
 .buttons {
     text-align: center;
-    margin: 30px 0;
+    margin-top: 30px;
 }
 
-.button {
+.buttons a {
     display: inline-block;
-    padding: 12px 25px;
-    margin: 7px;
-    border-radius: 30px;
     text-decoration: none;
     color: white;
-    background: #17634d;
+    padding: 13px 25px;
+    margin: 6px;
+    border-radius: 10px;
+    font-size: 17px;
     font-weight: bold;
 }
 
-.button.whatsapp {
-    background: #218c5a;
+.call {
+    background: #17634d;
+}
+
+.whatsapp {
+    background: #168b57;
 }
 
 footer {
-    margin-top: 30px;
+    margin-top: 40px;
     background: #123c32;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 25px 15px;
 }
 
 @media (max-width: 600px) {
+
+    header {
+        padding: 45px 15px;
+    }
 
     header h1 {
         font-size: 27px;
     }
 
     header p {
-        font-size: 16px;
+        font-size: 17px;
+    }
+
+    .section-title {
+        font-size: 24px;
     }
 
     .about,
-    .card,
-    .product {
-        padding: 20px;
+    .product,
+    .card {
+        padding: 22px;
     }
 
 }
@@ -158,47 +188,55 @@ footer {
 
 <h1>هوران هنر ماندگار البرز</h1>
 
-<p>تولید و عرضه تسمه‌های کولر آبی، صنعتی و کشاورزی</p>
+<p>
+تولید و عرضه تسمه‌های کولر آبی، صنعتی و کشاورزی
+</p>
 
 </header>
 
-
 <div class="container">
 
+<section>
 
-<section class="about">
+<h2 class="section-title">
+درباره هوران هنر
+</h2>
 
-<h2 class="section-title">درباره هوران هنر</h2>
-
-<p>
-مجموعه هوران هنر ماندگار البرز با فعالیت در زمینه تولید و عرضه
-تسمه‌های کولر آبی، صنعتی و کشاورزی، تلاش می‌کند محصولات باکیفیت
-و قابل اعتماد را در اختیار مشتریان و همکاران خود قرار دهد.
-</p>
-
-</section>
-
-
-<h2 class="section-title">محصولات</h2>
-
-
-<section class="products">
-
-<div class="product">
-
-<h3>تسمه کولر آبی</h3>
+<div class="about">
 
 <p>
-تولید و عرضه انواع تسمه‌های مناسب کولرهای آبی با کیفیت مناسب
-و دوام بالا.
+مجموعه هوران هنر ماندگار البرز با فعالیت در زمینه تولید و عرضه تسمه‌های کولر آبی، صنعتی و کشاورزی، تلاش می‌کند محصولات باکیفیت و قابل اعتماد را در اختیار مشتریان و همکاران خود قرار دهد.
 </p>
 
 </div>
 
+</section>
+
+<section>
+
+<h2 class="section-title">
+محصولات
+</h2>
+
+<div class="products">
 
 <div class="product">
 
-<h3>تسمه‌های صنعتی</h3>
+<h3>
+تسمه کولر آبی
+</h3>
+
+<p>
+تولید و عرضه انواع تسمه‌های مناسب کولرهای آبی با کیفیت مناسب و دوام بالا.
+</p>
+
+</div>
+
+<div class="product">
+
+<h3>
+تسمه‌های صنعتی
+</h3>
 
 <p>
 ارائه تسمه‌های صنعتی مورد استفاده در تجهیزات و ماشین‌آلات مختلف.
@@ -206,10 +244,11 @@ footer {
 
 </div>
 
-
 <div class="product">
 
-<h3>تسمه‌های کشاورزی</h3>
+<h3>
+تسمه‌های کشاورزی
+</h3>
 
 <p>
 تأمین تسمه‌های مورد استفاده در ماشین‌آلات و تجهیزات کشاورزی.
@@ -217,86 +256,91 @@ footer {
 
 </div>
 
+</div>
+
 </section>
 
+<section>
 
-<h2 class="section-title">تماس با ما</h2>
+<h2 class="section-title">
+تماس با ما
+</h2>
 
-
-<section class="contact">
-
+<div class="contact">
 
 <div class="card">
 
-<h3>دفتر مرکزی</h3>
+<h3>
+دفتر مرکزی
+</h3>
 
 <p class="phone">
-026 3402 6300<br>
+026 3402 6300
+</p>
+
+<p class="phone">
 026 3402 6400
 </p>
 
-<p>
-استان البرز، کرج، محمدشهر، همایون ویلا،
-خیابان شهید کیانی مهر، خیابان شهید علوی،
-ساختمان وزرا ۴
+<p class="address">
+استان البرز، کرج، محمدشهر، همایون ویلا، خیابان شهید کیانی مهر، خیابان شهید علوی، ساختمان وزرا ۴
 </p>
 
 </div>
 
-
 <div class="card">
 
-<h3>کارخانه</h3>
+<h3>
+کارخانه
+</h3>
 
 <p class="phone">
-021 9196 4592<br>
+021 9196 4592
+</p>
+
+<p class="phone">
 021 9196 4593
 </p>
 
-<p>
-استان تهران، شهرک صنعتی صفادشت،
-میدان نبی اکرم، بلوار الغدیر،
-خیابان صنعتگران، پلاک ۱۳
+<p class="address">
+استان تهران، شهرک صنعتی صفادشت، میدان نبی اکرم، بلوار الغدیر، خیابان صنعتگران، پلاک ۱۳
 </p>
 
 </div>
 
-
 <div class="card">
 
-<h3>تماس مستقیم</h3>
+<h3>
+تماس مستقیم
+</h3>
 
 <p class="phone">
 09013430117
 </p>
 
-<p>
+<p class="address">
 تلفن همراه و واتساپ
 </p>
 
 </div>
 
-
-</section>
-
+</div>
 
 <div class="buttons">
 
-<a class="button" href="tel:09013430117">
+<a class="call" href="tel:09013430117">
 تماس مستقیم
 </a>
 
-<a class="button whatsapp"
-href="https://wa.me/989013430117"
-target="_blank">
-واتساپ
+<a class="whatsapp" href="https://wa.me/989013430117">
+تماس در واتساپ
 </a>
 
 </div>
 
+</section>
 
 </div>
-
 
 <footer>
 
