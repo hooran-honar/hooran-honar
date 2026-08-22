@@ -23,55 +23,158 @@
 
 <style>
 
+:root {
+    --navy: #2F4156;
+    --teal: #567C8D;
+    --sky: #C8D9E6;
+    --beige: #F5EFEB;
+    --white: #FFFFFF;
+    --text: #2F4156;
+}
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: Tahoma, Arial, sans-serif;
-    background: #f5f7f8;
-    color: #222;
+    background:
+        linear-gradient(180deg, var(--beige) 0%, var(--white) 42%, var(--sky) 100%);
+    color: var(--text);
     line-height: 1.9;
 }
 
+/* HEADER */
+
 header {
-    background: linear-gradient(135deg, #123c32, #1f6b57);
-    color: white;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+    color: var(--white);
     text-align: center;
-    padding: 60px 20px;
+    padding: 55px 20px 65px;
+    box-shadow: 0 10px 30px rgba(47, 65, 86, 0.20);
+}
+
+header::before,
+header::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.07);
+    pointer-events: none;
+}
+
+header::before {
+    width: 320px;
+    height: 320px;
+    top: -180px;
+    right: -100px;
+}
+
+header::after {
+    width: 260px;
+    height: 260px;
+    bottom: -160px;
+    left: -80px;
+}
+
+header > * {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    margin-bottom: 15px;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+}
+
+.logo-box img {
+    display: block;
+    max-width: 220px;
+    height: auto;
+    border-radius: 10px;
 }
 
 header h1 {
-    margin: 0;
+    margin: 8px 0 0;
     font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
 }
 
 header p {
     font-size: 20px;
-    margin-top: 10px;
+    margin: 10px 0 0;
+    color: var(--sky);
 }
+
+/* GENERAL */
 
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 30px 15px;
+    padding: 45px 18px;
+}
+
+section {
+    margin-bottom: 48px;
 }
 
 .section-title {
     text-align: center;
-    color: #14513f;
-    margin: 30px 0 20px;
+    color: var(--navy);
+    margin: 0 0 25px;
     font-size: 28px;
+    font-weight: 700;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    margin: 10px auto 0;
+    border-radius: 10px;
+    background: var(--teal);
+}
+
+/* GLASS CARDS */
+
+.about,
+.product,
+.card {
+    background: rgba(255,255,255,0.82);
+    border: 1px solid rgba(200,217,230,0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(47,65,86,0.10);
 }
 
 .about {
-    background: white;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    padding: 32px;
     text-align: center;
 }
+
+.about p {
+    margin: 0;
+}
+
+/* PRODUCTS */
 
 .products {
     display: grid;
@@ -81,31 +184,38 @@ header p {
 }
 
 .product {
-    background: white;
-    padding: 28px;
-    border-radius: 16px;
+    padding: 30px 25px;
     text-align: center;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
-    transition: transform 0.2s;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .product:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
+    box-shadow: 0 18px 38px rgba(47,65,86,0.16);
+    border-color: var(--teal);
 }
 
 .product h3 {
-    color: #17634d;
+    color: var(--navy);
     margin-top: 0;
+    font-size: 21px;
 }
 
 .product h3 a {
-    color: #17634d;
+    color: var(--navy);
     text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.product h3 a:hover {
+    color: var(--teal);
 }
 
 .product p {
     margin-bottom: 0;
 }
+
+/* CONTACT */
 
 .contact {
     display: grid;
@@ -115,15 +225,20 @@ header p {
 }
 
 .card {
-    background: white;
-    padding: 28px;
-    border-radius: 16px;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    padding: 30px 25px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(47,65,86,0.14);
 }
 
 .card h3 {
-    color: #17634d;
+    color: var(--navy);
     margin-top: 0;
+    text-align: center;
+    font-size: 21px;
 }
 
 .phone {
@@ -131,6 +246,8 @@ header p {
     direction: ltr;
     text-align: center;
     margin: 8px 0;
+    color: var(--teal);
+    font-weight: bold;
 }
 
 .address {
@@ -138,42 +255,68 @@ header p {
     margin-top: 15px;
 }
 
+/* BUTTONS */
+
 .buttons {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 32px;
 }
 
 .buttons a {
     display: inline-block;
     text-decoration: none;
-    color: white;
-    padding: 13px 25px;
+    color: var(--white);
+    padding: 14px 28px;
     margin: 6px;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 17px;
     font-weight: bold;
+    box-shadow: 0 8px 20px rgba(47,65,86,0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buttons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(47,65,86,0.25);
 }
 
 .call {
-    background: #17634d;
+    background: var(--navy);
 }
 
 .whatsapp {
-    background: #168b57;
+    background: var(--teal);
 }
 
+/* FOOTER */
+
 footer {
-    margin-top: 40px;
-    background: #123c32;
-    color: white;
+    margin-top: 30px;
+    background: var(--navy);
+    color: var(--white);
     text-align: center;
-    padding: 25px 15px;
+    padding: 30px 15px;
+    box-shadow: 0 -8px 25px rgba(47,65,86,0.12);
 }
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:last-child {
+    color: var(--sky);
+}
+
+/* MOBILE */
 
 @media (max-width: 600px) {
 
     header {
-        padding: 45px 15px;
+        padding: 42px 15px 50px;
+    }
+
+    .logo-box img {
+        max-width: 190px;
     }
 
     header h1 {
@@ -184,6 +327,10 @@ footer {
         font-size: 17px;
     }
 
+    .container {
+        padding: 35px 14px;
+    }
+
     .section-title {
         font-size: 24px;
     }
@@ -191,7 +338,13 @@ footer {
     .about,
     .product,
     .card {
-        padding: 22px;
+        padding: 24px 20px;
+    }
+
+    .buttons a {
+        display: block;
+        margin: 10px auto;
+        max-width: 280px;
     }
 
 }
@@ -203,10 +356,9 @@ footer {
 
 <header>
 
-<div style="text-align:center; padding:20px 0;">
+<div class="logo-box">
     <img src="IMG_20260822_034356_286.jpg"
-         alt="هوران هنر ماندگار البرز"
-         style="max-width:220px; height:auto;">
+         alt="هوران هنر ماندگار البرز">
 </div>
 
 <h1>هوران هنر ماندگار البرز</h1>
@@ -378,8 +530,6 @@ footer {
 </p>
 
 </footer>
-
-</div>
 
 </body>
 </html>
