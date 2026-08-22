@@ -25,6 +25,15 @@
 
 <style>
 
+:root {
+    --navy: #2F4156;
+    --teal: #567C8D;
+    --sky: #C8D9E6;
+    --beige: #F5EFEB;
+    --white: #FFFFFF;
+    --text: #2F4156;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -36,25 +45,80 @@ html {
 body {
     margin: 0;
     font-family: Tahoma, Arial, sans-serif;
-    background: #f4f7f6;
-    color: #202525;
+    background: linear-gradient(
+        180deg,
+        var(--beige) 0%,
+        var(--white) 45%,
+        var(--sky) 100%
+    );
+    color: var(--text);
     line-height: 1.9;
 }
 
+/* HEADER */
+
 header {
+    position: relative;
+    overflow: hidden;
     background:
-        linear-gradient(135deg, #0d3329, #17634d 60%, #208066);
-    color: white;
+        linear-gradient(
+            135deg,
+            var(--navy) 0%,
+            var(--teal) 100%
+        );
+    color: var(--white);
     text-align: center;
-    padding: 25px 20px 70px;
+    padding: 25px 20px 80px;
+    box-shadow: 0 12px 35px rgba(47,65,86,0.22);
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    top: -220px;
+    right: -100px;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(200,217,230,0.08);
+    bottom: -210px;
+    left: -100px;
+}
+
+header > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* LOGO */
+
+.logo-box {
+    display: inline-flex;
+    padding: 13px;
+    margin-bottom: 15px;
+    background: rgba(255,255,255,0.96);
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.20);
 }
 
 .logo {
-    width: 150px;
-    max-width: 70%;
+    display: block;
+    width: 180px;
+    max-width: 70vw;
     height: auto;
-    margin-bottom: 15px;
+    border-radius: 10px;
 }
+
+/* NAVIGATION */
 
 nav {
     max-width: 1100px;
@@ -62,82 +126,126 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 9px;
 }
 
 nav a {
-    color: white;
+    color: var(--white);
     text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 20px;
+    padding: 9px 17px;
+    border-radius: 25px;
     font-size: 14px;
+    border: 1px solid rgba(255,255,255,0.16);
+    transition: all 0.25s ease;
 }
 
 nav a:hover {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.16);
+    transform: translateY(-2px);
 }
+
+/* HERO */
 
 .hero h1 {
     margin: 0;
     font-size: 42px;
+    font-weight: 700;
 }
 
 .hero p {
     font-size: 20px;
     max-width: 700px;
-    margin: 15px auto 25px;
+    margin: 15px auto 28px;
+    color: var(--sky);
 }
 
 .hero-buttons a {
     display: inline-block;
     text-decoration: none;
-    padding: 13px 25px;
+    padding: 14px 27px;
     margin: 5px;
-    border-radius: 10px;
+    border-radius: 12px;
     font-weight: bold;
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.23);
 }
 
 .primary {
-    background: #ffffff;
-    color: #14513f;
+    background: var(--white);
+    color: var(--navy);
 }
 
 .secondary {
-    background: #168b57;
-    color: white;
+    background: var(--teal);
+    color: var(--white);
 }
+
+/* MAIN */
 
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 45px 15px;
+    padding: 50px 18px;
 }
 
 .section {
-    margin-bottom: 55px;
+    margin-bottom: 65px;
 }
 
 .section-title {
     text-align: center;
-    color: #14513f;
+    color: var(--navy);
     font-size: 30px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 4px;
+    margin: 10px auto 0;
+    background: var(--teal);
+    border-radius: 10px;
 }
 
 .section-subtitle {
     text-align: center;
-    color: #666;
+    color: var(--teal);
     max-width: 700px;
     margin: 0 auto 30px;
 }
 
+/* GLASS BOX */
+
+.about-box,
+.product,
+.card {
+    background: rgba(255,255,255,0.84);
+    border: 1px solid rgba(200,217,230,0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(47,65,86,0.10);
+}
+
+/* ABOUT */
+
 .about-box {
-    background: white;
     padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    border-radius: 22px;
     text-align: center;
 }
+
+.about-box p {
+    margin: 8px 0;
+}
+
+/* PRODUCTS */
 
 .products {
     display: grid;
@@ -146,16 +254,16 @@ nav a:hover {
 }
 
 .product {
-    background: white;
-    padding: 30px 24px;
-    border-radius: 20px;
+    padding: 32px 24px;
+    border-radius: 22px;
     text-align: center;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
-    transition: transform .2s;
+    transition: all 0.25s ease;
 }
 
 .product:hover {
-    transform: translateY(-6px);
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(47,65,86,0.17);
+    border-color: var(--teal);
 }
 
 .product-icon {
@@ -164,18 +272,24 @@ nav a:hover {
 }
 
 .product h3 {
-    color: #17634d;
+    color: var(--navy);
     font-size: 21px;
 }
 
 .product a {
-    color: #17634d;
+    color: var(--navy);
     text-decoration: none;
 }
 
-.product p {
-    color: #555;
+.product a:hover {
+    color: var(--teal);
 }
+
+.product p {
+    color: #4f5f69;
+}
+
+/* WHY */
 
 .why {
     display: grid;
@@ -184,16 +298,32 @@ nav a:hover {
 }
 
 .why-card {
-    background: #123c32;
-    color: white;
-    padding: 25px 18px;
-    border-radius: 18px;
+    background: linear-gradient(
+        145deg,
+        var(--navy),
+        var(--teal)
+    );
+    color: var(--white);
+    padding: 28px 18px;
+    border-radius: 20px;
     text-align: center;
+    box-shadow: 0 10px 28px rgba(47,65,86,0.17);
+    transition: transform 0.25s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
 }
 
 .why-card h3 {
     margin-bottom: 8px;
 }
+
+.why-card p {
+    color: var(--sky);
+}
+
+/* GALLERY */
 
 .gallery {
     display: grid;
@@ -203,16 +333,29 @@ nav a:hover {
 
 .gallery-box {
     min-height: 190px;
-    background: linear-gradient(135deg, #dfe9e5, #f9fbfa);
-    border-radius: 20px;
+    background:
+        linear-gradient(
+            135deg,
+            var(--sky),
+            var(--white)
+        );
+    border-radius: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 25px;
-    color: #557068;
-    border: 1px dashed #9bb2aa;
+    color: var(--navy);
+    border: 1px dashed var(--teal);
+    transition: all 0.25s ease;
 }
+
+.gallery-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(47,65,86,0.12);
+}
+
+/* CONTACT */
 
 .contact {
     display: grid;
@@ -221,59 +364,83 @@ nav a:hover {
 }
 
 .card {
-    background: white;
-    padding: 28px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    padding: 30px 24px;
+    border-radius: 22px;
     text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 35px rgba(47,65,86,0.15);
 }
 
 .card h3 {
-    color: #17634d;
+    color: var(--navy);
 }
 
 .phone {
     font-size: 18px;
     direction: ltr;
+    color: var(--teal);
+    font-weight: bold;
 }
 
 .address {
-    color: #555;
+    color: #4f5f69;
 }
+
+/* BUTTONS */
 
 .contact-buttons {
     text-align: center;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .contact-buttons a {
     display: inline-block;
     text-decoration: none;
-    color: white;
+    color: var(--white);
     padding: 14px 28px;
     margin: 5px;
-    border-radius: 10px;
+    border-radius: 12px;
     font-weight: bold;
+    box-shadow: 0 8px 20px rgba(47,65,86,0.18);
+    transition: all 0.25s ease;
+}
+
+.contact-buttons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(47,65,86,0.25);
 }
 
 .call {
-    background: #17634d;
+    background: var(--navy);
 }
 
 .whatsapp {
-    background: #168b57;
+    background: var(--teal);
 }
 
+/* FOOTER */
+
 footer {
-    background: #0d3329;
-    color: white;
+    background: var(--navy);
+    color: var(--white);
     text-align: center;
-    padding: 30px 15px;
+    padding: 32px 15px;
+    box-shadow: 0 -8px 25px rgba(47,65,86,0.12);
 }
 
 footer p {
     margin: 5px;
 }
+
+footer p:last-child {
+    color: var(--sky);
+}
+
+/* TABLET */
 
 @media (max-width: 800px) {
 
@@ -295,6 +462,8 @@ footer p {
     }
 
 }
+
+/* MOBILE */
 
 @media (max-width: 500px) {
 
@@ -318,6 +487,14 @@ footer p {
         font-size: 25px;
     }
 
+    .about-box {
+        padding: 25px 20px;
+    }
+
+    .logo {
+        width: 160px;
+    }
+
 }
 
 </style>
@@ -328,15 +505,21 @@ footer p {
 
 <header>
 
+<div class="logo-box">
+
 <img class="logo"
      src="IMG_20260822_034356_286.jpg"
      alt="هوران هنر ماندگار البرز">
 
+</div>
+
 <nav>
+
 <a href="#about">درباره ما</a>
 <a href="#products">محصولات</a>
 <a href="#why">چرا هوران؟</a>
 <a href="#contact">تماس با ما</a>
+
 </nav>
 
 <div class="hero">
