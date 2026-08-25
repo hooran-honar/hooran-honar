@@ -2,830 +2,2283 @@
 <html lang="fa" dir="rtl">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="google-site-verification" content="iyY5p8i44TvUHwlodA0uKKJhQptPOOe1wYPobmdYZxQ">
+<meta name="google-site-verification" content="iyY5p8i44TvUHwlodA0uKKJhQptPOeOe1wYPobmdYZxQ">
 
-<title>هوران هنر ماندگار البرز | تولید و عرضه تسمه</title>
+<title>هوران هنر ماندگار البرز | تسمه‌های صنعتی، کشاورزی و کولر آبی</title>
 
-<meta name="description" content="هوران هنر ماندگار البرز، تولید و عرضه تسمه‌های کولر آبی، صنعتی و کشاورزی با تمرکز بر کیفیت، دوام و تأمین مطمئن.">
+<meta name="description"
+content="هوران هنر ماندگار البرز؛ تولید و عرضه تسمه‌های کولر آبی، صنعتی و کشاورزی با تمرکز بر کیفیت، دوام و تأمین مطمئن.">
+
+<meta name="theme-color" content="#061b2d">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet">
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "هوران هنر ماندگار البرز",
-  "url": "https://hooran-honar.github.io/hooran-honar/",
-  "logo": "https://hooran-honar.github.io/hooran-honar/IMG_20260822_034356_286.jpg"
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"هوران هنر ماندگار البرز",
+  "url":"https://hooran-honar.github.io/hooran-honar/",
+  "logo":"https://hooran-honar.github.io/hooran-honar/IMG_20260822_034356_286.jpg",
+  "telephone":"+982634026300",
+  "description":"تولید و عرضه تسمه‌های کولر آبی، صنعتی و کشاورزی"
 }
 </script>
 
 <style>
 
-:root {
-    --navy: #2F4156;
-    --teal: #567C8D;
-    --sky: #C8D9E6;
-    --beige: #F5EFEB;
-    --white: #FFFFFF;
-    --text: #2F4156;
+/* =========================================================
+   HOORAN PREMIUM INDUSTRIAL WEBSITE
+   ========================================================= */
+
+:root{
+    --navy:#061b2d;
+    --navy-2:#0a2940;
+    --blue:#0c4965;
+    --cyan:#09a7c7;
+    --cyan-2:#42d4e9;
+    --white:#ffffff;
+    --soft:#f4f8fa;
+    --line:#dce8ed;
+    --text:#142c3d;
+    --muted:#667986;
+    --gold:#d6b36a;
+
+    --radius:20px;
+    --shadow:0 18px 55px rgba(6,27,45,.10);
+    --shadow-hover:0 25px 70px rgba(6,27,45,.17);
 }
 
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    margin: 0;
-    font-family: Tahoma, Arial, sans-serif;
-    background: linear-gradient(
-        180deg,
-        var(--beige) 0%,
-        var(--white) 45%,
-        var(--sky) 100%
-    );
-    color: var(--text);
-    line-height: 1.9;
+body{
+    font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
+    background:#fff;
+    color:var(--text);
+    line-height:1.9;
+    overflow-x:hidden;
 }
 
-/* HEADER */
+a{
+    color:inherit;
+}
 
-header {
-    position: relative;
-    overflow: hidden;
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+section{
+    scroll-margin-top:90px;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar{
+    background:#041522;
+    color:#c9d9e1;
+    font-size:12px;
+}
+
+.topbar-inner{
+    min-height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.topbar-left{
+    display:flex;
+    gap:22px;
+    flex-wrap:wrap;
+}
+
+.topbar a{
+    text-decoration:none;
+    transition:.2s;
+}
+
+.topbar a:hover{
+    color:var(--cyan-2);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(6,27,45,.08);
+}
+
+.navbar{
+    min-height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    text-decoration:none;
+}
+
+.brand img{
+    width:68px;
+    height:58px;
+    object-fit:contain;
+}
+
+.brand-text strong{
+    display:block;
+    color:var(--navy);
+    font-size:17px;
+    font-weight:900;
+}
+
+.brand-text span{
+    display:block;
+    color:var(--muted);
+    font-size:10px;
+    margin-top:-2px;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:4px;
+}
+
+.nav a{
+    text-decoration:none;
+    padding:10px 14px;
+    color:#314b5c;
+    font-size:13px;
+    font-weight:600;
+    border-radius:10px;
+    transition:.25s;
+}
+
+.nav a:hover{
+    color:var(--cyan);
+    background:#eef8fa;
+}
+
+.nav-cta{
+    background:var(--navy)!important;
+    color:white!important;
+    padding:11px 18px!important;
+}
+
+.nav-cta:hover{
+    background:var(--cyan)!important;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    position:relative;
+    min-height:640px;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
     background:
-        linear-gradient(
-            135deg,
-            var(--navy) 0%,
-            var(--teal) 100%
-        );
-    color: var(--white);
-    text-align: center;
-    padding: 25px 20px 80px;
-    box-shadow: 0 12px 35px rgba(47,65,86,0.22);
+        radial-gradient(circle at 80% 25%,rgba(9,167,199,.20),transparent 28%),
+        radial-gradient(circle at 20% 80%,rgba(66,212,233,.10),transparent 30%),
+        linear-gradient(135deg,#041522,#082b42 55%,#061b2d);
+    color:white;
 }
 
-header::before {
-    content: "";
-    position: absolute;
-    width: 360px;
-    height: 360px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.06);
-    top: -220px;
-    right: -100px;
+.hero::before{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    border:1px solid rgba(66,212,233,.15);
+    border-radius:50%;
+    left:-250px;
+    top:-180px;
 }
 
-header::after {
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: rgba(200,217,230,0.08);
-    bottom: -210px;
-    left: -100px;
+.hero::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:50%;
+    right:-180px;
+    bottom:-250px;
 }
 
-header > * {
-    position: relative;
-    z-index: 2;
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:760px;
+    padding:80px 0;
 }
 
-/* LOGO */
-
-.logo-box {
-    display: inline-flex;
-    padding: 13px;
-    margin-bottom: 15px;
-    background: rgba(255,255,255,0.96);
-    border-radius: 20px;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.20);
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 13px;
+    border:1px solid rgba(66,212,233,.35);
+    background:rgba(9,167,199,.09);
+    border-radius:30px;
+    color:#9eeaf5;
+    font-size:12px;
+    margin-bottom:22px;
 }
 
-.logo {
-    display: block;
-    width: 180px;
-    max-width: 70vw;
-    height: auto;
-    border-radius: 10px;
+.eyebrow::before{
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:var(--cyan-2);
+    box-shadow:0 0 14px var(--cyan-2);
 }
 
-/* NAVIGATION */
-
-nav {
-    max-width: 1100px;
-    margin: 0 auto 45px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 9px;
+.hero h1{
+    font-size:clamp(38px,5vw,68px);
+    line-height:1.2;
+    font-weight:900;
+    letter-spacing:-1.5px;
+    margin-bottom:20px;
 }
 
-nav a {
-    color: var(--white);
-    text-decoration: none;
-    padding: 9px 17px;
-    border-radius: 25px;
-    font-size: 14px;
-    border: 1px solid rgba(255,255,255,0.16);
-    transition: all 0.25s ease;
+.hero h1 span{
+    color:var(--cyan-2);
 }
 
-nav a:hover {
-    background: rgba(255,255,255,0.16);
-    transform: translateY(-2px);
+.hero p{
+    max-width:700px;
+    color:#c5d6df;
+    font-size:17px;
+    line-height:2.1;
+    margin-bottom:32px;
 }
 
-/* HERO */
-
-.hero h1 {
-    margin: 0;
-    font-size: 42px;
-    font-weight: 700;
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-.hero p {
-    font-size: 20px;
-    max-width: 700px;
-    margin: 15px auto 28px;
-    color: var(--sky);
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    min-height:50px;
+    padding:0 23px;
+    border-radius:11px;
+    text-decoration:none;
+    font-size:13px;
+    font-weight:700;
+    transition:.25s;
 }
 
-.hero-buttons a {
-    display: inline-block;
-    text-decoration: none;
-    padding: 14px 27px;
-    margin: 5px;
-    border-radius: 12px;
-    font-weight: bold;
-    transition: all 0.25s ease;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+.btn-primary{
+    background:var(--cyan);
+    color:white;
+    box-shadow:0 12px 30px rgba(9,167,199,.25);
 }
 
-.hero-buttons a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.23);
+.btn-primary:hover{
+    background:#08badf;
+    transform:translateY(-3px);
 }
 
-.primary {
-    background: var(--white);
-    color: var(--navy);
+.btn-outline{
+    border:1px solid rgba(255,255,255,.25);
+    color:white;
+    background:rgba(255,255,255,.05);
 }
 
-.secondary {
-    background: var(--teal);
-    color: var(--white);
+.btn-outline:hover{
+    background:white;
+    color:var(--navy);
 }
 
-/* MAIN */
-
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 50px 18px;
+.hero-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    max-width:650px;
+    margin-top:55px;
 }
 
-.section {
-    margin-bottom: 65px;
+.stat{
+    border-right:1px solid rgba(255,255,255,.13);
+    padding-right:16px;
 }
 
-.section-title {
-    text-align: center;
-    color: var(--navy);
-    font-size: 30px;
-    margin-bottom: 10px;
+.stat:first-child{
+    border-right:0;
 }
 
-.section-title::after {
-    content: "";
-    display: block;
-    width: 55px;
-    height: 4px;
-    margin: 10px auto 0;
-    background: var(--teal);
-    border-radius: 10px;
+.stat strong{
+    display:block;
+    font-size:21px;
+    color:white;
 }
 
-.section-subtitle {
-    text-align: center;
-    color: var(--teal);
-    max-width: 700px;
-    margin: 0 auto 30px;
+.stat span{
+    color:#8da7b5;
+    font-size:11px;
 }
 
-/* GLASS BOX */
+/* =========================
+   TRUST BAR
+========================= */
 
-.about-box,
-.product,
-.card {
-    border: 1px solid rgba(200,217,230,0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 10px 30px rgba(47,65,86,0.10);
+.trust{
+    position:relative;
+    z-index:5;
+    margin-top:-45px;
 }
 
-/* ABOUT */
-
-.about-box {
-    background: rgba(255,255,255,0.84);
-    padding: 35px;
-    border-radius: 22px;
-    text-align: center;
+.trust-box{
+    background:white;
+    border:1px solid rgba(6,27,45,.07);
+    box-shadow:var(--shadow);
+    border-radius:18px;
+    padding:22px 25px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
 }
 
-.about-box p {
-    margin: 8px 0;
+.trust-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:7px 12px;
+    border-left:1px solid var(--line);
 }
 
-/* PRODUCTS */
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+.trust-item:last-child{
+    border-left:0;
 }
 
-.product {
-    padding: 32px 24px;
-    border-radius: 22px;
-    text-align: center;
-    transition: all 0.25s ease;
+.trust-icon{
+    width:42px;
+    height:42px;
+    flex:0 0 42px;
+    display:grid;
+    place-items:center;
+    border-radius:12px;
+    background:#e9f8fb;
+    color:var(--cyan);
+    font-size:18px;
 }
 
-/* رنگ‌بندی اختصاصی سه محصول */
-
-.product:nth-child(1) {
-    background: linear-gradient(
-        145deg,
-        #C8D9E6 0%,
-        #FFFFFF 85%
-    );
+.trust strong{
+    display:block;
+    font-size:12px;
+    color:var(--navy);
 }
 
-.product:nth-child(2) {
-    background: linear-gradient(
-        145deg,
-        #F5EFEB 0%,
-        #FFFFFF 85%
-    );
+.trust span{
+    display:block;
+    font-size:10px;
+    color:var(--muted);
 }
 
-.product:nth-child(3) {
-    background: linear-gradient(
-        145deg,
-        #FFFFFF 0%,
-        #C8D9E6 100%
-    );
+/* =========================
+   SECTION
+========================= */
+
+.section{
+    padding:105px 0;
 }
 
-.product:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(47,65,86,0.17);
-    border-color: var(--teal);
+.section-soft{
+    background:var(--soft);
 }
 
-.product-icon {
-    font-size: 42px;
-    margin-bottom: 10px;
-    filter: grayscale(15%);
+.section-head{
+    max-width:700px;
+    margin-bottom:45px;
 }
 
-.product h3 {
-    color: var(--navy);
-    font-size: 21px;
+.section-head.center{
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
 }
 
-.product a {
-    color: var(--navy);
-    text-decoration: none;
+.kicker{
+    color:var(--cyan);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.4px;
+    margin-bottom:8px;
 }
 
-.product a:hover {
-    color: var(--teal);
+.section-title{
+    color:var(--navy);
+    font-size:clamp(28px,4vw,42px);
+    line-height:1.35;
+    font-weight:900;
+    margin-bottom:13px;
 }
 
-.product p {
-    color: #4f5f69;
+.section-desc{
+    color:var(--muted);
+    font-size:14px;
+    line-height:2;
 }
 
-/* WHY */
+/* =========================
+   ABOUT
+========================= */
 
-.why {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+.about-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:55px;
+    align-items:center;
 }
 
-.why-card {
-    background: linear-gradient(
-        145deg,
-        var(--navy),
-        var(--teal)
-    );
-    color: var(--white);
-    padding: 28px 18px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 28px rgba(47,65,86,0.17);
-    transition: transform 0.25s ease;
+.about-text p{
+    color:#536875;
+    font-size:14px;
+    margin-bottom:17px;
 }
 
-.why-card:hover {
-    transform: translateY(-6px);
+.about-points{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:28px;
 }
 
-.why-card h3 {
-    margin-bottom: 8px;
+.about-point{
+    padding:15px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    background:white;
 }
 
-.why-card p {
-    color: var(--sky);
+.about-point strong{
+    display:block;
+    color:var(--navy);
+    font-size:13px;
 }
 
-/* GALLERY */
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+.about-point span{
+    color:var(--muted);
+    font-size:11px;
 }
 
-.gallery-box {
-    min-height: 190px;
+.about-panel{
+    position:relative;
+    min-height:370px;
+    border-radius:25px;
+    overflow:hidden;
     background:
-        linear-gradient(
-            135deg,
-            var(--sky),
-            var(--white)
-        );
-    border-radius: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 25px;
-    color: var(--navy);
-    border: 1px dashed var(--teal);
-    transition: all 0.25s ease;
+        linear-gradient(145deg,#0b425d,#061b2d);
+    box-shadow:var(--shadow-hover);
 }
 
-.gallery-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(47,65,86,0.12);
+.about-panel::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    border:1px solid rgba(66,212,233,.2);
+    top:-120px;
+    left:-80px;
 }
 
-/* CONTACT */
-
-.contact {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.about-panel-content{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:35px;
+    background:linear-gradient(transparent 25%,rgba(3,15,25,.8));
+    color:white;
 }
 
-.card {
-    background: rgba(255,255,255,0.84);
-    padding: 30px 24px;
-    border-radius: 22px;
-    text-align: center;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+.about-panel h3{
+    font-size:25px;
+    margin-bottom:8px;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 16px 35px rgba(47,65,86,0.15);
+.about-panel p{
+    color:#b8cbd5;
+    font-size:12px;
 }
 
-.card h3 {
-    color: var(--navy);
+/* =========================
+   PRODUCTS
+========================= */
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
 }
 
-.phone {
-    font-size: 18px;
-    direction: ltr;
-    color: var(--teal);
-    font-weight: bold;
+.product{
+    position:relative;
+    min-height:330px;
+    overflow:hidden;
+    background:white;
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:30px;
+    transition:.35s;
 }
 
-.address {
-    color: #4f5f69;
+.product::before{
+    content:"";
+    position:absolute;
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background:#e8f8fb;
+    top:-70px;
+    left:-50px;
+    transition:.35s;
 }
 
-/* BUTTONS */
-
-.contact-buttons {
-    text-align: center;
-    margin-top: 30px;
+.product:hover{
+    transform:translateY(-8px);
+    border-color:#9edce7;
+    box-shadow:var(--shadow-hover);
 }
 
-.contact-buttons a {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--white);
-    padding: 14px 28px;
-    margin: 5px;
-    border-radius: 12px;
-    font-weight: bold;
-    box-shadow: 0 8px 20px rgba(47,65,86,0.18);
-    transition: all 0.25s ease;
+.product:hover::before{
+    transform:scale(1.35);
 }
 
-.contact-buttons a:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 26px rgba(47,65,86,0.25);
+.product-number{
+    position:relative;
+    color:#9aabb5;
+    font-size:11px;
+    font-weight:700;
 }
 
-.call {
-    background: var(--navy);
+.product-icon{
+    position:relative;
+    width:58px;
+    height:58px;
+    display:grid;
+    place-items:center;
+    border-radius:16px;
+    background:var(--navy);
+    color:var(--cyan-2);
+    font-size:24px;
+    margin:30px 0 22px;
 }
 
-.whatsapp {
-    background: var(--teal);
+.product h3{
+    color:var(--navy);
+    font-size:20px;
+    margin-bottom:10px;
 }
 
-/* FOOTER */
-
-footer {
-    background: var(--navy);
-    color: var(--white);
-    text-align: center;
-    padding: 32px 15px;
-    box-shadow: 0 -8px 25px rgba(47,65,86,0.12);
+.product p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:2;
 }
 
-footer p {
-    margin: 5px;
+.product-link{
+    position:absolute;
+    bottom:27px;
+    right:30px;
+    color:var(--cyan);
+    text-decoration:none;
+    font-size:12px;
+    font-weight:800;
 }
 
-footer p:last-child {
-    color: var(--sky);
+.product-link:hover{
+    color:var(--navy);
 }
 
-/* TABLET */
+/* =========================
+   WHY
+========================= */
 
-@media (max-width: 800px) {
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+}
 
+.why-card{
+    background:var(--navy);
+    color:white;
+    padding:28px 22px;
+    border-radius:18px;
+    min-height:210px;
+    transition:.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-6px);
+    background:#0a334c;
+    box-shadow:var(--shadow-hover);
+}
+
+.why-num{
+    color:var(--cyan-2);
+    font-size:11px;
+    font-weight:800;
+}
+
+.why-card h3{
+    margin:35px 0 8px;
+    font-size:17px;
+}
+
+.why-card p{
+    color:#9fb5c1;
+    font-size:11px;
+    line-height:2;
+}
+
+/* =========================
+   FEATURE BAND
+========================= */
+
+.feature-band{
+    background:linear-gradient(135deg,#061b2d,#0b4966);
+    color:white;
+    overflow:hidden;
+    position:relative;
+}
+
+.feature-band::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+    left:-200px;
+    top:-300px;
+}
+
+.feature-grid{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.feature-band .section-title{
+    color:white;
+}
+
+.feature-band .section-desc{
+    color:#b5cad4;
+}
+
+.feature-list{
+    list-style:none;
+    margin-top:28px;
+}
+
+.feature-list li{
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.1);
+    color:#d6e3e9;
+    font-size:12px;
+}
+
+.feature-list li::before{
+    content:"✓";
+    color:var(--cyan-2);
+    margin-left:10px;
+    font-weight:900;
+}
+
+.feature-box{
+    border:1px solid rgba(255,255,255,.12);
+    background:rgba(255,255,255,.05);
+    border-radius:22px;
+    padding:35px;
+}
+
+.feature-box strong{
+    display:block;
+    color:var(--cyan-2);
+    font-size:32px;
+    margin-bottom:5px;
+}
+
+.feature-box span{
+    color:#b3c7d1;
+    font-size:12px;
+}
+
+/* =========================
+   GALLERY PLACEHOLDER
+========================= */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:1.4fr .8fr .8fr;
+    gap:15px;
+}
+
+.gallery-card{
+    min-height:230px;
+    border-radius:18px;
+    border:1px dashed #a8c5cf;
+    background:
+        linear-gradient(145deg,#eef7f9,#ffffff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:25px;
+    color:var(--muted);
+    transition:.3s;
+}
+
+.gallery-card:first-child{
+    min-height:475px;
+    background:
+        linear-gradient(145deg,#e0f2f6,#f8fbfc);
+}
+
+.gallery-card:hover{
+    transform:translateY(-5px);
+    border-color:var(--cyan);
+    box-shadow:var(--shadow);
+}
+
+.gallery-inner strong{
+    display:block;
+    color:var(--navy);
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.gallery-inner span{
+    font-size:11px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    padding:90px 0;
+}
+
+.cta-box{
+    position:relative;
+    overflow:hidden;
+    background:var(--navy);
+    color:white;
+    border-radius:25px;
+    padding:55px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.cta-box::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border:1px solid rgba(66,212,233,.13);
+    border-radius:50%;
+    left:-150px;
+    top:-180px;
+}
+
+.cta-content{
+    position:relative;
+    z-index:2;
+}
+
+.cta h2{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    color:#a9c0cb;
+    font-size:13px;
+}
+
+.cta-actions{
+    position:relative;
+    z-index:2;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.contact-card{
+    background:white;
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px;
+    transition:.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow);
+}
+
+.contact-label{
+    color:var(--cyan);
+    font-size:11px;
+    font-weight:800;
+}
+
+.contact-card h3{
+    color:var(--navy);
+    font-size:19px;
+    margin:10px 0 17px;
+}
+
+.phone{
+    display:block;
+    direction:ltr;
+    text-align:right;
+    color:var(--navy);
+    text-decoration:none;
+    font-size:17px;
+    font-weight:800;
+    margin:5px 0;
+}
+
+.phone:hover{
+    color:var(--cyan);
+}
+
+.address{
+    color:var(--muted);
+    font-size:11px;
+    line-height:2.1;
+    margin-top:17px;
+    padding-top:15px;
+    border-top:1px solid var(--line);
+}
+
+.contact-actions{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    background:#03111d;
+    color:white;
+    padding:55px 0 25px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:45px;
+    padding-bottom:40px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.footer h3{
+    font-size:17px;
+    margin-bottom:13px;
+}
+
+.footer p,
+.footer a{
+    color:#8fa7b4;
+    font-size:11px;
+    line-height:2.2;
+    text-decoration:none;
+}
+
+.footer a:hover{
+    color:var(--cyan-2);
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.footer-bottom{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    padding-top:20px;
+    color:#647e8c;
+    font-size:10px;
+}
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
+.floating{
+    position:fixed;
+    left:18px;
+    bottom:18px;
+    z-index:999;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.float-btn{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    text-decoration:none;
+    color:white;
+    font-size:19px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+    transition:.25s;
+}
+
+.float-btn:hover{
+    transform:scale(1.08);
+}
+
+.float-call{
+    background:var(--navy);
+}
+
+.float-wa{
+    background:#16b86b;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-toggle{
+    display:none;
+    width:42px;
+    height:42px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    background:white;
+    color:var(--navy);
+    font-size:21px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:950px){
+
+    .nav{
+        display:none;
+    }
+
+    .mobile-toggle{
+        display:grid;
+        place-items:center;
+    }
+
+    .hero{
+        min-height:590px;
+    }
+
+    .about-grid,
+    .feature-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .products{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-card:first-child{
+        grid-column:1/-1;
+        min-height:300px;
+    }
+
+    .trust-box{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .trust-item:nth-child(2){
+        border-left:0;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:650px){
+
+    .topbar{
+        display:none;
+    }
+
+    .navbar{
+        min-height:68px;
+    }
+
+    .brand img{
+        width:58px;
+        height:50px;
+    }
+
+    .brand-text strong{
+        font-size:14px;
+    }
+
+    .brand-text span{
+        font-size:8px;
+    }
+
+    .hero{
+        min-height:650px;
+    }
+
+    .hero-content{
+        padding:65px 0;
+    }
+
+    .hero h1{
+        font-size:36px;
+        letter-spacing:-.5px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .hero-stats{
+        grid-template-columns:1fr;
+        gap:15px;
+        margin-top:40px;
+    }
+
+    .stat{
+        border-right:0;
+        border-bottom:1px solid rgba(255,255,255,.12);
+        padding:0 0 12px;
+    }
+
+    .trust{
+        margin-top:-30px;
+    }
+
+    .trust-box{
+        grid-template-columns:1fr;
+        padding:15px;
+    }
+
+    .trust-item{
+        border-left:0;
+        border-bottom:1px solid var(--line);
+        padding:12px 5px;
+    }
+
+    .trust-item:last-child{
+        border-bottom:0;
+    }
+
+    .section{
+        padding:75px 0;
+    }
+
+    .section-title{
+        font-size:28px;
+    }
+
+    .about-points,
     .products,
-    .contact {
-        grid-template-columns: 1fr;
+    .why-grid,
+    .contact-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
     }
 
-    .why {
-        grid-template-columns: repeat(2, 1fr);
+    .gallery-card:first-child{
+        grid-column:auto;
+        min-height:230px;
     }
 
-    .gallery {
-        grid-template-columns: 1fr;
+    .about-panel{
+        min-height:300px;
     }
 
-    .hero h1 {
-        font-size: 32px;
+    .cta{
+        padding:60px 0;
+    }
+
+    .cta-box{
+        padding:35px 25px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .cta h2{
+        font-size:24px;
+    }
+
+    .cta-actions{
+        width:100%;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
+
+    .floating{
+        left:12px;
+        bottom:12px;
     }
 
 }
 
-/* MOBILE */
+/* =========================
+   ACCESSIBILITY
+========================= */
 
-@media (max-width: 500px) {
+:focus-visible{
+    outline:3px solid rgba(9,167,199,.45);
+    outline-offset:3px;
+}
 
-    header {
-        padding-bottom: 50px;
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="topbar">
+    <div class="container topbar-inner">
+
+        <div class="topbar-left">
+            <span>تسمه‌های صنعتی، کشاورزی و کولر آبی</span>
+            <span>تولید و تأمین مطمئن</span>
+        </div>
+
+        <a href="tel:09013430117">
+            تماس مستقیم با کارشناسان فروش
+        </a>
+
+    </div>
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <div class="container navbar">
+
+        <a class="brand" href="#top">
+
+            <img
+                src="IMG_20260822_034356_286.jpg"
+                alt="لوگوی هوران هنر ماندگار البرز">
+
+            <div class="brand-text">
+                <strong>هوران هنر ماندگار البرز</strong>
+                <span>راهکارهای مطمئن انتقال نیرو</span>
+            </div>
+
+        </a>
+
+
+        <nav class="nav">
+
+            <a href="#about">درباره هوران</a>
+
+            <a href="#products">محصولات</a>
+
+            <a href="#why">مزیت‌های ما</a>
+
+            <a href="#capabilities">توانمندی</a>
+
+            <a href="#contact">تماس با ما</a>
+
+            <a class="nav-cta" href="#contact">
+                درخواست پیش‌فاکتور
+            </a>
+
+        </nav>
+
+
+        <button class="mobile-toggle"
+                aria-label="منوی سایت"
+                onclick="document.querySelector('.nav').classList.toggle('show-mobile')">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main id="top">
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                تولید و تأمین تسمه
+            </div>
+
+            <h1>
+                تسمه‌هایی برای
+                <span>عملکرد مطمئن</span>
+                و ماندگار
+            </h1>
+
+            <p>
+                هوران هنر ماندگار البرز، تولید و عرضه‌کننده
+                تسمه‌های کولر آبی، صنعتی و کشاورزی؛
+                با تمرکز بر کیفیت، دوام، تأمین مطمئن
+                و پشتیبانی تخصصی.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a class="btn btn-primary" href="#products">
+                    مشاهده محصولات
+                    ←
+                </a>
+
+                <a class="btn btn-outline" href="#contact">
+                    درخواست پیش‌فاکتور
+                </a>
+
+            </div>
+
+
+            <div class="hero-stats">
+
+                <div class="stat">
+                    <strong>۳</strong>
+                    <span>دسته اصلی محصولات</span>
+                </div>
+
+                <div class="stat">
+                    <strong>تولید و تأمین</strong>
+                    <span>برای کاربردهای متنوع</span>
+                </div>
+
+                <div class="stat">
+                    <strong>پشتیبانی مستقیم</strong>
+                    <span>ارتباط با کارشناسان فروش</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     TRUST
+========================= -->
+
+<section class="trust">
+
+    <div class="container">
+
+        <div class="trust-box">
+
+            <div class="trust-item">
+
+                <div class="trust-icon">✓</div>
+
+                <div>
+                    <strong>کیفیت پایدار</strong>
+                    <span>تمرکز بر کیفیت محصول</span>
+                </div>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <div class="trust-icon">◆</div>
+
+                <div>
+                    <strong>تأمین مطمئن</strong>
+                    <span>پاسخگویی به نیاز بازار</span>
+                </div>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <div class="trust-icon">⚙</div>
+
+                <div>
+                    <strong>کاربرد صنعتی</strong>
+                    <span>برای تجهیزات مختلف</span>
+                </div>
+
+            </div>
+
+
+            <div class="trust-item">
+
+                <div class="trust-icon">☎</div>
+
+                <div>
+                    <strong>پشتیبانی تخصصی</strong>
+                    <span>ارتباط مستقیم با مجموعه</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about" class="section">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <div class="section-head">
+
+                    <div class="kicker">
+                        ABOUT HOORAN
+                    </div>
+
+                    <h2 class="section-title">
+                        همراه مطمئن در انتخاب و تأمین تسمه
+                    </h2>
+
+                    <p class="section-desc">
+                        هوران هنر ماندگار البرز با تمرکز بر
+                        تسمه‌های کولر آبی، صنعتی و کشاورزی،
+                        تلاش می‌کند محصول مناسب را برای
+                        کاربرد مناسب در اختیار مشتریان و
+                        همکاران خود قرار دهد.
+                    </p>
+
+                </div>
+
+
+                <p>
+                    هدف ما ایجاد همکاری بلندمدت با مشتریان،
+                    فروشندگان و فعالان حوزه صنعت و کشاورزی
+                    و ارائه محصولی متناسب با نیاز واقعی آنهاست.
+                </p>
+
+                <p>
+                    در هوران، کیفیت، دوام، تأمین مطمئن و
+                    پاسخگویی مستقیم، بخش مهمی از تجربه همکاری
+                    با مجموعه را تشکیل می‌دهد.
+                </p>
+
+
+                <div class="about-points">
+
+                    <div class="about-point">
+                        <strong>کیفیت و دوام</strong>
+                        <span>تمرکز بر محصول قابل اعتماد</span>
+                    </div>
+
+                    <div class="about-point">
+                        <strong>تنوع کاربرد</strong>
+                        <span>صنعت، کشاورزی و کولر آبی</span>
+                    </div>
+
+                    <div class="about-point">
+                        <strong>تأمین مطمئن</strong>
+                        <span>پاسخگویی به نیاز مشتری</span>
+                    </div>
+
+                    <div class="about-point">
+                        <strong>ارتباط مستقیم</strong>
+                        <span>پشتیبانی و پاسخگویی</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-panel">
+
+                <div class="about-panel-content">
+
+                    <h3>
+                        Hooran
+                    </h3>
+
+                    <p>
+                        راهکارهای مطمئن برای انتقال نیرو
+                        در کاربردهای مختلف.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section id="products" class="section section-soft">
+
+    <div class="container">
+
+        <div class="section-head center">
+
+            <div class="kicker">
+                OUR PRODUCTS
+            </div>
+
+            <h2 class="section-title">
+                محصولات هوران
+            </h2>
+
+            <p class="section-desc">
+                انتخاب تسمه مناسب برای تجهیزات،
+                ماشین‌آلات و کاربردهای مختلف.
+            </p>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <article class="product">
+
+                <div class="product-number">
+                    01 / COOLING
+                </div>
+
+                <div class="product-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    تسمه کولر آبی
+                </h3>
+
+                <p>
+                    تولید و عرضه انواع تسمه مناسب
+                    کولرهای آبی با تمرکز بر کیفیت،
+                    دوام و عملکرد مناسب.
+                </p>
+
+                <a class="product-link"
+                   href="tasme-koler-abi.html">
+                    مشاهده محصول ←
+                </a>
+
+            </article>
+
+
+            <article class="product">
+
+                <div class="product-number">
+                    02 / INDUSTRIAL
+                </div>
+
+                <div class="product-icon">
+                    ⚙
+                </div>
+
+                <h3>
+                    تسمه‌های صنعتی
+                </h3>
+
+                <p>
+                    تسمه‌های مورد استفاده در تجهیزات
+                    و ماشین‌آلات صنعتی مختلف،
+                    مناسب برای کاربردهای متنوع.
+                </p>
+
+                <a class="product-link"
+                   href="#contact">
+                    دریافت اطلاعات ←
+                </a>
+
+            </article>
+
+
+            <article class="product">
+
+                <div class="product-number">
+                    03 / AGRICULTURAL
+                </div>
+
+                <div class="product-icon">
+                    ◆
+                </div>
+
+                <h3>
+                    تسمه‌های کشاورزی
+                </h3>
+
+                <p>
+                    تأمین تسمه‌های مورد استفاده در
+                    ماشین‌آلات و تجهیزات کشاورزی
+                    و کاربردهای مرتبط.
+                </p>
+
+                <a class="product-link"
+                   href="#contact">
+                    دریافت اطلاعات ←
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WHY HOORAN
+========================= -->
+
+<section id="why" class="section">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <div class="kicker">
+                WHY HOORAN
+            </div>
+
+            <h2 class="section-title">
+                چرا هوران؟
+            </h2>
+
+            <p class="section-desc">
+                یک همکاری حرفه‌ای فقط به محصول ختم نمی‌شود؛
+                کیفیت، پاسخگویی و تأمین مطمئن نیز اهمیت دارد.
+            </p>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="why-num">
+                    01
+                </div>
+
+                <h3>
+                    کیفیت
+                </h3>
+
+                <p>
+                    توجه به کیفیت و انتخاب محصول مناسب
+                    برای کاربرد موردنظر.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-num">
+                    02
+                </div>
+
+                <h3>
+                    دوام
+                </h3>
+
+                <p>
+                    تمرکز بر ارائه محصول قابل اعتماد
+                    برای استفاده مداوم.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-num">
+                    03
+                </div>
+
+                <h3>
+                    تأمین مطمئن
+                </h3>
+
+                <p>
+                    تلاش برای پاسخگویی مناسب به نیاز
+                    مشتریان و همکاران.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-num">
+                    04
+                </div>
+
+                <h3>
+                    پشتیبانی
+                </h3>
+
+                <p>
+                    ارتباط مستقیم با مجموعه و کارشناسان
+                    فروش برای دریافت اطلاعات.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CAPABILITIES
+========================= -->
+
+<section id="capabilities" class="section feature-band">
+
+    <div class="container">
+
+        <div class="feature-grid">
+
+            <div>
+
+                <div class="kicker">
+                    OUR CAPABILITIES
+                </div>
+
+                <h2 class="section-title">
+                    یک مجموعه،
+                    چند حوزه تخصصی
+                </h2>
+
+                <p class="section-desc">
+                    هوران برای پاسخگویی به نیازهای مختلف
+                    در حوزه‌های کولر آبی، صنعت و کشاورزی
+                    فعالیت می‌کند.
+                </p>
+
+
+                <ul class="feature-list">
+
+                    <li>
+                        تسمه‌های کولر آبی
+                    </li>
+
+                    <li>
+                        تسمه‌های مورد استفاده در صنعت
+                    </li>
+
+                    <li>
+                        تسمه‌های مورد استفاده در ماشین‌آلات کشاورزی
+                    </li>
+
+                    <li>
+                        ارتباط مستقیم برای دریافت اطلاعات محصول
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="feature-box">
+
+                <strong>
+                    HOORAN
+                </strong>
+
+                <span>
+                    هنر ماندگار البرز
+                </span>
+
+                <br><br>
+
+                <span>
+                    کیفیت، دوام و تأمین مطمئن؛
+                    با هدف ایجاد همکاری بلندمدت.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="section section-soft">
+
+    <div class="container">
+
+        <div class="section-head center">
+
+            <div class="kicker">
+                OUR WORLD
+            </div>
+
+            <h2 class="section-title">
+                محصولات و فضای کاری هوران
+            </h2>
+
+            <p class="section-desc">
+                این بخش برای تصاویر واقعی محصولات،
+                کارخانه، تجهیزات و فعالیت مجموعه آماده شده است.
+            </p>
+
+        </div>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-card">
+
+                <div class="gallery-inner">
+
+                    <strong>
+                        تصاویر محصولات
+                    </strong>
+
+                    <span>
+                        محل قرارگیری تصاویر واقعی تسمه‌ها
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-card">
+
+                <div class="gallery-inner">
+
+                    <strong>
+                        کارخانه
+                    </strong>
+
+                    <span>
+                        تصاویر خط تولید و تجهیزات
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery-card">
+
+                <div class="gallery-inner">
+
+                    <strong>
+                        کیفیت و فرآیند
+                    </strong>
+
+                    <span>
+                        تصاویر تکمیلی مجموعه
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <div class="cta-box">
+
+            <div class="cta-content">
+
+                <h2>
+                    برای انتخاب تسمه مناسب
+                    با ما در ارتباط باشید.
+                </h2>
+
+                <p>
+                    کارشناسان هوران آماده پاسخگویی
+                    و ارائه اطلاعات موردنیاز شما هستند.
+                </p>
+
+            </div>
+
+
+            <div class="cta-actions">
+
+                <a class="btn btn-primary"
+                   href="tel:09013430117">
+                    تماس با کارشناس
+                </a>
+
+                <a class="btn btn-outline"
+                   href="#contact">
+                    اطلاعات تماس
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="section section-soft">
+
+    <div class="container">
+
+        <div class="section-head center">
+
+            <div class="kicker">
+                CONTACT HOORAN
+            </div>
+
+            <h2 class="section-title">
+                با ما در ارتباط باشید
+            </h2>
+
+            <p class="section-desc">
+                برای دریافت اطلاعات محصول، همکاری،
+                استعلام و درخواست پیش‌فاکتور با ما تماس بگیرید.
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <!-- OFFICE -->
+
+            <div class="contact-card">
+
+                <div class="contact-label">
+                    CENTRAL OFFICE
+                </div>
+
+                <h3>
+                    دفتر مرکزی
+                </h3>
+
+                <a class="phone"
+                   href="tel:02634026300">
+                    026 3402 6300
+                </a>
+
+                <a class="phone"
+                   href="tel:02634026400">
+                    026 3402 6400
+                </a>
+
+                <p class="address">
+                    کرج، محمدشهر، همایون ویلا،
+                    خیابان شهید کیانی مهر،
+                    خیابان شهید علوی،
+                    ساختمان وزرا ۴
+                </p>
+
+            </div>
+
+
+            <!-- FACTORY -->
+
+            <div class="contact-card">
+
+                <div class="contact-label">
+                    FACTORY
+                </div>
+
+                <h3>
+                    کارخانه
+                </h3>
+
+                <a class="phone"
+                   href="tel:02191694592">
+                    021 9169 4592
+                </a>
+
+                <a class="phone"
+                   href="tel:02191694593">
+                    021 9169 4593
+                </a>
+
+                <p class="address">
+                    شهرک صنعتی صفادشت،
+                    میدان نبی اکرم،
+                    بلوار الغدیر،
+                    خیابان صنعتگران،
+                    پلاک ۱۳
+                </p>
+
+            </div>
+
+
+            <!-- MOBILE -->
+
+            <div class="contact-card">
+
+                <div class="contact-label">
+                    DIRECT CONTACT
+                </div>
+
+                <h3>
+                    تماس مستقیم
+                </h3>
+
+                <a class="phone"
+                   href="tel:09013430117">
+                    09013430117
+                </a>
+
+                <p class="address">
+                    تلفن همراه و ارتباط مستقیم
+                    با کارشناسان فروش هوران
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="contact-actions">
+
+            <a class="btn btn-primary"
+               href="tel:09013430117">
+                📞 تماس مستقیم
+            </a>
+
+            <a class="btn"
+               style="background:#16b86b;color:#fff;"
+               href="https://wa.me/989013430117">
+                💬 واتساپ
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <h3>
+                    هوران هنر ماندگار البرز
+                </h3>
+
+                <p>
+                    تولید و عرضه تسمه‌های کولر آبی،
+                    صنعتی و کشاورزی با تمرکز بر کیفیت،
+                    دوام و تأمین مطمئن.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    دسترسی سریع
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="#about">
+                        درباره هوران
+                    </a>
+
+                    <a href="#products">
+                        محصولات
+                    </a>
+
+                    <a href="#why">
+                        چرا هوران؟
+                    </a>
+
+                    <a href="#contact">
+                        تماس با ما
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    تماس
+                </h3>
+
+                <div class="footer-links">
+
+                    <a href="tel:02634026300">
+                        دفتر مرکزی: 026 3402 6300
+                    </a>
+
+                    <a href="tel:02634026400">
+                        دفتر مرکزی: 026 3402 6400
+                    </a>
+
+                    <a href="tel:02191694592">
+                        کارخانه: 021 9169 4592
+                    </a>
+
+                    <a href="tel:09013430117">
+                        موبایل: 09013430117
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © هوران هنر ماندگار البرز
+            </span>
+
+            <span>
+                تمامی حقوق محفوظ است.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     FLOATING CONTACT
+========================= -->
+
+<div class="floating">
+
+    <a class="float-btn float-wa"
+       href="https://wa.me/989013430117"
+       aria-label="واتساپ">
+        💬
+    </a>
+
+    <a class="float-btn float-call"
+       href="tel:09013430117"
+       aria-label="تماس">
+        ☎
+    </a>
+
+</div>
+
+
+<!-- =========================
+     MOBILE MENU STYLE
+========================= -->
+
+<style>
+
+@media(max-width:950px){
+
+    .nav.show-mobile{
+        display:flex;
+        position:absolute;
+        top:78px;
+        right:4%;
+        left:4%;
+        background:white;
+        border:1px solid var(--line);
+        border-radius:16px;
+        padding:12px;
+        box-shadow:var(--shadow-hover);
+        flex-direction:column;
+        align-items:stretch;
     }
 
-    .why {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h1 {
-        font-size: 27px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    .section-title {
-        font-size: 25px;
-    }
-
-    .about-box {
-        padding: 25px 20px;
-    }
-
-    .logo {
-        width: 160px;
+    .nav.show-mobile a{
+        text-align:center;
     }
 
 }
 
 </style>
 
-</head>
-
-<body>
-
-<header>
-
-<div class="logo-box">
-
-<img class="logo"
-     src="IMG_20260822_034356_286.jpg"
-     alt="هوران هنر ماندگار البرز">
-
-</div>
-
-<nav>
-
-<a href="#about">درباره ما</a>
-<a href="#products">محصولات</a>
-<a href="#why">چرا هوران؟</a>
-<a href="#contact">تماس با ما</a>
-
-</nav>
-
-<div class="hero">
-
-<h1>هوران هنر ماندگار البرز</h1>
-
-<p>
-تولید و عرضه تسمه‌های کولر آبی، صنعتی و کشاورزی
-</p>
-
-<div class="hero-buttons">
-
-<a class="primary" href="#products">
-مشاهده محصولات
-</a>
-
-<a class="secondary" href="tel:09013430117">
-تماس با کارشناس فروش
-</a>
-
-</div>
-
-</div>
-
-</header>
-
-<div class="container">
-
-<section id="about" class="section">
-
-<h2 class="section-title">
-درباره هوران هنر
-</h2>
-
-<p class="section-subtitle">
-تأمین مطمئن برای مشتریان، فروشندگان و فعالان حوزه‌های صنعتی و کشاورزی
-</p>
-
-<div class="about-box">
-
-<p>
-هوران هنر ماندگار البرز در زمینه تولید و عرضه تسمه‌های کولر آبی،
-تسمه‌های صنعتی و تسمه‌های کشاورزی فعالیت می‌کند.
-این مجموعه با تمرکز بر کیفیت، دوام و تأمین مطمئن،
-محصولات مورد نیاز مشتریان و همکاران خود را ارائه می‌دهد.
-</p>
-
-<p>
-هدف ما ایجاد همکاری بلندمدت و ارائه محصول مناسب برای هر کاربرد است.
-</p>
-
-</div>
-
-</section>
-
-<section id="products" class="section">
-
-<h2 class="section-title">
-محصولات هوران
-</h2>
-
-<p class="section-subtitle">
-انتخاب تسمه مناسب برای کولر، تجهیزات صنعتی و ماشین‌آلات کشاورزی
-</p>
-
-<div class="products">
-
-<div class="product">
-
-<div class="product-icon">⚙️</div>
-
-<h3>
-<a href="tasme-koler-abi.html">
-تسمه کولر آبی
-</a>
-</h3>
-
-<p>
-تولید و عرضه انواع تسمه مناسب کولرهای آبی با کیفیت و دوام مناسب.
-</p>
-
-</div>
-
-<div class="product">
-
-<div class="product-icon">🏭</div>
-
-<h3>
-تسمه‌های صنعتی
-</h3>
-
-<p>
-ارائه تسمه‌های صنعتی مورد استفاده در تجهیزات و ماشین‌آلات مختلف.
-</p>
-
-</div>
-
-<div class="product">
-
-<div class="product-icon">🚜</div>
-
-<h3>
-تسمه‌های کشاورزی
-</h3>
-
-<p>
-تأمین تسمه‌های مورد استفاده در ماشین‌آلات و تجهیزات کشاورزی.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="why" class="section">
-
-<h2 class="section-title">
-چرا هوران؟
-</h2>
-
-<div class="why">
-
-<div class="why-card">
-<h3>کیفیت</h3>
-<p>توجه به کیفیت و انتخاب محصول مناسب</p>
-</div>
-
-<div class="why-card">
-<h3>دوام</h3>
-<p>تمرکز بر ارائه محصولات قابل اعتماد</p>
-</div>
-
-<div class="why-card">
-<h3>تأمین مطمئن</h3>
-<p>پاسخگویی به نیاز مشتریان و همکاران</p>
-</div>
-
-<div class="why-card">
-<h3>پشتیبانی</h3>
-<p>ارتباط مستقیم با مجموعه و کارشناسان فروش</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2 class="section-title">
-گالری و فضای کاری
-</h2>
-
-<p class="section-subtitle">
-این بخش برای تصاویر واقعی محصولات، کارخانه و فعالیت مجموعه هوران آماده شده است.
-</p>
-
-<div class="gallery">
-
-<div class="gallery-box">
-📸
-<br>
-تصاویر محصولات هوران
-</div>
-
-<div class="gallery-box">
-🏭
-<br>
-تصاویر کارخانه و تجهیزات
-</div>
-
-<div class="gallery-box">
-📞
-<br>
-ارتباط با کارشناسان فروش
-</div>
-
-</div>
-
-</section>
-
-<section id="contact" class="section">
-
-<h2 class="section-title">
-تماس با ما
-</h2>
-
-<div class="contact">
-
-<div class="card">
-
-<h3>
-دفتر مرکزی
-</h3>
-
-<p class="phone">
-026 3402 6300
-</p>
-
-<p class="phone">
-026 3402 6400
-</p>
-
-<p class="address">
-استان البرز، کرج، محمدشهر، همایون ویلا،
-خیابان شهید کیانی مهر، خیابان شهید علوی،
-ساختمان وزرا ۴
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-کارخانه
-</h3>
-
-<p class="phone">
-021 9169 4592
-</p>
-
-<p class="phone">
-021 9169 4593
-</p>
-
-<p class="address">
-استان تهران، شهرک صنعتی صفادشت،
-میدان نبی اکرم، بلوار الغدیر،
-خیابان صنعتگران، پلاک ۱۳
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-تماس مستقیم
-</h3>
-
-<p class="phone">
-09013430117
-</p>
-
-<p>
-تلفن همراه و واتساپ
-</p>
-
-</div>
-
-</div>
-
-<div class="contact-buttons">
-
-<a class="call" href="tel:09013430117">
-📞 تماس مستقیم
-</a>
-
-<a class="whatsapp" href="https://wa.me/989013430117">
-💬 تماس در واتساپ
-</a>
-
-</div>
-
-</section>
-
-</div>
-
-<footer>
-
-<p>
-© هوران هنر ماندگار البرز
-</p>
-
-<p>
-تولید و عرضه تسمه‌های کولر آبی، صنعتی و کشاورزی
-</p>
-
-</footer>
 
 </body>
-
 </html>
