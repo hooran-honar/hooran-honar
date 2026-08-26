@@ -1003,11 +1003,13 @@ section{
     padding-bottom:40px;
     border-bottom:1px solid rgba(255,255,255,.08);
 }
-/* PHONE NUMBERS */
+/* PHONE NUMBERS - FINAL FIX */
+
 .footer a[href^="tel:"]{
-    direction:ltr;
-    unicode-bidi:embed;
+    direction:ltr !important;
+    unicode-bidi:isolate !important;
     display:inline-block;
+    text-align:left;
 }
 .footer h3{
     font-size:19px;
