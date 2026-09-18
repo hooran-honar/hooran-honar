@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
   <style>
     :root{
       --bg:#071116;
@@ -70,7 +73,7 @@
       box-shadow:0 20px 60px rgba(0,0,0,.18);
     }
 
-    /* HEADER */
+    /* ================= HEADER ================= */
 
     header{
       position:sticky;
@@ -170,7 +173,7 @@
       display:none;
     }
 
-    /* HERO */
+    /* ================= HERO ================= */
 
     .hero{
       padding:90px 0 70px;
@@ -228,7 +231,6 @@
       padding:0 24px;
       border-radius:14px;
       border:1px solid var(--line);
-      font-family:inherit;
       font-size:14px;
       cursor:pointer;
       transition:.25s;
@@ -271,7 +273,7 @@
       border:1px solid rgba(255,255,255,.07);
     }
 
-    /* HERO PANEL */
+    /* ================= HERO PANEL ================= */
 
     .hero-panel{
       border-radius:28px;
@@ -365,7 +367,7 @@
       font-size:11px;
     }
 
-    /* SECTION */
+    /* ================= SECTIONS ================= */
 
     section{
       padding:90px 0;
@@ -394,7 +396,7 @@
       font-size:15px;
     }
 
-    /* SYSTEM */
+    /* ================= SYSTEM ================= */
 
     .system-grid{
       display:grid;
@@ -439,7 +441,7 @@
       line-height:1.9;
     }
 
-    /* MATERIAL */
+    /* ================= MATERIAL ================= */
 
     .material-box{
       margin-top:28px;
@@ -477,7 +479,7 @@
       font-size:11px;
     }
 
-    /* SERVICES */
+    /* ================= SERVICES ================= */
 
     .services-grid{
       display:grid;
@@ -522,7 +524,7 @@
       line-height:2;
     }
 
-    /* ABOUT */
+    /* ================= ABOUT ================= */
 
     .about-grid{
       display:grid;
@@ -573,7 +575,7 @@
       font-size:11px;
     }
 
-    /* COMPLEX */
+    /* ================= COMPLEX PROJECTS ================= */
 
     .complex{
       border-radius:28px;
@@ -610,11 +612,7 @@
       color:#c5d2d5;
     }
 
-    /* PORTAL */
-
-    .portal-section{
-      position:relative;
-    }
+    /* ================= PORTAL ================= */
 
     .portal-wrap{
       border-radius:30px;
@@ -702,7 +700,7 @@
       line-height:1.9;
     }
 
-    /* PORTAL AUTH */
+    /* ================= PORTAL LOGIN ================= */
 
     .portal-auth{
       margin-top:22px;
@@ -753,7 +751,6 @@
       border-radius:12px;
       padding:12px 13px;
       outline:none;
-      font-family:inherit;
       font-size:12px;
     }
 
@@ -792,7 +789,7 @@
       border:1px solid rgba(85,226,212,.15);
     }
 
-    /* LOGGED IN PORTAL */
+    /* ================= PORTAL DASHBOARD ================= */
 
     .portal-dashboard{
       display:none;
@@ -873,9 +870,10 @@
       color:var(--muted);
       text-align:center;
       font-size:11px;
+      grid-column:1/-1;
     }
 
-    /* REQUEST */
+    /* ================= REQUEST ================= */
 
     .request-grid{
       display:grid;
@@ -957,7 +955,6 @@
       border-radius:12px;
       padding:12px 13px;
       outline:none;
-      font-family:inherit;
       font-size:12px;
       transition:.2s;
     }
@@ -991,7 +988,25 @@
       text-align:center;
     }
 
-    /* FOOTER */
+    /* ================= SUCCESS ================= */
+
+    .success-message{
+      display:none;
+      margin-bottom:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(85,226,212,.08);
+      border:1px solid rgba(85,226,212,.18);
+      color:#bcece7;
+      font-size:12px;
+      text-align:center;
+    }
+
+    .success-message.show{
+      display:block;
+    }
+
+    /* ================= FOOTER ================= */
 
     footer{
       border-top:1px solid var(--line);
@@ -1016,25 +1031,7 @@
       direction:ltr;
     }
 
-    /* SUCCESS MESSAGE */
-
-    .success-message{
-      display:none;
-      margin-bottom:18px;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(85,226,212,.08);
-      border:1px solid rgba(85,226,212,.18);
-      color:#bcece7;
-      font-size:12px;
-      text-align:center;
-    }
-
-    .success-message.show{
-      display:block;
-    }
-
-    /* RESPONSIVE */
+    /* ================= RESPONSIVE ================= */
 
     @media(max-width:1050px){
 
@@ -1163,10 +1160,6 @@
         font-size:27px;
       }
 
-      .stats{
-        grid-template-columns:1fr 1fr;
-      }
-
       .footer-inner{
         flex-direction:column;
         text-align:center;
@@ -1200,7 +1193,6 @@
   </div>
 </header>
 
-
 <main>
 
   <!-- HERO -->
@@ -1227,6 +1219,7 @@
         </p>
 
         <div class="hero-buttons">
+
           <a href="#request" class="btn btn-primary">
             درخواست بازدید پروژه
           </a>
@@ -1234,6 +1227,7 @@
           <a href="#portal" class="btn btn-secondary">
             ورود به پرتال پروژه
           </a>
+
         </div>
 
         <div class="trust">
@@ -1246,7 +1240,6 @@
         </div>
 
       </div>
-
 
       <div class="hero-panel glass">
 
@@ -1319,7 +1312,6 @@
     </div>
   </section>
 
-
   <!-- SYSTEM -->
 
   <section id="system">
@@ -1327,6 +1319,7 @@
     <div class="container">
 
       <div class="section-head">
+
         <div class="eyebrow">HOORAN SYSTEM</div>
 
         <h2>
@@ -1337,8 +1330,8 @@
           از شناخت پروژه و برداشت دقیق تا طراحی، آنالیز ساخت، تأمین،
           اجرا و تحویل؛ اطلاعات هر مرحله مبنای مرحله بعد قرار می‌گیرد.
         </p>
-      </div>
 
+      </div>
 
       <div class="system-grid">
 
@@ -1386,17 +1379,18 @@
 
       </div>
 
-
       <div class="material-box glass">
 
         <div>
           <h3>آنالیز ساخت و تأمین متریال</h3>
+
           <p>
             اطلاعات پروژه به لیست واقعی مواد، قطعات و ملزومات موردنیاز تبدیل می‌شود.
           </p>
         </div>
 
         <div class="chips">
+
           <span class="chip">شیشه</span>
           <span class="chip">پروفیل</span>
           <span class="chip">مواد اولیه</span>
@@ -1405,6 +1399,7 @@
           <span class="chip">ملزومات نصب</span>
           <span class="chip">لیست سفارش</span>
           <span class="chip">آنالیز ساخت</span>
+
         </div>
 
       </div>
@@ -1413,7 +1408,6 @@
 
   </section>
 
-
   <!-- SERVICES -->
 
   <section id="services">
@@ -1421,15 +1415,18 @@
     <div class="container">
 
       <div class="section-head">
+
         <div class="eyebrow">SERVICES</div>
 
-        <h2>خدمات تخصصی هوران</h2>
+        <h2>
+          خدمات تخصصی هوران
+        </h2>
 
         <p>
           هر پروژه بر اساس اطلاعات واقعی همان پروژه بررسی و مدیریت می‌شود.
         </p>
-      </div>
 
+      </div>
 
       <div class="services-grid">
 
@@ -1473,4 +1470,1021 @@
           </p>
         </div>
 
-        <div class="service-card glass
+        <div class="service-card glass">
+          <div class="service-icon">06</div>
+          <h3>کنترل کیفیت و تحویل</h3>
+          <p>
+            کنترل کیفیت اجرا، ثبت نتیجه نهایی و تحویل پروژه به کارفرما.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-box glass">
+
+          <div class="eyebrow">
+            ABOUT HOORAN
+          </div>
+
+          <h2>
+            تجربه‌ای که تبدیل به سیستم شده است
+          </h2>
+
+          <p>
+            سیستم تخصصی هوران حاصل تجربه عملی در اندازه‌برداری، طراحی،
+            آنالیز و اجرای پروژه‌های اداری است؛ با تمرکز بر کاهش خطا،
+            دوباره‌کاری و ابهام بین مراحل مختلف پروژه.
+          </p>
+
+        </div>
+
+        <div class="stats">
+
+          <div class="stat glass">
+            <strong>15+</strong>
+            <span>سال تجربه عملی</span>
+          </div>
+
+          <div class="stat glass">
+            <strong>11</strong>
+            <span>فرم و مرحله کنترلی</span>
+          </div>
+
+          <div class="stat glass">
+            <strong>0→100</strong>
+            <span>از برداشت تا تحویل</span>
+          </div>
+
+          <div class="stat glass">
+            <strong>1</strong>
+            <span>فرآیند یکپارچه پروژه</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- COMPLEX PROJECTS -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="complex">
+
+        <div class="eyebrow">
+          COMPLEX PROJECTS
+        </div>
+
+        <h2>
+          پروژه‌های پیچیده، نیازمند برداشت دقیق‌تر هستند.
+        </h2>
+
+        <p>
+          در پروژه‌هایی با شرایط معماری خاص، محدودیت‌های حمل یا تأسیسات متعدد،
+          اطلاعات دقیق اولیه نقش تعیین‌کننده‌ای در اجرای صحیح دارد.
+        </p>
+
+        <div class="complex-tags">
+
+          <span>سقف‌های شیب‌دار</span>
+          <span>چندارتفاعی</span>
+          <span>پارتیشن‌های قوسی</span>
+          <span>شکست‌های معماری</span>
+          <span>محدودیت حمل</span>
+          <span>تأسیسات</span>
+          <span>کف و قرنیز</span>
+          <span>آسانسور و راه‌پله</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PORTAL -->
+
+  <section id="portal">
+
+    <div class="container">
+
+      <div class="portal-wrap">
+
+        <div class="portal-header">
+
+          <div>
+
+            <div class="eyebrow">
+              HOORAN PROJECT PORTAL
+            </div>
+
+            <h2>
+              پرتال پروژه‌های هوران
+            </h2>
+
+            <p>
+              فضای اختصاصی برای شرکت‌های طرف همکاری؛ برای مشاهده پروژه‌ها
+              و در مراحل بعد دریافت و ارسال نقشه‌ها، فایل‌های اجرایی،
+              آنالیز و مستندات پروژه.
+            </p>
+
+          </div>
+
+          <div class="portal-badge">
+            فضای اختصاصی پروژه
+          </div>
+
+        </div>
+
+        <div class="portal-grid">
+
+          <div class="portal-card">
+
+            <div class="portal-icon">
+              01
+            </div>
+
+            <h3>
+              پروژه‌های اختصاصی
+            </h3>
+
+            <p>
+              هر شرکت فقط پروژه‌های مرتبط با حساب خود را مشاهده می‌کند.
+            </p>
+
+          </div>
+
+          <div class="portal-card">
+
+            <div class="portal-icon">
+              02
+            </div>
+
+            <h3>
+              نقشه و فایل‌های اجرایی
+            </h3>
+
+            <p>
+              محل اختصاصی برای دسترسی به فایل‌های پروژه در مراحل بعدی.
+            </p>
+
+          </div>
+
+          <div class="portal-card">
+
+            <div class="portal-icon">
+              03
+            </div>
+
+            <h3>
+              آنالیز و لیست متریال
+            </h3>
+
+            <p>
+              نمایش مستندات و اطلاعات ساخت و سفارش پروژه.
+            </p>
+
+          </div>
+
+          <div class="portal-card">
+
+            <div class="portal-icon">
+              04
+            </div>
+
+            <h3>
+              ارسال فایل به هوران
+            </h3>
+
+            <p>
+              امکان ارسال فایل و مستندات از طرف شرکت در مرحله توسعه پرتال.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- LOGIN -->
+
+        <div class="portal-auth">
+
+          <div class="portal-auth-header">
+
+            <strong>
+              ورود به فضای اختصاصی پروژه
+            </strong>
+
+            <span>
+              ایمیل و رمز عبور حساب شرکت خود را وارد کنید.
+            </span>
+
+          </div>
+
+          <form id="portalLoginForm" class="portal-login-form">
+
+            <div class="portal-field">
+
+              <label for="portalEmail">
+                ایمیل
+              </label>
+
+              <input
+                id="portalEmail"
+                type="email"
+                autocomplete="email"
+                placeholder="example@company.com"
+                required
+              >
+
+            </div>
+
+            <div class="portal-field">
+
+              <label for="portalPassword">
+                رمز عبور
+              </label>
+
+              <input
+                id="portalPassword"
+                type="password"
+                autocomplete="current-password"
+                placeholder="••••••••"
+                required
+              >
+
+            </div>
+
+            <button
+              id="portalLoginBtn"
+              type="submit"
+              class="btn btn-primary portal-login-button"
+            >
+              ورود به پرتال
+            </button>
+
+          </form>
+
+          <div
+            id="portalMessage"
+            class="portal-message"
+          ></div>
+
+        </div>
+
+        <!-- DASHBOARD -->
+
+        <div
+          id="portalDashboard"
+          class="portal-dashboard"
+        >
+
+          <div class="portal-userbar">
+
+            <div>
+
+              <strong id="portalUserName">
+                کاربر
+              </strong>
+
+              <span id="portalCompanyName">
+                پروژه‌های شرکت شما
+              </span>
+
+            </div>
+
+            <button
+              id="portalLogoutBtn"
+              type="button"
+              class="btn logout-btn"
+            >
+              خروج
+            </button>
+
+          </div>
+
+          <div
+            id="projectList"
+            class="project-list"
+          ></div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- REQUEST -->
+
+  <section id="request">
+
+    <div class="container">
+
+      <div class="request-grid">
+
+        <div class="request-info glass">
+
+          <div class="eyebrow">
+            PROJECT REQUEST
+          </div>
+
+          <h2>
+            درخواست بازدید پروژه
+          </h2>
+
+          <p>
+            اگر برای یک پروژه اداری به برداشت، طراحی، آنالیز ساخت یا
+            هماهنگی اجرا نیاز دارید، مشخصات پروژه را ارسال کنید تا
+            برای هماهنگی با شما تماس بگیریم.
+          </p>
+
+          <div class="contact">
+
+            <small>
+              تماس با هوران هنر ماندگار البرز
+            </small>
+
+            <strong>
+              02191694592
+            </strong>
+
+          </div>
+
+        </div>
+
+        <div class="form-card glass">
+
+          <div
+            id="formSuccess"
+            class="success-message"
+          >
+            درخواست شما با موفقیت ارسال شد.
+            کارشناسان هوران با شما تماس خواهند گرفت.
+          </div>
+
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+
+            <input
+              type="hidden"
+              name="access_key"
+              value="44dcfa06-aded-4b2f-0bd2d7e8704e"
+            >
+
+            <input
+              type="hidden"
+              name="subject"
+              value="درخواست بازدید جدید از سایت هوران"
+            >
+
+            <input
+              type="hidden"
+              name="from_name"
+              value="سایت هوران هنر ماندگار البرز"
+            >
+
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://hooran-honar.github.io/hooran-honar/hooran-new.html?sent=1"
+            >
+
+            <input
+              type="checkbox"
+              name="botcheck"
+              style="display:none"
+            >
+
+            <div class="form-grid">
+
+              <div class="field">
+
+                <label>
+                  نام و نام خانوادگی
+                </label>
+
+                <input
+                  type="text"
+                  name="name"
+                  required
+                >
+
+              </div>
+
+              <div class="field">
+
+                <label>
+                  نام شرکت
+                </label>
+
+                <input
+                  type="text"
+                  name="company"
+                >
+
+              </div>
+
+              <div class="field">
+
+                <label>
+                  شماره موبایل
+                </label>
+
+                <input
+                  type="tel"
+                  name="mobile"
+                  required
+                >
+
+              </div>
+
+              <div class="field">
+
+                <label>
+                  شهر / منطقه
+                </label>
+
+                <input
+                  type="text"
+                  name="city"
+                >
+
+              </div>
+
+              <div class="field full">
+
+                <label>
+                  آدرس پروژه
+                </label>
+
+                <input
+                  type="text"
+                  name="address"
+                >
+
+              </div>
+
+              <div class="field">
+
+                <label>
+                  نوع پروژه
+                </label>
+
+                <select name="project_type">
+
+                  <option value="">
+                    انتخاب کنید
+                  </option>
+
+                  <option>
+                    پارتیشن اداری
+                  </option>
+
+                  <option>
+                    مبلمان اداری
+                  </option>
+
+                  <option>
+                    طراحی و اجرای فضای اداری
+                  </option>
+
+                  <option>
+                    اندازه‌برداری و آنالیز پروژه
+                  </option>
+
+                  <option>
+                    سایر
+                  </option>
+
+                </select>
+
+              </div>
+
+              <div class="field">
+
+                <label>
+                  متراژ تقریبی
+                </label>
+
+                <input
+                  type="text"
+                  name="area"
+                  placeholder="مثلاً ۳۵۰ متر"
+                >
+
+              </div>
+
+              <div class="field full">
+
+                <label>
+                  توضیحات پروژه
+                </label>
+
+                <textarea
+                  name="description"
+                  placeholder="توضیحات، شرایط پروژه یا نیاز شما..."
+                ></textarea>
+
+              </div>
+
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary form-submit"
+            >
+              ارسال درخواست بازدید
+            </button>
+
+            <div class="form-note">
+              اطلاعات ارسال‌شده برای بررسی و هماهنگی درخواست شما استفاده می‌شود.
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <p>
+      © هوران هنر ماندگار البرز — سیستم تخصصی هوران
+    </p>
+
+    <p class="footer-phone">
+      02191694592
+    </p>
+
+  </div>
+
+</footer>
+
+<script>
+
+/* =========================================================
+   SUPABASE CONFIGURATION
+   ========================================================= */
+
+const SUPABASE_URL =
+  "https://bdafucbptyyftfzqvjey.supabase.co";
+
+const SUPABASE_PUBLISHABLE_KEY =
+  "sb_publishable_4UHpbt4Yt32B4a08hsg7dg_uU9acL_e";
+
+const supabaseClient =
+  window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+
+
+/* =========================================================
+   PORTAL ELEMENTS
+   ========================================================= */
+
+const loginForm =
+  document.getElementById("portalLoginForm");
+
+const loginBtn =
+  document.getElementById("portalLoginBtn");
+
+const message =
+  document.getElementById("portalMessage");
+
+const dashboard =
+  document.getElementById("portalDashboard");
+
+const userName =
+  document.getElementById("portalUserName");
+
+const companyName =
+  document.getElementById("portalCompanyName");
+
+const projectList =
+  document.getElementById("projectList");
+
+const logoutBtn =
+  document.getElementById("portalLogoutBtn");
+
+
+/* =========================================================
+   PORTAL MESSAGE
+   ========================================================= */
+
+function showPortalMessage(
+  text,
+  type = "error"
+){
+
+  message.textContent = text;
+
+  message.className =
+    "portal-message show " + type;
+
+}
+
+
+function clearPortalMessage(){
+
+  message.textContent = "";
+
+  message.className =
+    "portal-message";
+
+}
+
+
+/* =========================================================
+   HTML SAFETY
+   ========================================================= */
+
+function escapeHtml(value){
+
+  return String(value)
+    .replace(/[&<>"']/g, function(character){
+
+      const map = {
+
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        '"':"&quot;",
+        "'":"&#039;"
+
+      };
+
+      return map[character];
+
+    });
+
+}
+
+
+/* =========================================================
+   LOAD PORTAL
+   ========================================================= */
+
+async function loadPortal(){
+
+  const {
+    data: {
+      user
+    }
+  } =
+  await supabaseClient.auth.getUser();
+
+
+  if(!user){
+
+    dashboard.classList.remove("show");
+
+    return false;
+
+  }
+
+
+  /* PROFILE */
+
+  const {
+    data: profile,
+    error: profileError
+  } =
+  await supabaseClient
+    .from("profiles")
+    .select("full_name,company_id")
+    .eq("id", user.id)
+    .single();
+
+
+  if(profileError || !profile){
+
+    showPortalMessage(
+      "اطلاعات حساب شما در پرتال کامل نشده است.",
+      "error"
+    );
+
+    return false;
+
+  }
+
+
+  /* COMPANY */
+
+  let company = null;
+
+
+  if(profile.company_id){
+
+    const {
+      data: companyData
+    } =
+    await supabaseClient
+      .from("companies")
+      .select("name")
+      .eq("id", profile.company_id)
+      .single();
+
+    company = companyData;
+
+  }
+
+
+  userName.textContent =
+    profile.full_name ||
+    user.email ||
+    "کاربر پرتال";
+
+
+  companyName.textContent =
+    company?.name ||
+    "پروژه‌های شرکت شما";
+
+
+  /* PROJECTS */
+
+  const {
+    data: projects,
+    error: projectsError
+  } =
+  await supabaseClient
+    .from("projects")
+    .select(
+      "project_code,name,description,created_at"
+    )
+    .order(
+      "created_at",
+      {
+        ascending:false
+      }
+    );
+
+
+  if(projectsError){
+
+    showPortalMessage(
+      "خطا در دریافت پروژه‌ها. دوباره تلاش کنید.",
+      "error"
+    );
+
+    return false;
+
+  }
+
+
+  projectList.innerHTML = "";
+
+
+  if(
+    !projects ||
+    projects.length === 0
+  ){
+
+    projectList.innerHTML = `
+      <div class="project-empty">
+        فعلاً پروژه‌ای برای این حساب ثبت نشده است.
+      </div>
+    `;
+
+  }
+
+  else{
+
+    projects.forEach(function(project){
+
+      const card =
+        document.createElement("div");
+
+      card.className =
+        "project-card";
+
+
+      card.innerHTML = `
+
+        <div class="project-code">
+          ${escapeHtml(project.project_code || "")}
+        </div>
+
+        <h3>
+          ${escapeHtml(project.name || "پروژه")}
+        </h3>
+
+        <p>
+          ${escapeHtml(
+            project.description ||
+            "برای این پروژه توضیحی ثبت نشده است."
+          )}
+        </p>
+
+      `;
+
+
+      projectList.appendChild(card);
+
+    });
+
+  }
+
+
+  dashboard.classList.add("show");
+
+  clearPortalMessage();
+
+  return true;
+
+}
+
+
+/* =========================================================
+   LOGIN
+   ========================================================= */
+
+loginForm.addEventListener(
+  "submit",
+  async function(event){
+
+    event.preventDefault();
+
+    clearPortalMessage();
+
+    loginBtn.disabled = true;
+
+    loginBtn.textContent =
+      "در حال ورود...";
+
+
+    const email =
+      document
+        .getElementById("portalEmail")
+        .value
+        .trim();
+
+
+    const password =
+      document
+        .getElementById("portalPassword")
+        .value;
+
+
+    const {
+      error
+    } =
+    await supabaseClient.auth.signInWithPassword({
+
+      email:email,
+
+      password:password
+
+    });
+
+
+    loginBtn.disabled = false;
+
+    loginBtn.textContent =
+      "ورود به پرتال";
+
+
+    if(error){
+
+      showPortalMessage(
+        "ایمیل یا رمز عبور صحیح نیست.",
+        "error"
+      );
+
+      return;
+
+    }
+
+
+    await loadPortal();
+
+  }
+);
+
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+logoutBtn.addEventListener(
+  "click",
+  async function(){
+
+    await supabaseClient.auth.signOut();
+
+    dashboard.classList.remove("show");
+
+    projectList.innerHTML = "";
+
+    showPortalMessage(
+      "از پرتال خارج شدید.",
+      "success"
+    );
+
+  }
+);
+
+
+/* =========================================================
+   AUTH STATE
+   ========================================================= */
+
+supabaseClient.auth.onAuthStateChange(
+  async function(event){
+
+    if(
+      event === "SIGNED_IN" ||
+      event === "INITIAL_SESSION"
+    ){
+
+      await loadPortal();
+
+    }
+
+
+    if(event === "SIGNED_OUT"){
+
+      dashboard.classList.remove("show");
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   WEB3FORMS SUCCESS
+   ========================================================= */
+
+const params =
+  new URLSearchParams(
+    window.location.search
+  );
+
+
+if(
+  params.get("sent") === "1"
+){
+
+  const success =
+    document.getElementById(
+      "formSuccess"
+    );
+
+
+  if(success){
+
+    success.classList.add("show");
+
+
+    setTimeout(
+      function(){
+
+        success.scrollIntoView({
+          behavior:"smooth",
+          block:"center"
+        });
+
+      },
+      300
+    );
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
