@@ -8,7 +8,13 @@
 
 <meta name="description" content="سیستم تخصصی هوران برای اندازه‌برداری، طراحی، تحلیل، مستندسازی، اجرا و تحویل پروژه‌های اداری.">
 
+<!-- Persian Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -20,10 +26,11 @@ html{
 }
 
 body{
-    font-family:Tahoma,Arial,sans-serif;
+    font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
     background:#071116;
     color:#eef7f7;
-    line-height:1.9;
+    line-height:2;
+    font-weight:400;
 }
 
 a{
@@ -36,17 +43,22 @@ a{
     margin:auto;
 }
 
+/* =========================
+   HEADER
+========================= */
+
 header{
     position:sticky;
     top:0;
     z-index:1000;
     background:rgba(7,17,22,.88);
-    backdrop-filter:blur(14px);
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
     border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .nav{
-    min-height:76px;
+    min-height:82px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -56,22 +68,21 @@ header{
 .logo{
     display:flex;
     align-items:center;
-    gap:12px;
-    font-weight:bold;
+    gap:13px;
     color:#fff;
 }
 
 .logo-mark{
-    width:46px;
-    height:46px;
-    border-radius:14px;
+    width:48px;
+    height:48px;
+    border-radius:15px;
     display:grid;
     place-items:center;
     background:linear-gradient(135deg,#35d9c8,#1687a1);
     color:#061014;
-    font-size:24px;
-    font-weight:bold;
-    box-shadow:0 8px 25px rgba(35,214,197,.16);
+    font-size:25px;
+    font-weight:800;
+    box-shadow:0 8px 28px rgba(35,214,197,.18);
 }
 
 .logo-text{
@@ -81,26 +92,36 @@ header{
 }
 
 .logo-text strong{
-    font-size:20px;
-    letter-spacing:-.5px;
+    font-size:21px;
+    font-weight:800;
+    letter-spacing:-.6px;
 }
 
 .logo-text span{
     font-size:11px;
-    color:#8fa5a9;
-    font-weight:normal;
+    color:#91a6aa;
+    font-weight:400;
+    margin-top:2px;
 }
 
 .nav-links{
     display:flex;
-    gap:25px;
-    font-size:14px;
+    gap:27px;
+    font-size:13px;
     color:#b9cbce;
+}
+
+.nav-links a{
+    transition:.25s ease;
 }
 
 .nav-links a:hover{
     color:#35d7c6;
 }
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
     min-height:720px;
@@ -142,33 +163,38 @@ header{
 
 .badge{
     display:inline-block;
-    padding:7px 15px;
+    padding:6px 16px;
     border:1px solid rgba(53,215,198,.35);
     background:rgba(53,215,198,.07);
     color:#55dfd0;
     border-radius:50px;
-    font-size:13px;
-    margin-bottom:22px;
+    font-size:12px;
+    margin-bottom:25px;
+    font-weight:500;
 }
 
 h1{
-    font-size:clamp(38px,6vw,72px);
-    line-height:1.25;
-    margin-bottom:24px;
-    letter-spacing:-1px;
+    font-size:clamp(40px,6vw,72px);
+    line-height:1.35;
+    margin-bottom:25px;
+    letter-spacing:-1.5px;
+    font-weight:800;
 }
 
 .gradient{
     background:linear-gradient(90deg,#62e7da,#53aeea);
     -webkit-background-clip:text;
+    background-clip:text;
     color:transparent;
 }
 
 .hero p{
     color:#b7c8cb;
-    max-width:700px;
-    font-size:18px;
+    max-width:720px;
+    font-size:17px;
+    line-height:2.2;
     margin-bottom:35px;
+    font-weight:400;
 }
 
 .buttons{
@@ -178,11 +204,12 @@ h1{
 }
 
 .btn{
-    padding:13px 24px;
+    padding:12px 24px;
     border-radius:12px;
-    font-weight:bold;
+    font-weight:600;
     display:inline-block;
-    transition:.25s;
+    transition:.25s ease;
+    font-family:inherit;
 }
 
 .btn-primary{
@@ -192,6 +219,7 @@ h1{
 
 .btn-primary:hover{
     transform:translateY(-2px);
+    box-shadow:0 10px 28px rgba(46,216,197,.16);
 }
 
 .btn-secondary{
@@ -202,6 +230,10 @@ h1{
 .btn-secondary:hover{
     background:rgba(255,255,255,.08);
 }
+
+/* =========================
+   SECTIONS
+========================= */
 
 section{
     padding:100px 0;
@@ -214,17 +246,26 @@ section{
 
 .section-title span{
     color:#45d9ca;
-    font-size:14px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:1px;
 }
 
 .section-title h2{
-    font-size:38px;
-    margin:8px 0 12px;
+    font-size:36px;
+    margin:8px 0 14px;
+    font-weight:800;
+    letter-spacing:-.8px;
 }
 
 .section-title p{
     color:#9eb1b5;
+    font-size:15px;
 }
+
+/* =========================
+   GLASS
+========================= */
 
 .glass{
     background:linear-gradient(
@@ -235,7 +276,12 @@ section{
     border:1px solid rgba(255,255,255,.09);
     border-radius:22px;
     backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 }
+
+/* =========================
+   SYSTEM STEPS
+========================= */
 
 .steps{
     display:grid;
@@ -246,23 +292,38 @@ section{
 .step{
     padding:28px;
     min-height:190px;
+    transition:.25s ease;
+}
+
+.step:hover{
+    transform:translateY(-4px);
+    border-color:rgba(53,215,198,.20);
 }
 
 .number{
-    font-size:13px;
+    font-size:12px;
     color:#42d8ca;
-    margin-bottom:20px;
+    margin-bottom:18px;
+    font-weight:700;
+    direction:ltr;
+    text-align:right;
 }
 
 .step h3{
     margin-bottom:10px;
-    font-size:20px;
+    font-size:19px;
+    font-weight:700;
 }
 
 .step p{
     color:#9eb1b5;
-    font-size:14px;
+    font-size:13px;
+    line-height:2;
 }
+
+/* =========================
+   SERVICES
+========================= */
 
 .services{
     display:grid;
@@ -272,6 +333,12 @@ section{
 
 .service{
     padding:28px;
+    transition:.25s ease;
+}
+
+.service:hover{
+    transform:translateY(-4px);
+    border-color:rgba(53,215,198,.20);
 }
 
 .service-icon{
@@ -288,12 +355,19 @@ section{
 
 .service h3{
     margin-bottom:10px;
+    font-size:18px;
+    font-weight:700;
 }
 
 .service p{
     color:#9eb1b5;
-    font-size:14px;
+    font-size:13px;
+    line-height:2;
 }
+
+/* =========================
+   ABOUT
+========================= */
 
 .highlight{
     display:grid;
@@ -306,12 +380,16 @@ section{
 }
 
 .highlight-box h3{
-    font-size:27px;
+    font-size:26px;
+    line-height:1.6;
     margin-bottom:18px;
+    font-weight:800;
 }
 
 .highlight-box p{
     color:#a8b9bc;
+    font-size:14px;
+    line-height:2.2;
 }
 
 .stats{
@@ -329,14 +407,19 @@ section{
 
 .stat strong{
     display:block;
-    font-size:30px;
+    font-size:29px;
     color:#53ded0;
+    font-weight:800;
 }
 
 .stat span{
-    font-size:13px;
+    font-size:12px;
     color:#9eb1b5;
 }
+
+/* =========================
+   FORM
+========================= */
 
 .form-section{
     display:grid;
@@ -350,20 +433,24 @@ section{
 }
 
 .contact-box h3{
-    font-size:28px;
+    font-size:27px;
     margin-bottom:15px;
+    font-weight:800;
 }
 
 .contact-box p{
     color:#a7b8bb;
     margin-bottom:25px;
+    font-size:14px;
+    line-height:2.2;
 }
 
 .phone{
-    font-size:22px;
+    font-size:21px;
     color:#50ded0;
     direction:ltr;
     text-align:right;
+    font-weight:600;
 }
 
 .form{
@@ -387,7 +474,7 @@ section{
 }
 
 label{
-    font-size:13px;
+    font-size:12px;
     color:#b8c8ca;
 }
 
@@ -401,13 +488,21 @@ textarea{
     border-radius:11px;
     padding:12px 14px;
     font-family:inherit;
+    font-size:13px;
     outline:none;
+    transition:.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#718488;
 }
 
 input:focus,
 select:focus,
 textarea:focus{
     border-color:rgba(64,216,202,.6);
+    box-shadow:0 0 0 3px rgba(64,216,202,.05);
 }
 
 textarea{
@@ -425,7 +520,7 @@ select option{
     cursor:pointer;
     width:100%;
     font-family:inherit;
-    font-size:15px;
+    font-size:14px;
 }
 
 .notice{
@@ -435,14 +530,18 @@ select option{
     background:rgba(53,215,198,.07);
     color:#72dfd4;
     display:none;
-    font-size:13px;
+    font-size:12px;
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     padding:35px 0;
     border-top:1px solid rgba(255,255,255,.08);
     color:#82969a;
-    font-size:13px;
+    font-size:12px;
 }
 
 .footer-content{
@@ -451,6 +550,10 @@ footer{
     gap:20px;
     flex-wrap:wrap;
 }
+
+/* =========================
+   TABLET
+========================= */
 
 @media(max-width:850px){
 
@@ -471,7 +574,12 @@ footer{
     .form-section{
         grid-template-columns:1fr;
     }
+
 }
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:600px){
 
@@ -479,12 +587,37 @@ footer{
         padding:70px 0;
     }
 
+    .nav{
+        min-height:74px;
+    }
+
+    .logo-mark{
+        width:43px;
+        height:43px;
+        border-radius:13px;
+        font-size:22px;
+    }
+
+    .logo-text strong{
+        font-size:18px;
+    }
+
+    .logo-text span{
+        font-size:10px;
+    }
+
     h1{
         font-size:40px;
+        line-height:1.4;
     }
 
     .hero p{
-        font-size:16px;
+        font-size:15px;
+        line-height:2.1;
+    }
+
+    .section-title h2{
+        font-size:30px;
     }
 
     .steps,
@@ -503,38 +636,77 @@ footer{
     .form{
         padding:25px;
     }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .buttons .btn{
+        text-align:center;
+        width:100%;
+    }
+
 }
+
+/* =========================
+   EXTRA SMALL
+========================= */
+
+@media(max-width:380px){
+
+    .logo-text span{
+        display:none;
+    }
+
+    h1{
+        font-size:34px;
+    }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="container nav">
 
 <a href="#home" class="logo">
-    <div class="logo-mark">ه</div>
-    <div class="logo-text">
-        <strong>هوران</strong>
-        <span>هنر ماندگار البرز</span>
-    </div>
+
+<div class="logo-mark">ه</div>
+
+<div class="logo-text">
+<strong>هوران</strong>
+<span>هنر ماندگار البرز</span>
+</div>
+
 </a>
 
 <nav class="nav-links">
+
 <a href="#system">سیستم تخصصی</a>
 <a href="#services">خدمات</a>
 <a href="#about">درباره هوران</a>
 <a href="#request">درخواست بازدید</a>
+
 </nav>
 
 </div>
-</header>
 
+</header>
 
 <main>
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero" id="home">
+
 <div class="container">
+
 <div class="hero-content">
 
 <div class="badge">
@@ -553,6 +725,7 @@ footer{
 </p>
 
 <div class="buttons">
+
 <a href="#request" class="btn btn-primary">
 درخواست بازدید پروژه
 </a>
@@ -560,152 +733,273 @@ footer{
 <a href="#system" class="btn btn-secondary">
 آشنایی با سیستم هوران
 </a>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 
+<!-- =========================
+     SYSTEM
+========================= -->
+
 <section id="system">
+
 <div class="container">
 
 <div class="section-title">
+
 <span>HOORAN SYSTEM</span>
-<h2>سیستم تخصصی هوران</h2>
+
+<h2>
+سیستم تخصصی هوران
+</h2>
+
 <p>
 تجربه اجرایی به یک فرآیند مشخص، قابل کنترل و قابل تکرار تبدیل شده است.
 </p>
+
 </div>
 
 <div class="steps">
 
 <div class="step glass">
+
 <div class="number">01</div>
-<h3>شناخت پروژه</h3>
+
+<h3>
+شناخت پروژه
+</h3>
+
 <p>
 بررسی نیازها، شرایط پروژه، مسیر حمل، دسترسی‌ها و محدودیت‌های اجرایی.
 </p>
+
 </div>
 
+
 <div class="step glass">
+
 <div class="number">02</div>
-<h3>برداشت دقیق</h3>
+
+<h3>
+برداشت دقیق
+</h3>
+
 <p>
 اندازه‌برداری، بررسی فضا، تأسیسات، کف، سقف، درب‌ها، پنجره‌ها و جزئیات مؤثر.
 </p>
+
 </div>
 
+
 <div class="step glass">
+
 <div class="number">03</div>
-<h3>تحلیل</h3>
+
+<h3>
+تحلیل
+</h3>
+
 <p>
 تبدیل اطلاعات برداشت‌شده به داده‌های قابل استفاده برای تصمیم‌گیری پروژه.
 </p>
+
 </div>
 
+
 <div class="step glass">
+
 <div class="number">04</div>
-<h3>طراحی و مستندسازی</h3>
+
+<h3>
+طراحی و مستندسازی
+</h3>
+
 <p>
 تهیه نقشه‌ها و اطلاعات لازم برای اجرای دقیق و هماهنگ پروژه.
 </p>
+
 </div>
 
+
 <div class="step glass">
+
 <div class="number">05</div>
-<h3>اجرا و کنترل</h3>
+
+<h3>
+اجرا و کنترل
+</h3>
+
 <p>
 هماهنگی اجرا، کنترل کیفیت، ایمنی، زمان‌بندی و جلوگیری از آسیب به ساختمان.
 </p>
+
 </div>
 
+
 <div class="step glass">
+
 <div class="number">06</div>
-<h3>تحویل نهایی</h3>
+
+<h3>
+تحویل نهایی
+</h3>
+
 <p>
 کنترل نهایی، ثبت اطلاعات پروژه و تحویل منظم و مستند به کارفرما.
 </p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 
+<!-- =========================
+     SERVICES
+========================= -->
+
 <section id="services">
+
 <div class="container">
 
 <div class="section-title">
+
 <span>SERVICES</span>
-<h2>خدمات تخصصی</h2>
+
+<h2>
+خدمات تخصصی
+</h2>
+
 <p>
 تمرکز هوران بر اجرای دقیق فرآیندهای فنی پروژه‌های اداری است.
 </p>
+
 </div>
 
 <div class="services">
 
+
 <div class="service glass">
+
 <div class="service-icon">⌁</div>
-<h3>برداشت و اندازه‌برداری</h3>
+
+<h3>
+برداشت و اندازه‌برداری
+</h3>
+
 <p>
 اندازه‌برداری دقیق و بررسی شرایط واقعی پروژه قبل از طراحی و اجرا.
 </p>
+
 </div>
 
+
 <div class="service glass">
+
 <div class="service-icon">⌘</div>
-<h3>طراحی و مستندسازی</h3>
+
+<h3>
+طراحی و مستندسازی
+</h3>
+
 <p>
 تبدیل اطلاعات پروژه به نقشه و مستندات قابل استفاده در اجرا.
 </p>
+
 </div>
 
+
 <div class="service glass">
+
 <div class="service-icon">◈</div>
-<h3>آنالیز و برآورد</h3>
+
+<h3>
+آنالیز و برآورد
+</h3>
+
 <p>
 تحلیل مواد، یراق، ملزومات و نیازهای اجرایی پروژه.
 </p>
+
 </div>
 
+
 <div class="service glass">
+
 <div class="service-icon">↗</div>
-<h3>هماهنگی اجرا</h3>
+
+<h3>
+هماهنگی اجرا
+</h3>
+
 <p>
 برنامه‌ریزی و هماهنگی عوامل مختلف برای اجرای منظم پروژه.
 </p>
+
 </div>
 
+
 <div class="service glass">
+
 <div class="service-icon">✓</div>
-<h3>کنترل کیفیت</h3>
+
+<h3>
+کنترل کیفیت
+</h3>
+
 <p>
 کنترل کیفیت اجرا، ایمنی، زمان‌بندی و رعایت الزامات پروژه.
 </p>
+
 </div>
 
+
 <div class="service glass">
+
 <div class="service-icon">□</div>
-<h3>تحویل نهایی</h3>
+
+<h3>
+تحویل نهایی
+</h3>
+
 <p>
 بررسی نهایی و تحویل پروژه با ثبت اطلاعات مورد نیاز کارفرما.
 </p>
+
 </div>
 
 </div>
+
 </div>
+
 </section>
 
 
+<!-- =========================
+     ABOUT
+========================= -->
+
 <section id="about">
+
 <div class="container">
 
 <div class="highlight">
 
+
 <div class="highlight-box glass">
-<h3>تجربه‌ای که تبدیل به سیستم شده است.</h3>
+
+<h3>
+تجربه‌ای که تبدیل به سیستم شده است.
+</h3>
 
 <p>
 سیستم تخصصی هوران بر پایه بیش از ۱۵ سال تجربه عملی
@@ -713,29 +1007,53 @@ footer{
 هدف، کاهش خطاهای انسانی و ایجاد یک مسیر مشخص از شروع پروژه تا تحویل نهایی است.
 </p>
 
+
 <div class="stats">
 
+
 <div class="stat">
+
 <strong>۱۵+</strong>
-<span>سال تجربه عملی</span>
+
+<span>
+سال تجربه عملی
+</span>
+
 </div>
 
+
 <div class="stat">
+
 <strong>۱۱</strong>
-<span>فرم تخصصی کنترل فرآیند</span>
+
+<span>
+فرم تخصصی کنترل فرآیند
+</span>
+
 </div>
+
 
 <div class="stat">
+
 <strong>۰→۱۰۰</strong>
-<span>نگاه یکپارچه به پروژه</span>
-</div>
+
+<span>
+نگاه یکپارچه به پروژه
+</span>
 
 </div>
+
+
+</div>
+
 </div>
 
 
 <div class="highlight-box glass">
-<h3>برای پروژه‌های پیچیده ساخته شده است.</h3>
+
+<h3>
+برای پروژه‌های پیچیده ساخته شده است.
+</h3>
 
 <p>
 در پروژه‌های اداری، جزئیاتی مانند سقف‌های شیب‌دار،
@@ -746,27 +1064,45 @@ footer{
 
 </div>
 
+
 </div>
+
 </div>
+
 </section>
 
 
+<!-- =========================
+     REQUEST
+========================= -->
+
 <section id="request">
+
 <div class="container">
 
 <div class="section-title">
+
 <span>PROJECT REQUEST</span>
-<h2>درخواست بازدید پروژه</h2>
+
+<h2>
+درخواست بازدید پروژه
+</h2>
+
 <p>
 اطلاعات اولیه پروژه را ثبت کنید تا برای بررسی و هماهنگی با شما تماس بگیریم.
 </p>
+
 </div>
+
 
 <div class="form-section">
 
+
 <div class="contact-box glass">
 
-<h3>شروع یک پروژه دقیق</h3>
+<h3>
+شروع یک پروژه دقیق
+</h3>
 
 <p>
 اطلاعات پروژه را وارد کنید. در مرحله بعد،
@@ -784,58 +1120,130 @@ footer{
 
 <div class="form-grid">
 
+
 <div class="field">
-<label>نام و نام خانوادگی</label>
+
+<label>
+نام و نام خانوادگی
+</label>
+
 <input type="text" name="name" required>
+
 </div>
 
+
 <div class="field">
-<label>نام شرکت / سازمان</label>
+
+<label>
+نام شرکت / سازمان
+</label>
+
 <input type="text" name="company">
+
 </div>
 
+
 <div class="field">
-<label>شماره موبایل</label>
+
+<label>
+شماره موبایل
+</label>
+
 <input type="tel" name="mobile" required>
+
 </div>
 
+
 <div class="field">
-<label>شهر / منطقه</label>
+
+<label>
+شهر / منطقه
+</label>
+
 <input type="text" name="city">
+
 </div>
 
+
 <div class="field full">
-<label>آدرس پروژه</label>
+
+<label>
+آدرس پروژه
+</label>
+
 <input type="text" name="address">
+
 </div>
 
+
 <div class="field">
-<label>نوع پروژه</label>
+
+<label>
+نوع پروژه
+</label>
+
 <select name="project">
-<option value="">انتخاب کنید</option>
-<option>پارتیشن اداری</option>
-<option>مبلمان اداری</option>
-<option>طراحی و اجرای فضای اداری</option>
-<option>بازطراحی فضای اداری</option>
-<option>سایر</option>
+
+<option value="">
+انتخاب کنید
+</option>
+
+<option>
+پارتیشن اداری
+</option>
+
+<option>
+مبلمان اداری
+</option>
+
+<option>
+طراحی و اجرای فضای اداری
+</option>
+
+<option>
+بازطراحی فضای اداری
+</option>
+
+<option>
+سایر
+</option>
+
 </select>
+
 </div>
 
+
 <div class="field">
-<label>متراژ تقریبی</label>
+
+<label>
+متراژ تقریبی
+</label>
+
 <input type="text" name="area" placeholder="مثلاً ۵۰۰ متر">
+
 </div>
+
 
 <div class="field full">
-<label>توضیحات پروژه</label>
-<textarea name="description" placeholder="هر توضیحی که درباره پروژه لازم است بدانیم..."></textarea>
+
+<label>
+توضیحات پروژه
+</label>
+
+<textarea
+name="description"
+placeholder="هر توضیحی که درباره پروژه لازم است بدانیم..."
+></textarea>
+
 </div>
 
 </div>
+
 
 <button type="submit" class="btn btn-primary submit">
 ثبت درخواست
 </button>
+
 
 <div class="notice" id="notice">
 فرم از نظر ظاهری آماده است. در مرحله بعد اتصال واقعی فرم به دریافت اطلاعات و پیامک را فعال می‌کنیم.
@@ -844,13 +1252,20 @@ footer{
 </form>
 
 </div>
+
 </div>
+
 </section>
 
 </main>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
 <div class="container footer-content">
 
 <div>
@@ -862,16 +1277,21 @@ footer{
 </div>
 
 </div>
+
 </footer>
 
 
 <script>
 
-document.getElementById("projectForm").addEventListener("submit",function(e){
+document
+.getElementById("projectForm")
+.addEventListener("submit",function(e){
 
 e.preventDefault();
 
-document.getElementById("notice").style.display="block";
+document
+.getElementById("notice")
+.style.display="block";
 
 });
 
