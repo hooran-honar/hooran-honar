@@ -42,7 +42,7 @@ a{
     margin:auto;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header{
     position:sticky;
@@ -137,63 +137,82 @@ header{
     width:100%;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
-    min-height:720px;
+    min-height:730px;
     display:flex;
     align-items:center;
     position:relative;
     overflow:hidden;
+    padding:70px 0;
 }
 
 .hero::before{
     content:"";
     position:absolute;
-    width:500px;
-    height:500px;
+    width:600px;
+    height:600px;
     border-radius:50%;
     background:rgba(25,205,190,.10);
-    filter:blur(80px);
-    top:-150px;
-    right:-100px;
+    filter:blur(100px);
+    top:-220px;
+    right:-140px;
 }
 
 .hero::after{
     content:"";
     position:absolute;
-    width:420px;
-    height:420px;
+    width:500px;
+    height:500px;
     border-radius:50%;
-    background:rgba(40,120,255,.08);
-    filter:blur(80px);
-    bottom:-180px;
-    left:-100px;
+    background:rgba(40,120,255,.07);
+    filter:blur(100px);
+    bottom:-250px;
+    left:-140px;
+}
+
+.hero-grid{
+    position:relative;
+    z-index:2;
+    display:grid;
+    grid-template-columns:1.08fr .92fr;
+    gap:55px;
+    align-items:center;
 }
 
 .hero-content{
-    position:relative;
-    z-index:2;
-    max-width:850px;
+    max-width:720px;
 }
 
 .badge{
-    display:inline-block;
-    padding:6px 16px;
-    border:1px solid rgba(53,215,198,.35);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 15px;
+    border:1px solid rgba(53,215,198,.32);
     background:rgba(53,215,198,.07);
     color:#55dfd0;
     border-radius:50px;
     font-size:12px;
-    margin-bottom:25px;
+    margin-bottom:24px;
     font-weight:500;
 }
 
+.badge::before{
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#48dfd0;
+    box-shadow:0 0 12px rgba(72,223,208,.8);
+}
+
 h1{
-    font-size:clamp(40px,6vw,72px);
-    line-height:1.35;
-    margin-bottom:25px;
-    letter-spacing:-1.5px;
+    font-size:clamp(40px,5.2vw,67px);
+    line-height:1.38;
+    margin-bottom:24px;
+    letter-spacing:-1.8px;
     font-weight:800;
 }
 
@@ -206,16 +225,16 @@ h1{
 
 .hero p{
     color:#b7c8cb;
-    max-width:720px;
-    font-size:17px;
-    line-height:2.2;
-    margin-bottom:35px;
+    max-width:680px;
+    font-size:16px;
+    line-height:2.25;
+    margin-bottom:30px;
 }
 
 .buttons{
     display:flex;
     flex-wrap:wrap;
-    gap:14px;
+    gap:13px;
 }
 
 .btn{
@@ -225,6 +244,8 @@ h1{
     display:inline-block;
     transition:.25s ease;
     font-family:inherit;
+    border:none;
+    cursor:pointer;
 }
 
 .btn-primary{
@@ -246,7 +267,183 @@ h1{
     background:rgba(255,255,255,.08);
 }
 
-/* SECTIONS */
+.hero-trust{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-top:28px;
+}
+
+.hero-trust span{
+    color:#829a9e;
+    font-size:11px;
+}
+
+.hero-trust span:not(:last-child)::after{
+    content:"•";
+    margin-right:9px;
+    color:#3ecfc1;
+}
+
+/* HERO PANEL */
+
+.hero-panel{
+    position:relative;
+}
+
+.system-card{
+    position:relative;
+    padding:30px;
+    border-radius:28px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.025)
+        );
+    border:1px solid rgba(255,255,255,.11);
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.07);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    overflow:hidden;
+}
+
+.system-card::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(53,215,198,.08);
+    filter:blur(45px);
+    top:-70px;
+    left:-50px;
+}
+
+.system-top{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:28px;
+}
+
+.system-label{
+    color:#54dfd0;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:.5px;
+}
+
+.system-status{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    color:#809699;
+    font-size:10px;
+}
+
+.system-status i{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#42d8ca;
+    display:inline-block;
+}
+
+.system-card h2{
+    position:relative;
+    font-size:26px;
+    line-height:1.7;
+    font-weight:800;
+    margin-bottom:24px;
+}
+
+.system-card h2 span{
+    color:#8fa5a9;
+    font-size:14px;
+    display:block;
+    font-weight:400;
+    line-height:2;
+    margin-top:5px;
+}
+
+.system-flow{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:11px;
+}
+
+.flow-item{
+    padding:16px;
+    min-height:88px;
+    border-radius:15px;
+    background:rgba(0,0,0,.16);
+    border:1px solid rgba(255,255,255,.07);
+    transition:.25s ease;
+}
+
+.flow-item:hover{
+    transform:translateY(-2px);
+    border-color:rgba(53,215,198,.25);
+}
+
+.flow-number{
+    color:#42d8ca;
+    font-size:10px;
+    font-weight:700;
+    direction:ltr;
+    text-align:right;
+    margin-bottom:4px;
+}
+
+.flow-item strong{
+    display:block;
+    font-size:13px;
+    font-weight:600;
+}
+
+.flow-item small{
+    display:block;
+    color:#82979b;
+    font-size:10px;
+    margin-top:2px;
+}
+
+.system-bottom{
+    position:relative;
+    margin-top:20px;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.07);
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+}
+
+.system-bottom strong{
+    display:block;
+    font-size:30px;
+    line-height:1;
+    color:#54dfd0;
+}
+
+.system-bottom span{
+    color:#84999d;
+    font-size:10px;
+}
+
+.system-bottom p{
+    color:#9eb1b5;
+    font-size:11px;
+    line-height:1.8;
+    max-width:170px;
+    text-align:left;
+}
+
+/* ================= SECTIONS ================= */
 
 section{
     padding:100px 0;
@@ -276,7 +473,7 @@ section{
     font-size:15px;
 }
 
-/* GLASS */
+/* ================= GLASS ================= */
 
 .glass{
     background:linear-gradient(
@@ -290,7 +487,7 @@ section{
     -webkit-backdrop-filter:blur(12px);
 }
 
-/* SYSTEM */
+/* ================= SYSTEM ================= */
 
 .steps{
     display:grid;
@@ -330,7 +527,7 @@ section{
     line-height:2;
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 
 .services{
     display:grid;
@@ -372,7 +569,7 @@ section{
     line-height:2;
 }
 
-/* MATERIAL BOX */
+/* ================= MATERIAL BOX ================= */
 
 .material-box{
     margin-top:25px;
@@ -407,7 +604,7 @@ section{
     font-size:12px;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 
 .about-grid{
     display:grid;
@@ -454,7 +651,7 @@ section{
     font-size:12px;
 }
 
-/* COMPLEX */
+/* ================= COMPLEX ================= */
 
 .complex{
     position:relative;
@@ -494,7 +691,7 @@ section{
     font-size:12px;
 }
 
-/* FORM */
+/* ================= FORM ================= */
 
 .request-box{
     display:grid;
@@ -586,7 +783,7 @@ section{
     margin-top:18px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
     padding:35px 0;
@@ -607,7 +804,7 @@ footer{
     font-weight:700;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:900px){
 
@@ -620,7 +817,23 @@ footer{
     }
 
     .hero{
-        min-height:650px;
+        min-height:auto;
+        padding:75px 0;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .hero-content{
+        max-width:800px;
+    }
+
+    .hero-panel{
+        max-width:650px;
+        width:100%;
+        margin:auto;
     }
 
     .steps,
@@ -656,15 +869,68 @@ footer{
     }
 
     .hero{
-        min-height:600px;
+        padding:60px 0 70px;
+    }
+
+    .hero-grid{
+        gap:35px;
     }
 
     h1{
-        font-size:40px;
+        font-size:39px;
+        letter-spacing:-1px;
     }
 
     .hero p{
         font-size:14px;
+        line-height:2.2;
+    }
+
+    .hero-trust{
+        gap:5px;
+    }
+
+    .hero-trust span{
+        font-size:9px;
+    }
+
+    .system-card{
+        padding:22px;
+        border-radius:22px;
+    }
+
+    .system-card h2{
+        font-size:22px;
+    }
+
+    .system-flow{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .flow-item{
+        padding:13px;
+        min-height:80px;
+    }
+
+    .flow-item strong{
+        font-size:11px;
+    }
+
+    .flow-item small{
+        font-size:9px;
+    }
+
+    .system-bottom{
+        align-items:center;
+    }
+
+    .system-bottom strong{
+        font-size:25px;
+    }
+
+    .system-bottom p{
+        font-size:9px;
+        max-width:145px;
     }
 
     .section-title h2{
@@ -687,6 +953,10 @@ footer{
     .request-info,
     .form-card{
         padding:25px;
+    }
+
+    .complex-card h2{
+        font-size:27px;
     }
 
     .footer-inner{
@@ -732,26 +1002,32 @@ footer{
 <main>
 
 
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
 
-<div class="container">
+<div class="container hero-grid">
+
 
 <div class="hero-content">
 
 <span class="badge">
-سیستم تخصصی هوران
+طراحی • آنالیز ساخت • تأمین • اجرا
 </span>
 
 <h1>
-پروژه اداری را
-<span class="gradient">سیستماتیک</span>
-پیش ببرید.
+پروژه‌های اداری را
+<br>
+<span class="gradient">از برداشت تا اجرا</span>
+<br>
+دقیق مدیریت کنید.
 </h1>
 
 <p>
-از برداشت دقیق و اندازه‌برداری تا طراحی، آنالیز ساخت،
-سفارش شیشه و مواد اولیه، تأمین متریال، هماهنگی تولید،
-اجرا و تحویل نهایی؛ همه‌چیز بر پایه یک فرآیند منظم و قابل کنترل.
+سیستم تخصصی هوران، اطلاعات واقعی پروژه را از مرحله
+برداشت و اندازه‌برداری به طراحی، آنالیز ساخت، سفارش
+متریال، هماهنگی تولید، اجرا و تحویل نهایی تبدیل می‌کند؛
+تا هر مرحله بر اساس اطلاعات مرحله قبل پیش برود.
 </p>
 
 <div class="buttons">
@@ -761,8 +1037,175 @@ footer{
 </a>
 
 <a href="#system" class="btn btn-secondary">
-آشنایی با سیستم هوران
+مشاهده فرآیند هوران
 </a>
+
+</div>
+
+<div class="hero-trust">
+
+<span>برداشت دقیق</span>
+<span>مستندسازی</span>
+<span>آنالیز ساخت</span>
+<span>تأمین متریال</span>
+<span>هماهنگی اجرا</span>
+<span>تحویل نهایی</span>
+
+</div>
+
+</div>
+
+
+<div class="hero-panel">
+
+<div class="system-card">
+
+<div class="system-top">
+
+<div class="system-label">
+HOORAN SYSTEM
+</div>
+
+<div class="system-status">
+<i></i>
+فرآیند یکپارچه پروژه
+</div>
+
+</div>
+
+<h2>
+یک مسیر مشخص
+برای کنترل پروژه
+<span>
+از اطلاعات میدانی تا اجرای نهایی
+</span>
+</h2>
+
+<div class="system-flow">
+
+<div class="flow-item">
+
+<div class="flow-number">
+01
+</div>
+
+<strong>
+برداشت دقیق
+</strong>
+
+<small>
+اطلاعات واقعی پروژه
+</small>
+
+</div>
+
+
+<div class="flow-item">
+
+<div class="flow-number">
+02
+</div>
+
+<strong>
+طراحی و مستندسازی
+</strong>
+
+<small>
+تبدیل اطلاعات به نقشه
+</small>
+
+</div>
+
+
+<div class="flow-item">
+
+<div class="flow-number">
+03
+</div>
+
+<strong>
+آنالیز ساخت
+</strong>
+
+<small>
+قطعات و متریال
+</small>
+
+</div>
+
+
+<div class="flow-item">
+
+<div class="flow-number">
+04
+</div>
+
+<strong>
+سفارش متریال
+</strong>
+
+<small>
+آماده‌سازی تولید
+</small>
+
+</div>
+
+
+<div class="flow-item">
+
+<div class="flow-number">
+05
+</div>
+
+<strong>
+تولید و اجرا
+</strong>
+
+<small>
+هماهنگی مراحل
+</small>
+
+</div>
+
+
+<div class="flow-item">
+
+<div class="flow-number">
+06
+</div>
+
+<strong>
+کنترل و تحویل
+</strong>
+
+<small>
+ثبت نتیجه نهایی
+</small>
+
+</div>
+
+</div>
+
+
+<div class="system-bottom">
+
+<div>
+
+<strong>
+0→100
+</strong>
+
+<span>
+از برداشت تا تحویل
+</span>
+
+</div>
+
+<p>
+یک فرآیند منظم برای کاهش خطا و دوباره‌کاری
+</p>
+
+</div>
 
 </div>
 
@@ -772,6 +1215,8 @@ footer{
 
 </section>
 
+
+<!-- ================= SYSTEM ================= -->
 
 <section id="system">
 
@@ -931,6 +1376,8 @@ footer{
 </section>
 
 
+<!-- ================= SERVICES ================= -->
+
 <section id="services">
 
 <div class="container">
@@ -1057,6 +1504,8 @@ footer{
 </section>
 
 
+<!-- ================= ABOUT ================= -->
+
 <section id="about">
 
 <div class="container">
@@ -1156,6 +1605,8 @@ footer{
 </section>
 
 
+<!-- ================= COMPLEX ================= -->
+
 <section class="complex">
 
 <div class="container">
@@ -1195,6 +1646,8 @@ footer{
 
 </section>
 
+
+<!-- ================= REQUEST ================= -->
 
 <section id="request">
 
@@ -1407,6 +1860,8 @@ class="btn btn-primary"
 
 </main>
 
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
