@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -148,6 +149,18 @@
 
     .nav-links a:hover::after{
       width:100%;
+    }
+
+    .portal-nav{
+      padding:9px 15px !important;
+      border:1px solid rgba(85,226,212,.22);
+      border-radius:999px;
+      background:rgba(85,226,212,.06);
+      color:var(--accent) !important;
+    }
+
+    .portal-nav::after{
+      display:none;
     }
 
     /* HERO */
@@ -590,6 +603,126 @@
       color:#c5d2d5;
     }
 
+    /* PORTAL */
+
+    .portal-section{
+      position:relative;
+    }
+
+    .portal-wrap{
+      border-radius:30px;
+      padding:42px;
+      background:
+        radial-gradient(circle at 85% 15%,rgba(85,226,212,.12),transparent 28%),
+        radial-gradient(circle at 10% 90%,rgba(22,135,159,.12),transparent 30%),
+        rgba(255,255,255,.035);
+      border:1px solid rgba(85,226,212,.12);
+      box-shadow:0 25px 80px rgba(0,0,0,.18);
+    }
+
+    .portal-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:25px;
+      margin-bottom:32px;
+    }
+
+    .portal-header h2{
+      font-size:34px;
+      margin-bottom:10px;
+    }
+
+    .portal-header p{
+      color:var(--muted);
+      font-size:13px;
+      max-width:680px;
+      line-height:2;
+    }
+
+    .portal-badge{
+      flex:none;
+      padding:9px 14px;
+      border-radius:999px;
+      color:var(--accent);
+      border:1px solid rgba(85,226,212,.18);
+      background:rgba(85,226,212,.06);
+      font-size:11px;
+    }
+
+    .portal-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:13px;
+    }
+
+    .portal-card{
+      min-height:170px;
+      padding:24px;
+      border-radius:20px;
+      background:rgba(255,255,255,.045);
+      border:1px solid rgba(255,255,255,.07);
+      transition:.25s;
+    }
+
+    .portal-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(85,226,212,.20);
+      background:rgba(255,255,255,.065);
+    }
+
+    .portal-icon{
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(85,226,212,.08);
+      color:var(--accent);
+      font-size:18px;
+      margin-bottom:18px;
+    }
+
+    .portal-card h3{
+      font-size:15px;
+      margin-bottom:7px;
+    }
+
+    .portal-card p{
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.9;
+    }
+
+    .portal-login{
+      margin-top:22px;
+      padding:22px;
+      border-radius:20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      background:rgba(0,0,0,.16);
+      border:1px solid rgba(255,255,255,.07);
+    }
+
+    .portal-login strong{
+      display:block;
+      font-size:15px;
+      margin-bottom:4px;
+    }
+
+    .portal-login span{
+      color:var(--muted);
+      font-size:10px;
+    }
+
+    .portal-login .btn{
+      min-height:45px;
+      white-space:nowrap;
+    }
+
     /* REQUEST */
 
     .request-grid{
@@ -752,8 +885,13 @@
     /* RESPONSIVE */
 
     @media(max-width:1050px){
+
       .system-grid{
         grid-template-columns:repeat(4,1fr);
+      }
+
+      .portal-grid{
+        grid-template-columns:repeat(2,1fr);
       }
 
       .hero-grid{
@@ -766,6 +904,7 @@
     }
 
     @media(max-width:800px){
+
       .nav-links{
         display:none;
       }
@@ -791,9 +930,19 @@
       .chips{
         justify-content:flex-start;
       }
+
+      .portal-header{
+        flex-direction:column;
+      }
+
+      .portal-login{
+        flex-direction:column;
+        align-items:flex-start;
+      }
     }
 
     @media(max-width:600px){
+
       .container{
         width:min(100% - 24px,var(--max));
       }
@@ -812,6 +961,18 @@
 
       .services-grid{
         grid-template-columns:1fr;
+      }
+
+      .portal-grid{
+        grid-template-columns:1fr;
+      }
+
+      .portal-wrap{
+        padding:28px 18px;
+      }
+
+      .portal-header h2{
+        font-size:28px;
       }
 
       .form-grid{
@@ -860,6 +1021,7 @@
       <a href="#system">سیستم تخصصی</a>
       <a href="#services">خدمات</a>
       <a href="#about">درباره هوران</a>
+      <a href="#portal" class="portal-nav">پرتال پروژه</a>
       <a href="#request">درخواست بازدید</a>
     </nav>
 
@@ -897,8 +1059,8 @@
             درخواست بازدید پروژه
           </a>
 
-          <a href="#system" class="btn btn-secondary">
-            مشاهده فرآیند هوران
+          <a href="#portal" class="btn btn-secondary">
+            ورود به پرتال پروژه
           </a>
         </div>
 
@@ -1242,6 +1404,102 @@
   </section>
 
 
+  <!-- PORTAL PROJECTS -->
+
+  <section id="portal" class="portal-section">
+
+    <div class="container">
+
+      <div class="portal-wrap">
+
+        <div class="portal-header">
+
+          <div>
+            <div class="eyebrow">HOORAN PROJECT PORTAL</div>
+
+            <h2>
+              پرتال پروژه‌های هوران
+            </h2>
+
+            <p>
+              فضای اختصاصی برای مدیریت و تبادل مستندات پروژه بین هوران و شرکت‌های طرف همکاری.
+              در این بخش می‌توان نقشه‌ها، آنالیزها، تصاویر، مستندات اجرایی و فایل‌های پروژه را
+              در یک مسیر مشخص و قابل کنترل مدیریت کرد.
+            </p>
+          </div>
+
+          <div class="portal-badge">
+            فضای اختصاصی پروژه
+          </div>
+
+        </div>
+
+
+        <div class="portal-grid">
+
+          <div class="portal-card">
+            <div class="portal-icon">⌂</div>
+            <h3>پروژه‌های اختصاصی</h3>
+            <p>
+              هر شرکت می‌تواند پروژه‌های مربوط به خود را در یک فضای اختصاصی مشاهده کند.
+            </p>
+          </div>
+
+
+          <div class="portal-card">
+            <div class="portal-icon">▣</div>
+            <h3>نقشه و فایل‌های اجرایی</h3>
+            <p>
+              امکان دسترسی به نقشه‌ها، فایل‌های PDF، مستندات و نسخه‌های تأییدشده پروژه.
+            </p>
+          </div>
+
+
+          <div class="portal-card">
+            <div class="portal-icon">≡</div>
+            <h3>آنالیز و لیست متریال</h3>
+            <p>
+              دریافت آنالیز ساخت، لیست سفارش، متریال و ملزومات موردنیاز پروژه.
+            </p>
+          </div>
+
+
+          <div class="portal-card">
+            <div class="portal-icon">↥</div>
+            <h3>ارسال فایل به هوران</h3>
+            <p>
+              در مرحله بعد امکان ارسال نقشه، عکس و سایر مستندات از طرف شرکت نیز اضافه می‌شود.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="portal-login">
+
+          <div>
+            <strong>
+              دسترسی شرکت‌های طرف همکاری
+            </strong>
+
+            <span>
+              ورود به فضای اختصاصی پروژه در مرحله بعد فعال خواهد شد.
+            </span>
+          </div>
+
+          <a href="#request" class="btn btn-primary">
+            درخواست همکاری و پروژه
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
   <!-- REQUEST -->
 
   <section id="request">
@@ -1275,7 +1533,6 @@
         method="POST"
       >
 
-        <!-- Web3Forms -->
         <input
           type="hidden"
           name="access_key"
@@ -1300,7 +1557,6 @@
           value="https://hooran-honar.github.io/hooran-honar/hooran-new.html?sent=1"
         >
 
-        <!-- Anti Bot -->
         <input
           type="checkbox"
           name="botcheck"
@@ -1397,6 +1653,7 @@
 
           <div class="field">
             <label for="area">متراژ تقریبی</label>
+
             <input
               id="area"
               type="text"
@@ -1468,11 +1725,14 @@
       document.getElementById("successMessage");
 
     if(successMessage){
+
       successMessage.classList.add("show");
+
       successMessage.scrollIntoView({
         behavior:"smooth",
         block:"center"
       });
+
     }
 
     window.history.replaceState(
@@ -1480,9 +1740,11 @@
       document.title,
       window.location.pathname
     );
+
   }
 
 </script>
 
 </body>
 </html>
+```
