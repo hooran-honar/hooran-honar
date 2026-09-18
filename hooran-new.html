@@ -1,1898 +1,1486 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>هوران هنر ماندگار البرز | سیستم تخصصی پروژه‌های اداری</title>
-
-<meta name="description" content="سیستم تخصصی هوران برای برداشت، طراحی، آنالیز ساخت، سفارش متریال، هماهنگی تولید، اجرا و تحویل پروژه‌های اداری.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:"Vazirmatn",Tahoma,Arial,sans-serif;
-    background:#071116;
-    color:#eef7f7;
-    line-height:2;
-    font-weight:400;
-}
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-.container{
-    width:min(1180px,92%);
-    margin:auto;
-}
-
-/* ================= HEADER ================= */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(5,14,18,.88);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(255,255,255,.07);
-}
-
-.nav{
-    min-height:88px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    color:#fff;
-}
-
-.logo-mark{
-    width:50px;
-    height:50px;
-    border-radius:16px;
-    display:grid;
-    place-items:center;
-    background:linear-gradient(135deg,#55e2d4,#16879f);
-    color:#061014;
-    font-size:26px;
-    font-weight:800;
-    box-shadow:
-        0 8px 30px rgba(53,215,198,.20),
-        inset 0 1px 0 rgba(255,255,255,.30);
-}
-
-.logo-text{
-    display:flex;
-    flex-direction:column;
-    line-height:1.3;
-}
-
-.logo-text strong{
-    font-size:22px;
-    font-weight:800;
-    letter-spacing:-.7px;
-}
-
-.logo-text span{
-    font-size:10px;
-    color:#8fa5a9;
-    font-weight:400;
-    margin-top:4px;
-}
-
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:30px;
-    font-size:13px;
-    color:#b8cacc;
-}
-
-.nav-links a{
-    position:relative;
-    transition:.25s ease;
-    padding:8px 0;
-}
-
-.nav-links a::after{
-    content:"";
-    position:absolute;
-    right:0;
-    bottom:0;
-    width:0;
-    height:2px;
-    border-radius:5px;
-    background:#42d8ca;
-    transition:.25s ease;
-}
-
-.nav-links a:hover{
-    color:#55e0d2;
-}
-
-.nav-links a:hover::after{
-    width:100%;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-    min-height:730px;
-    display:flex;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-    padding:70px 0;
-}
-
-.hero::before{
-    content:"";
-    position:absolute;
-    width:600px;
-    height:600px;
-    border-radius:50%;
-    background:rgba(25,205,190,.10);
-    filter:blur(100px);
-    top:-220px;
-    right:-140px;
-}
-
-.hero::after{
-    content:"";
-    position:absolute;
-    width:500px;
-    height:500px;
-    border-radius:50%;
-    background:rgba(40,120,255,.07);
-    filter:blur(100px);
-    bottom:-250px;
-    left:-140px;
-}
-
-.hero-grid{
-    position:relative;
-    z-index:2;
-    display:grid;
-    grid-template-columns:1.08fr .92fr;
-    gap:55px;
-    align-items:center;
-}
-
-.hero-content{
-    max-width:720px;
-}
-
-.badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:7px 15px;
-    border:1px solid rgba(53,215,198,.32);
-    background:rgba(53,215,198,.07);
-    color:#55dfd0;
-    border-radius:50px;
-    font-size:12px;
-    margin-bottom:24px;
-    font-weight:500;
-}
-
-.badge::before{
-    content:"";
-    width:7px;
-    height:7px;
-    border-radius:50%;
-    background:#48dfd0;
-    box-shadow:0 0 12px rgba(72,223,208,.8);
-}
-
-h1{
-    font-size:clamp(40px,5.2vw,67px);
-    line-height:1.38;
-    margin-bottom:24px;
-    letter-spacing:-1.8px;
-    font-weight:800;
-}
-
-.gradient{
-    background:linear-gradient(90deg,#62e7da,#53aeea);
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-}
-
-.hero p{
-    color:#b7c8cb;
-    max-width:680px;
-    font-size:16px;
-    line-height:2.25;
-    margin-bottom:30px;
-}
-
-.buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:13px;
-}
-
-.btn{
-    padding:12px 24px;
-    border-radius:12px;
-    font-weight:600;
-    display:inline-block;
-    transition:.25s ease;
-    font-family:inherit;
-    border:none;
-    cursor:pointer;
-}
-
-.btn-primary{
-    background:linear-gradient(135deg,#2ed8c5,#208faa);
-    color:#061014;
-}
-
-.btn-primary:hover{
-    transform:translateY(-2px);
-    box-shadow:0 10px 28px rgba(46,216,197,.16);
-}
-
-.btn-secondary{
-    border:1px solid rgba(255,255,255,.14);
-    background:rgba(255,255,255,.04);
-}
-
-.btn-secondary:hover{
-    background:rgba(255,255,255,.08);
-}
-
-.hero-trust{
-    display:flex;
-    flex-wrap:wrap;
-    gap:9px;
-    margin-top:28px;
-}
-
-.hero-trust span{
-    color:#829a9e;
-    font-size:11px;
-}
-
-.hero-trust span:not(:last-child)::after{
-    content:"•";
-    margin-right:9px;
-    color:#3ecfc1;
-}
-
-/* HERO PANEL */
-
-.hero-panel{
-    position:relative;
-}
-
-.system-card{
-    position:relative;
-    padding:30px;
-    border-radius:28px;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.10),
-            rgba(255,255,255,.025)
-        );
-    border:1px solid rgba(255,255,255,.11);
-    box-shadow:
-        0 30px 80px rgba(0,0,0,.25),
-        inset 0 1px 0 rgba(255,255,255,.07);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-    overflow:hidden;
-}
-
-.system-card::before{
-    content:"";
-    position:absolute;
-    width:180px;
-    height:180px;
-    border-radius:50%;
-    background:rgba(53,215,198,.08);
-    filter:blur(45px);
-    top:-70px;
-    left:-50px;
-}
-
-.system-top{
-    position:relative;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:28px;
-}
-
-.system-label{
-    color:#54dfd0;
-    font-size:11px;
-    font-weight:600;
-    letter-spacing:.5px;
-}
-
-.system-status{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    color:#809699;
-    font-size:10px;
-}
-
-.system-status i{
-    width:7px;
-    height:7px;
-    border-radius:50%;
-    background:#42d8ca;
-    display:inline-block;
-}
-
-.system-card h2{
-    position:relative;
-    font-size:26px;
-    line-height:1.7;
-    font-weight:800;
-    margin-bottom:24px;
-}
-
-.system-card h2 span{
-    color:#8fa5a9;
-    font-size:14px;
-    display:block;
-    font-weight:400;
-    line-height:2;
-    margin-top:5px;
-}
-
-.system-flow{
-    position:relative;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:11px;
-}
-
-.flow-item{
-    padding:16px;
-    min-height:88px;
-    border-radius:15px;
-    background:rgba(0,0,0,.16);
-    border:1px solid rgba(255,255,255,.07);
-    transition:.25s ease;
-}
-
-.flow-item:hover{
-    transform:translateY(-2px);
-    border-color:rgba(53,215,198,.25);
-}
-
-.flow-number{
-    color:#42d8ca;
-    font-size:10px;
-    font-weight:700;
-    direction:ltr;
-    text-align:right;
-    margin-bottom:4px;
-}
-
-.flow-item strong{
-    display:block;
-    font-size:13px;
-    font-weight:600;
-}
-
-.flow-item small{
-    display:block;
-    color:#82979b;
-    font-size:10px;
-    margin-top:2px;
-}
-
-.system-bottom{
-    position:relative;
-    margin-top:20px;
-    padding-top:18px;
-    border-top:1px solid rgba(255,255,255,.07);
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
-}
-
-.system-bottom strong{
-    display:block;
-    font-size:30px;
-    line-height:1;
-    color:#54dfd0;
-}
-
-.system-bottom span{
-    color:#84999d;
-    font-size:10px;
-}
-
-.system-bottom p{
-    color:#9eb1b5;
-    font-size:11px;
-    line-height:1.8;
-    max-width:170px;
-    text-align:left;
-}
-
-/* ================= SECTIONS ================= */
-
-section{
-    padding:100px 0;
-}
-
-.section-title{
-    max-width:720px;
-    margin-bottom:45px;
-}
-
-.section-title span{
-    color:#45d9ca;
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:1px;
-}
-
-.section-title h2{
-    font-size:36px;
-    margin:8px 0 14px;
-    font-weight:800;
-    letter-spacing:-.8px;
-}
-
-.section-title p{
-    color:#9eb1b5;
-    font-size:15px;
-}
-
-/* ================= GLASS ================= */
-
-.glass{
-    background:linear-gradient(
-        145deg,
-        rgba(255,255,255,.075),
-        rgba(255,255,255,.025)
-    );
-    border:1px solid rgba(255,255,255,.09);
-    border-radius:22px;
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-}
-
-/* ================= SYSTEM ================= */
-
-.steps{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.step{
-    padding:28px;
-    min-height:205px;
-    transition:.25s ease;
-}
-
-.step:hover{
-    transform:translateY(-4px);
-    border-color:rgba(53,215,198,.20);
-}
-
-.number{
-    font-size:12px;
-    color:#42d8ca;
-    margin-bottom:18px;
-    font-weight:700;
-    direction:ltr;
-    text-align:right;
-}
-
-.step h3{
-    margin-bottom:10px;
-    font-size:19px;
-    font-weight:700;
-}
-
-.step p{
-    color:#9eb1b5;
-    font-size:13px;
-    line-height:2;
-}
-
-/* ================= SERVICES ================= */
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-}
-
-.service{
-    padding:28px;
-    transition:.25s ease;
-}
-
-.service:hover{
-    transform:translateY(-4px);
-    border-color:rgba(53,215,198,.20);
-}
-
-.service-icon{
-    width:46px;
-    height:46px;
-    border-radius:13px;
-    background:rgba(53,215,198,.10);
-    display:grid;
-    place-items:center;
-    color:#42d8ca;
-    font-size:20px;
-    margin-bottom:20px;
-}
-
-.service h3{
-    margin-bottom:10px;
-    font-size:18px;
-    font-weight:700;
-}
-
-.service p{
-    color:#9eb1b5;
-    font-size:13px;
-    line-height:2;
-}
-
-/* ================= MATERIAL BOX ================= */
-
-.material-box{
-    margin-top:25px;
-    padding:30px;
-}
-
-.material-box h3{
-    font-size:22px;
-    margin-bottom:12px;
-    font-weight:800;
-}
-
-.material-box p{
-    color:#a8b9bc;
-    font-size:14px;
-    line-height:2.2;
-}
-
-.material-list{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:20px;
-}
-
-.material-list span{
-    padding:7px 14px;
-    border-radius:30px;
-    background:rgba(53,215,198,.08);
-    border:1px solid rgba(53,215,198,.16);
-    color:#bde9e5;
-    font-size:12px;
-}
-
-/* ================= ABOUT ================= */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:22px;
-}
-
-.about-card{
-    padding:35px;
-}
-
-.about-card h3{
-    font-size:25px;
-    margin-bottom:18px;
-    font-weight:800;
-}
-
-.about-card p{
-    color:#a9babc;
-    font-size:14px;
-    line-height:2.3;
-}
-
-.stats{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.stat{
-    padding:25px;
-    text-align:center;
-}
-
-.stat strong{
-    display:block;
-    font-size:32px;
-    color:#4edfd0;
-    font-weight:800;
-}
-
-.stat span{
-    color:#9eb1b5;
-    font-size:12px;
-}
-
-/* ================= COMPLEX ================= */
-
-.complex{
-    position:relative;
-    overflow:hidden;
-}
-
-.complex-card{
-    padding:45px;
-}
-
-.complex-card h2{
-    font-size:34px;
-    margin-bottom:18px;
-    font-weight:800;
-}
-
-.complex-card p{
-    color:#a8b9bc;
-    max-width:800px;
-    font-size:15px;
-    line-height:2.3;
-}
-
-.complex-list{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-top:25px;
-}
-
-.complex-list span{
-    padding:8px 14px;
-    border-radius:30px;
-    border:1px solid rgba(255,255,255,.10);
-    background:rgba(255,255,255,.04);
-    color:#c9d6d8;
-    font-size:12px;
-}
-
-/* ================= FORM ================= */
-
-.request-box{
-    display:grid;
-    grid-template-columns:.8fr 1.2fr;
-    gap:25px;
-}
-
-.request-info{
-    padding:35px;
-}
-
-.request-info h3{
-    font-size:27px;
-    margin-bottom:15px;
-    font-weight:800;
-}
-
-.request-info p{
-    color:#a8b9bc;
-    font-size:14px;
-    line-height:2.3;
-    margin-bottom:25px;
-}
-
-.contact-phone{
-    display:inline-block;
-    direction:ltr;
-    color:#54dfd0;
-    font-size:20px;
-    font-weight:700;
-}
-
-.form-card{
-    padding:35px;
-}
-
-.form-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.field{
-    display:flex;
-    flex-direction:column;
-    gap:7px;
-}
-
-.field.full{
-    grid-column:1/-1;
-}
-
-.field label{
-    font-size:12px;
-    color:#b8c8ca;
-}
-
-.field input,
-.field select,
-.field textarea{
-    width:100%;
-    border:1px solid rgba(255,255,255,.10);
-    background:rgba(0,0,0,.20);
-    color:#eef7f7;
-    border-radius:12px;
-    padding:12px 14px;
-    font-family:inherit;
-    font-size:13px;
-    outline:none;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus{
-    border-color:rgba(53,215,198,.45);
-}
-
-.field textarea{
-    min-height:125px;
-    resize:vertical;
-}
-
-.field select option{
-    background:#101b20;
-    color:#fff;
-}
-
-.form-submit{
-    margin-top:18px;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    padding:35px 0;
-    border-top:1px solid rgba(255,255,255,.08);
-    color:#829598;
-    font-size:12px;
-}
-
-.footer-inner{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-}
-
-.footer-brand{
-    color:#d8e5e6;
-    font-weight:700;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:900px){
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>سیستم تخصصی هوران | هوران هنر ماندگار البرز</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#071116;
+      --bg2:#0b181e;
+      --card:rgba(255,255,255,.055);
+      --card2:rgba(255,255,255,.075);
+      --line:rgba(255,255,255,.10);
+      --text:#f4fbfc;
+      --muted:#9db0b5;
+      --accent:#55e2d4;
+      --accent2:#16879f;
+      --max:1200px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:"Vazirmatn",sans-serif;
+      background:
+        radial-gradient(circle at 80% 10%,rgba(31,143,158,.18),transparent 30%),
+        radial-gradient(circle at 10% 30%,rgba(85,226,212,.08),transparent 25%),
+        var(--bg);
+      color:var(--text);
+      line-height:1.8;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(var(--max),calc(100% - 40px));
+      margin:auto;
+    }
+
+    .glass{
+      background:var(--card);
+      border:1px solid var(--line);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      box-shadow:0 20px 60px rgba(0,0,0,.18);
+    }
+
+    /* HEADER */
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(5,14,18,.88);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.07);
+    }
 
     .nav{
-        min-height:72px;
+      min-height:88px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
     }
 
-    .nav-links{
-        display:none;
-    }
-
-    .hero{
-        min-height:auto;
-        padding:75px 0;
-    }
-
-    .hero-grid{
-        grid-template-columns:1fr;
-        gap:45px;
-    }
-
-    .hero-content{
-        max-width:800px;
-    }
-
-    .hero-panel{
-        max-width:650px;
-        width:100%;
-        margin:auto;
-    }
-
-    .steps,
-    .services{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .about-grid,
-    .request-box{
-        grid-template-columns:1fr;
-    }
-}
-
-@media(max-width:600px){
-
-    section{
-        padding:75px 0;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
     }
 
     .logo-mark{
-        width:42px;
-        height:42px;
-        border-radius:13px;
-        font-size:22px;
+      width:50px;
+      height:50px;
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      font-weight:900;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#061116;
+      box-shadow:0 10px 30px rgba(85,226,212,.18);
+    }
+
+    .logo-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.4;
     }
 
     .logo-text strong{
-        font-size:17px;
+      font-size:22px;
+      font-weight:900;
     }
 
     .logo-text span{
-        font-size:9px;
+      font-size:11px;
+      color:var(--muted);
     }
 
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:28px;
+    }
+
+    .nav-links a{
+      color:#c8d6d9;
+      font-size:14px;
+      position:relative;
+      transition:.25s;
+    }
+
+    .nav-links a:hover{
+      color:var(--accent);
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      right:0;
+      bottom:-8px;
+      width:0;
+      height:2px;
+      background:var(--accent);
+      transition:.25s;
+    }
+
+    .nav-links a:hover::after{
+      width:100%;
+    }
+
+    /* HERO */
+
     .hero{
-        padding:60px 0 70px;
+      padding:90px 0 70px;
     }
 
     .hero-grid{
-        gap:35px;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:50px;
+      align-items:center;
     }
 
-    h1{
-        font-size:39px;
-        letter-spacing:-1px;
+    .badge{
+      display:inline-flex;
+      padding:7px 14px;
+      border:1px solid rgba(85,226,212,.22);
+      background:rgba(85,226,212,.07);
+      color:var(--accent);
+      border-radius:999px;
+      font-size:12px;
+      margin-bottom:22px;
+    }
+
+    .hero h1{
+      font-size:clamp(38px,5vw,68px);
+      line-height:1.25;
+      letter-spacing:-1.5px;
+      margin-bottom:24px;
+      font-weight:900;
+    }
+
+    .hero h1 span{
+      color:var(--accent);
     }
 
     .hero p{
-        font-size:14px;
-        line-height:2.2;
+      color:var(--muted);
+      font-size:17px;
+      max-width:720px;
+      line-height:2.1;
     }
 
-    .hero-trust{
-        gap:5px;
+    .hero-buttons{
+      display:flex;
+      gap:14px;
+      margin-top:30px;
+      flex-wrap:wrap;
     }
 
-    .hero-trust span{
-        font-size:9px;
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:0 24px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      font-family:inherit;
+      font-size:14px;
+      cursor:pointer;
+      transition:.25s;
     }
 
-    .system-card{
-        padding:22px;
-        border-radius:22px;
+    .btn-primary{
+      color:#041114;
+      background:var(--accent);
+      font-weight:800;
+      box-shadow:0 12px 35px rgba(85,226,212,.16);
     }
 
-    .system-card h2{
-        font-size:22px;
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      box-shadow:0 18px 40px rgba(85,226,212,.24);
     }
 
-    .system-flow{
-        grid-template-columns:1fr 1fr;
+    .btn-secondary{
+      color:#dbe8ea;
+      background:rgba(255,255,255,.04);
+    }
+
+    .btn-secondary:hover{
+      background:rgba(255,255,255,.08);
+    }
+
+    .trust{
+      margin-top:34px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+    }
+
+    .trust span{
+      font-size:11px;
+      color:#b6c7ca;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.07);
+    }
+
+    /* HERO PANEL */
+
+    .hero-panel{
+      border-radius:28px;
+      padding:28px;
+    }
+
+    .panel-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:25px;
+    }
+
+    .panel-title{
+      font-size:12px;
+      letter-spacing:2px;
+      color:var(--accent);
+      font-weight:800;
+    }
+
+    .status{
+      font-size:10px;
+      color:#9deee4;
+      padding:5px 9px;
+      border-radius:999px;
+      background:rgba(85,226,212,.08);
+      border:1px solid rgba(85,226,212,.15);
+    }
+
+    .hero-panel h3{
+      font-size:26px;
+      margin-bottom:24px;
+    }
+
+    .flow{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
     }
 
     .flow-item{
-        padding:13px;
-        min-height:80px;
+      display:flex;
+      gap:13px;
+      align-items:center;
+      padding:13px;
+      border-radius:14px;
+      background:rgba(255,255,255,.035);
+      border:1px solid rgba(255,255,255,.055);
+    }
+
+    .flow-number{
+      width:34px;
+      height:34px;
+      border-radius:10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(85,226,212,.09);
+      color:var(--accent);
+      font-size:11px;
+      font-weight:800;
+      flex:none;
     }
 
     .flow-item strong{
-        font-size:11px;
+      display:block;
+      font-size:13px;
     }
 
     .flow-item small{
-        font-size:9px;
+      color:var(--muted);
+      font-size:10px;
     }
 
-    .system-bottom{
-        align-items:center;
+    .panel-bottom{
+      margin-top:20px;
+      padding-top:20px;
+      border-top:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
     }
 
-    .system-bottom strong{
-        font-size:25px;
+    .panel-bottom strong{
+      font-size:25px;
+      color:var(--accent);
     }
 
-    .system-bottom p{
-        font-size:9px;
-        max-width:145px;
+    .panel-bottom span{
+      color:var(--muted);
+      font-size:11px;
     }
 
-    .section-title h2{
-        font-size:29px;
+    /* SECTION */
+
+    section{
+      padding:90px 0;
     }
 
-    .steps,
-    .services,
-    .stats,
+    .section-head{
+      max-width:760px;
+      margin-bottom:45px;
+    }
+
+    .eyebrow{
+      color:var(--accent);
+      font-size:12px;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+
+    .section-head h2{
+      font-size:clamp(28px,4vw,44px);
+      line-height:1.4;
+      margin-bottom:15px;
+    }
+
+    .section-head p{
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    /* SYSTEM */
+
+    .system-grid{
+      display:grid;
+      grid-template-columns:repeat(7,1fr);
+      gap:10px;
+    }
+
+    .system-card{
+      padding:22px 16px;
+      min-height:180px;
+      border-radius:18px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .system-card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      right:0;
+      width:100%;
+      height:2px;
+      background:linear-gradient(90deg,transparent,var(--accent),transparent);
+      opacity:.5;
+    }
+
+    .system-number{
+      color:var(--accent);
+      font-size:11px;
+      font-weight:900;
+      margin-bottom:20px;
+    }
+
+    .system-card h3{
+      font-size:15px;
+      margin-bottom:9px;
+    }
+
+    .system-card p{
+      color:var(--muted);
+      font-size:11px;
+      line-height:1.9;
+    }
+
+    /* MATERIAL */
+
+    .material-box{
+      margin-top:28px;
+      padding:30px;
+      border-radius:24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
+    }
+
+    .material-box h3{
+      font-size:22px;
+      margin-bottom:8px;
+    }
+
+    .material-box p{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .chips{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .chip{
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(85,226,212,.06);
+      border:1px solid rgba(85,226,212,.13);
+      color:#bfe9e5;
+      font-size:11px;
+    }
+
+    /* SERVICES */
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .service-card{
+      padding:28px;
+      border-radius:22px;
+      min-height:210px;
+      transition:.25s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-4px);
+      background:var(--card2);
+      border-color:rgba(85,226,212,.16);
+    }
+
+    .service-icon{
+      width:44px;
+      height:44px;
+      border-radius:13px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(85,226,212,.08);
+      color:var(--accent);
+      font-weight:900;
+      margin-bottom:22px;
+    }
+
+    .service-card h3{
+      font-size:17px;
+      margin-bottom:10px;
+    }
+
+    .service-card p{
+      color:var(--muted);
+      font-size:12px;
+      line-height:2;
+    }
+
+    /* ABOUT */
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      align-items:center;
+    }
+
+    .about-box{
+      padding:35px;
+      border-radius:25px;
+    }
+
+    .about-box h2{
+      font-size:34px;
+      margin-bottom:18px;
+    }
+
+    .about-box p{
+      color:var(--muted);
+      line-height:2.2;
+      font-size:14px;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    .stat{
+      padding:25px;
+      border-radius:20px;
+      text-align:center;
+    }
+
+    .stat strong{
+      display:block;
+      font-size:32px;
+      color:var(--accent);
+      line-height:1.3;
+    }
+
+    .stat span{
+      display:block;
+      margin-top:7px;
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    /* COMPLEX */
+
+    .complex{
+      border-radius:28px;
+      padding:45px;
+      background:
+        radial-gradient(circle at 20% 20%,rgba(85,226,212,.10),transparent 30%),
+        rgba(255,255,255,.035);
+    }
+
+    .complex h2{
+      font-size:35px;
+      margin-bottom:15px;
+      max-width:750px;
+    }
+
+    .complex p{
+      color:var(--muted);
+      max-width:750px;
+      margin-bottom:25px;
+    }
+
+    .complex-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+    }
+
+    .complex-tags span{
+      padding:8px 13px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.035);
+      font-size:11px;
+      color:#c5d2d5;
+    }
+
+    /* REQUEST */
+
+    .request-grid{
+      display:grid;
+      grid-template-columns:.75fr 1.25fr;
+      gap:25px;
+      align-items:stretch;
+    }
+
+    .request-info{
+      padding:35px;
+      border-radius:25px;
+    }
+
+    .request-info h2{
+      font-size:31px;
+      margin-bottom:15px;
+    }
+
+    .request-info p{
+      color:var(--muted);
+      font-size:13px;
+      line-height:2.1;
+    }
+
+    .contact{
+      margin-top:30px;
+      padding-top:25px;
+      border-top:1px solid var(--line);
+    }
+
+    .contact small{
+      color:var(--muted);
+      display:block;
+      font-size:10px;
+    }
+
+    .contact strong{
+      display:block;
+      margin-top:5px;
+      color:var(--accent);
+      font-size:20px;
+      direction:ltr;
+      text-align:right;
+    }
+
+    .form-card{
+      padding:30px;
+      border-radius:25px;
+    }
+
     .form-grid{
-        grid-template-columns:1fr;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:7px;
     }
 
     .field.full{
-        grid-column:auto;
+      grid-column:1/-1;
     }
 
-    .complex-card,
-    .about-card,
-    .request-info,
-    .form-card{
-        padding:25px;
+    .field label{
+      color:#cbd9dc;
+      font-size:11px;
     }
 
-    .complex-card h2{
-        font-size:27px;
+    .field input,
+    .field select,
+    .field textarea{
+      width:100%;
+      border:1px solid rgba(255,255,255,.09);
+      background:rgba(0,0,0,.18);
+      color:#f2f7f8;
+      border-radius:12px;
+      padding:12px 13px;
+      outline:none;
+      font-family:inherit;
+      font-size:12px;
+      transition:.2s;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus{
+      border-color:rgba(85,226,212,.45);
+      box-shadow:0 0 0 3px rgba(85,226,212,.06);
+    }
+
+    .field textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .field select option{
+      background:#0b181e;
+      color:#fff;
+    }
+
+    .form-submit{
+      margin-top:18px;
+      width:100%;
+    }
+
+    .form-note{
+      margin-top:12px;
+      color:#778b90;
+      font-size:9px;
+      text-align:center;
+    }
+
+    /* FOOTER */
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:30px 0;
+      margin-top:30px;
     }
 
     .footer-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .footer-inner p{
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    .footer-phone{
+      color:var(--accent);
+      direction:ltr;
+    }
+
+    /* SUCCESS MESSAGE */
+
+    .success-message{
+      display:none;
+      margin-bottom:18px;
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(85,226,212,.08);
+      border:1px solid rgba(85,226,212,.18);
+      color:#bcece7;
+      font-size:12px;
+      text-align:center;
+    }
+
+    .success-message.show{
+      display:block;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1050px){
+      .system-grid{
+        grid-template-columns:repeat(4,1fr);
+      }
+
+      .hero-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-panel{
+        max-width:700px;
+      }
+    }
+
+    @media(max-width:800px){
+      .nav-links{
+        display:none;
+      }
+
+      .hero{
+        padding-top:60px;
+      }
+
+      .services-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .about-grid,
+      .request-grid{
+        grid-template-columns:1fr;
+      }
+
+      .material-box{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .chips{
+        justify-content:flex-start;
+      }
+    }
+
+    @media(max-width:600px){
+      .container{
+        width:min(100% - 24px,var(--max));
+      }
+
+      section{
+        padding:65px 0;
+      }
+
+      .hero h1{
+        font-size:38px;
+      }
+
+      .system-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .services-grid{
+        grid-template-columns:1fr;
+      }
+
+      .form-grid{
+        grid-template-columns:1fr;
+      }
+
+      .field.full{
+        grid-column:auto;
+      }
+
+      .complex{
+        padding:28px 20px;
+      }
+
+      .complex h2{
+        font-size:27px;
+      }
+
+      .stats{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .footer-inner{
         flex-direction:column;
         text-align:center;
+      }
     }
-}
-
-</style>
+  </style>
 </head>
 
 <body>
 
 <header>
+  <div class="container nav">
 
-<div class="container nav">
+    <a href="#" class="brand">
+      <div class="logo-mark">ه</div>
 
-<a href="#home" class="logo">
+      <div class="logo-text">
+        <strong>هوران</strong>
+        <span>هنر ماندگار البرز</span>
+      </div>
+    </a>
 
-<div class="logo-mark">ه</div>
+    <nav class="nav-links">
+      <a href="#system">سیستم تخصصی</a>
+      <a href="#services">خدمات</a>
+      <a href="#about">درباره هوران</a>
+      <a href="#request">درخواست بازدید</a>
+    </nav>
 
-<div class="logo-text">
-<strong>هوران</strong>
-<span>هنر ماندگار البرز</span>
-</div>
-
-</a>
-
-<nav class="nav-links">
-
-<a href="#system">سیستم تخصصی</a>
-<a href="#services">خدمات</a>
-<a href="#about">درباره هوران</a>
-<a href="#request">درخواست بازدید</a>
-
-</nav>
-
-</div>
-
+  </div>
 </header>
 
 
 <main>
 
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="badge">
+          طراحی • آنالیز ساخت • تأمین • اجرا
+        </div>
+
+        <h1>
+          پروژه‌های اداری را<br>
+          از برداشت تا اجرا<br>
+          <span>دقیق مدیریت کنید.</span>
+        </h1>
+
+        <p>
+          سیستم تخصصی هوران، اطلاعات واقعی پروژه را از مرحله برداشت و
+          اندازه‌برداری به طراحی، آنالیز ساخت، سفارش متریال، هماهنگی تولید،
+          اجرا و تحویل نهایی تبدیل می‌کند؛ تا هر مرحله بر اساس اطلاعات مرحله قبل پیش برود.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#request" class="btn btn-primary">
+            درخواست بازدید پروژه
+          </a>
+
+          <a href="#system" class="btn btn-secondary">
+            مشاهده فرآیند هوران
+          </a>
+        </div>
+
+        <div class="trust">
+          <span>برداشت دقیق</span>
+          <span>مستندسازی</span>
+          <span>آنالیز ساخت</span>
+          <span>تأمین متریال</span>
+          <span>هماهنگی اجرا</span>
+          <span>تحویل نهایی</span>
+        </div>
+
+      </div>
+
+
+      <div class="hero-panel glass">
+
+        <div class="panel-top">
+          <div class="panel-title">HOORAN SYSTEM</div>
+          <div class="status">فرآیند یکپارچه پروژه</div>
+        </div>
+
+        <h3>یک مسیر مشخص برای کنترل پروژه</h3>
+
+        <div class="flow">
+
+          <div class="flow-item">
+            <div class="flow-number">01</div>
+            <div>
+              <strong>برداشت دقیق</strong>
+              <small>اطلاعات واقعی پروژه</small>
+            </div>
+          </div>
+
+          <div class="flow-item">
+            <div class="flow-number">02</div>
+            <div>
+              <strong>طراحی و مستندسازی</strong>
+              <small>تبدیل اطلاعات به نقشه</small>
+            </div>
+          </div>
+
+          <div class="flow-item">
+            <div class="flow-number">03</div>
+            <div>
+              <strong>آنالیز ساخت</strong>
+              <small>قطعات و متریال</small>
+            </div>
+          </div>
+
+          <div class="flow-item">
+            <div class="flow-number">04</div>
+            <div>
+              <strong>سفارش متریال</strong>
+              <small>آماده‌سازی تولید</small>
+            </div>
+          </div>
+
+          <div class="flow-item">
+            <div class="flow-number">05</div>
+            <div>
+              <strong>تولید و اجرا</strong>
+              <small>هماهنگی مراحل</small>
+            </div>
+          </div>
+
+          <div class="flow-item">
+            <div class="flow-number">06</div>
+            <div>
+              <strong>کنترل و تحویل</strong>
+              <small>ثبت نتیجه نهایی</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="panel-bottom">
+          <strong>0→100</strong>
+          <span>یک فرآیند منظم برای کاهش خطا و دوباره‌کاری</span>
+        </div>
 
-<!-- ================= HERO ================= -->
+      </div>
 
-<section class="hero" id="home">
+    </div>
+  </section>
 
-<div class="container hero-grid">
 
+  <!-- SYSTEM -->
 
-<div class="hero-content">
+  <section id="system">
 
-<span class="badge">
-طراحی • آنالیز ساخت • تأمین • اجرا
-</span>
+    <div class="container">
 
-<h1>
-پروژه‌های اداری را
-<br>
-<span class="gradient">از برداشت تا اجرا</span>
-<br>
-دقیق مدیریت کنید.
-</h1>
+      <div class="section-head">
+        <div class="eyebrow">HOORAN SYSTEM</div>
 
-<p>
-سیستم تخصصی هوران، اطلاعات واقعی پروژه را از مرحله
-برداشت و اندازه‌برداری به طراحی، آنالیز ساخت، سفارش
-متریال، هماهنگی تولید، اجرا و تحویل نهایی تبدیل می‌کند؛
-تا هر مرحله بر اساس اطلاعات مرحله قبل پیش برود.
-</p>
+        <h2>
+          یک سیستم یکپارچه برای مدیریت پروژه‌های اداری
+        </h2>
 
-<div class="buttons">
+        <p>
+          از شناخت پروژه و برداشت دقیق تا طراحی، آنالیز ساخت، تأمین،
+          اجرا و تحویل؛ اطلاعات هر مرحله مبنای مرحله بعد قرار می‌گیرد.
+        </p>
+      </div>
 
-<a href="#request" class="btn btn-primary">
-درخواست بازدید پروژه
-</a>
 
-<a href="#system" class="btn btn-secondary">
-مشاهده فرآیند هوران
-</a>
+      <div class="system-grid">
 
-</div>
+        <div class="system-card glass">
+          <div class="system-number">01</div>
+          <h3>شناخت پروژه</h3>
+          <p>شناخت نیازها، شرایط پروژه و محدودیت‌های اجرایی.</p>
+        </div>
 
-<div class="hero-trust">
+        <div class="system-card glass">
+          <div class="system-number">02</div>
+          <h3>برداشت دقیق</h3>
+          <p>اندازه‌برداری و ثبت اطلاعات واقعی فضای پروژه.</p>
+        </div>
 
-<span>برداشت دقیق</span>
-<span>مستندسازی</span>
-<span>آنالیز ساخت</span>
-<span>تأمین متریال</span>
-<span>هماهنگی اجرا</span>
-<span>تحویل نهایی</span>
+        <div class="system-card glass">
+          <div class="system-number">03</div>
+          <h3>طراحی و مستندسازی</h3>
+          <p>تبدیل اطلاعات برداشت‌شده به نقشه و مستندات.</p>
+        </div>
 
-</div>
+        <div class="system-card glass">
+          <div class="system-number">04</div>
+          <h3>آنالیز ساخت</h3>
+          <p>تبدیل نقشه‌ها به قطعات، متریال و ملزومات ساخت.</p>
+        </div>
 
-</div>
+        <div class="system-card glass">
+          <div class="system-number">05</div>
+          <h3>سفارش مواد و متریال</h3>
+          <p>تأمین متریال بر اساس نیاز واقعی پروژه.</p>
+        </div>
 
+        <div class="system-card glass">
+          <div class="system-number">06</div>
+          <h3>هماهنگی تولید و اجرا</h3>
+          <p>هماهنگی مراحل تولید، حمل و نصب پروژه.</p>
+        </div>
+
+        <div class="system-card glass">
+          <div class="system-number">07</div>
+          <h3>کنترل و تحویل نهایی</h3>
+          <p>کنترل کیفیت، ثبت نتیجه و تحویل پروژه.</p>
+        </div>
 
-<div class="hero-panel">
+      </div>
 
-<div class="system-card">
 
-<div class="system-top">
+      <div class="material-box glass">
 
-<div class="system-label">
-HOORAN SYSTEM
-</div>
+        <div>
+          <h3>آنالیز ساخت و تأمین متریال</h3>
+          <p>
+            اطلاعات پروژه به لیست واقعی مواد، قطعات و ملزومات موردنیاز تبدیل می‌شود.
+          </p>
+        </div>
 
-<div class="system-status">
-<i></i>
-فرآیند یکپارچه پروژه
-</div>
+        <div class="chips">
+          <span class="chip">شیشه</span>
+          <span class="chip">پروفیل</span>
+          <span class="chip">مواد اولیه</span>
+          <span class="chip">یراق‌آلات</span>
+          <span class="chip">ملزومات ساخت</span>
+          <span class="chip">ملزومات نصب</span>
+          <span class="chip">لیست سفارش</span>
+          <span class="chip">آنالیز ساخت</span>
+        </div>
 
-</div>
+      </div>
 
-<h2>
-یک مسیر مشخص
-برای کنترل پروژه
-<span>
-از اطلاعات میدانی تا اجرای نهایی
-</span>
-</h2>
+    </div>
 
-<div class="system-flow">
+  </section>
 
-<div class="flow-item">
 
-<div class="flow-number">
-01
-</div>
+  <!-- SERVICES -->
 
-<strong>
-برداشت دقیق
-</strong>
+  <section id="services">
 
-<small>
-اطلاعات واقعی پروژه
-</small>
+    <div class="container">
 
-</div>
+      <div class="section-head">
+        <div class="eyebrow">SERVICES</div>
 
+        <h2>خدمات تخصصی هوران</h2>
 
-<div class="flow-item">
+        <p>
+          هر پروژه بر اساس اطلاعات واقعی همان پروژه بررسی و مدیریت می‌شود.
+        </p>
+      </div>
 
-<div class="flow-number">
-02
-</div>
 
-<strong>
-طراحی و مستندسازی
-</strong>
+      <div class="services-grid">
 
-<small>
-تبدیل اطلاعات به نقشه
-</small>
+        <div class="service-card glass">
+          <div class="service-icon">01</div>
+          <h3>برداشت و اندازه‌برداری</h3>
+          <p>
+            برداشت دقیق ابعاد، شرایط محیط، مسیر حمل و محدودیت‌های اجرایی پروژه.
+          </p>
+        </div>
 
-</div>
+        <div class="service-card glass">
+          <div class="service-icon">02</div>
+          <h3>طراحی و مستندسازی</h3>
+          <p>
+            تبدیل اطلاعات پروژه به نقشه‌ها و مستندات قابل استفاده برای ادامه فرآیند.
+          </p>
+        </div>
 
+        <div class="service-card glass">
+          <div class="service-icon">03</div>
+          <h3>آنالیز ساخت</h3>
+          <p>
+            بررسی قطعات، مواد اولیه، یراق‌آلات و ملزومات موردنیاز ساخت.
+          </p>
+        </div>
 
-<div class="flow-item">
+        <div class="service-card glass">
+          <div class="service-icon">04</div>
+          <h3>سفارش شیشه و متریال</h3>
+          <p>
+            تهیه لیست سفارش و هماهنگی تأمین متریال موردنیاز پروژه.
+          </p>
+        </div>
 
-<div class="flow-number">
-03
-</div>
+        <div class="service-card glass">
+          <div class="service-icon">05</div>
+          <h3>هماهنگی تولید و اجرا</h3>
+          <p>
+            هماهنگی مراحل تولید، حمل، نصب و اجرای پروژه بر اساس برنامه.
+          </p>
+        </div>
 
-<strong>
-آنالیز ساخت
-</strong>
+        <div class="service-card glass">
+          <div class="service-icon">06</div>
+          <h3>کنترل کیفیت و تحویل</h3>
+          <p>
+            کنترل اجرا، ثبت نتیجه، رفع موارد باقی‌مانده و تحویل نهایی.
+          </p>
+        </div>
 
-<small>
-قطعات و متریال
-</small>
+      </div>
 
-</div>
+    </div>
 
+  </section>
 
-<div class="flow-item">
 
-<div class="flow-number">
-04
-</div>
+  <!-- ABOUT -->
 
-<strong>
-سفارش متریال
-</strong>
+  <section id="about">
 
-<small>
-آماده‌سازی تولید
-</small>
+    <div class="container about-grid">
 
-</div>
+      <div class="about-box glass">
 
+        <div class="eyebrow">ABOUT HOORAN</div>
 
-<div class="flow-item">
+        <h2>تجربه‌ای که تبدیل به سیستم شده است</h2>
 
-<div class="flow-number">
-05
-</div>
+        <p>
+          سیستم تخصصی هوران بر پایه تجربه عملی در پروژه‌های اداری شکل گرفته است؛
+          تجربه‌ای که از اندازه‌برداری و طراحی تا آنالیز، تأمین، اجرا و تحویل پروژه
+          را به یک فرآیند منظم و قابل کنترل تبدیل کرده است.
+        </p>
 
-<strong>
-تولید و اجرا
-</strong>
+      </div>
 
-<small>
-هماهنگی مراحل
-</small>
 
-</div>
+      <div class="stats">
 
+        <div class="stat glass">
+          <strong>15+</strong>
+          <span>سال تجربه عملی</span>
+        </div>
 
-<div class="flow-item">
+        <div class="stat glass">
+          <strong>11</strong>
+          <span>فرم و مرحله کنترلی</span>
+        </div>
 
-<div class="flow-number">
-06
-</div>
+        <div class="stat glass">
+          <strong>0→100</strong>
+          <span>از برداشت تا تحویل</span>
+        </div>
 
-<strong>
-کنترل و تحویل
-</strong>
+        <div class="stat glass">
+          <strong>1</strong>
+          <span>فرآیند یکپارچه پروژه</span>
+        </div>
 
-<small>
-ثبت نتیجه نهایی
-</small>
+      </div>
 
-</div>
+    </div>
 
-</div>
+  </section>
 
 
-<div class="system-bottom">
+  <!-- COMPLEX PROJECTS -->
 
-<div>
+  <section>
 
-<strong>
-0→100
-</strong>
+    <div class="container">
 
-<span>
-از برداشت تا تحویل
-</span>
+      <div class="complex">
 
-</div>
+        <div class="eyebrow">COMPLEX PROJECTS</div>
 
-<p>
-یک فرآیند منظم برای کاهش خطا و دوباره‌کاری
-</p>
+        <h2>
+          پروژه‌های پیچیده، نیازمند برداشت دقیق‌تر هستند.
+        </h2>
 
-</div>
+        <p>
+          در پروژه‌هایی که شرایط معماری یا اجرایی پیچیده است،
+          کوچک‌ترین خطا در برداشت می‌تواند روی طراحی، ساخت و اجرا اثر بگذارد.
+          سیستم هوران این محدودیت‌ها را از مرحله برداشت وارد فرآیند پروژه می‌کند.
+        </p>
 
-</div>
+        <div class="complex-tags">
+          <span>سقف‌های شیب‌دار</span>
+          <span>چندارتفاعی</span>
+          <span>پارتیشن‌های قوسی</span>
+          <span>شکست‌های معماری</span>
+          <span>محدودیت حمل</span>
+          <span>تأسیسات</span>
+          <span>کف و قرنیز</span>
+          <span>آسانسور و راه‌پله</span>
+        </div>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</section>
+  </section>
 
 
-<!-- ================= SYSTEM ================= -->
+  <!-- REQUEST -->
 
-<section id="system">
+  <section id="request">
 
-<div class="container">
+    <div class="container request-grid">
 
-<div class="section-title">
+      <div class="request-info glass">
 
-<span>HOORAN SYSTEM</span>
+        <div class="eyebrow">PROJECT REQUEST</div>
 
-<h2>
-مسیر پروژه از برداشت تا تحویل
-</h2>
+        <h2>درخواست بازدید پروژه</h2>
 
-<p>
-یک فرآیند مرحله‌بندی‌شده برای کاهش خطا،
-کنترل بهتر هزینه و زمان و هماهنگی دقیق‌تر بین طراحی،
-ساخت و اجرا.
-</p>
+        <p>
+          اطلاعات اولیه پروژه را برای ما ارسال کنید.
+          پس از بررسی اطلاعات، برای هماهنگی مراحل بعدی با شما تماس خواهیم گرفت.
+        </p>
 
-</div>
+        <div class="contact">
+          <small>تماس با هوران</small>
+          <strong>02191694592</strong>
+        </div>
 
+      </div>
 
-<div class="steps">
 
+      <!-- REAL WEB3FORMS FORM -->
 
-<div class="step glass">
+      <form
+        class="form-card glass"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
 
-<div class="number">01</div>
+        <!-- Web3Forms -->
+        <input
+          type="hidden"
+          name="access_key"
+          value="44dcfa06-aded-4b14-b2f1-0bd2d7e8704e"
+        >
 
-<h3>شناخت پروژه</h3>
+        <input
+          type="hidden"
+          name="subject"
+          value="درخواست بازدید جدید از سایت هوران"
+        >
 
-<p>
-بررسی نیازهای کارفرما، نوع پروژه، شرایط ساختمان،
-مسیر حمل، ورودی، آسانسور و محدودیت‌های اجرایی.
-</p>
+        <input
+          type="hidden"
+          name="from_name"
+          value="سایت هوران هنر ماندگار البرز"
+        >
 
-</div>
+        <input
+          type="hidden"
+          name="redirect"
+          value="https://hooran-honar.github.io/hooran-honar/hooran-new.html?sent=1"
+        >
 
+        <!-- Anti Bot -->
+        <input
+          type="checkbox"
+          name="botcheck"
+          style="display:none;"
+        >
 
-<div class="step glass">
 
-<div class="number">02</div>
+        <div
+          id="successMessage"
+          class="success-message"
+        >
+          درخواست شما با موفقیت ارسال شد.
+          کارشناسان هوران برای هماهنگی با شما تماس خواهند گرفت.
+        </div>
 
-<h3>برداشت دقیق</h3>
 
-<p>
-اندازه‌برداری، برداشت فضا، ستون‌ها، درب و پنجره،
-تأسیسات، کف، سقف، قرنیز و سایر المان‌های مؤثر.
-</p>
+        <div class="form-grid">
 
-</div>
+          <div class="field">
+            <label for="name">نام و نام خانوادگی *</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="نام و نام خانوادگی"
+              required
+            >
+          </div>
 
 
-<div class="step glass">
+          <div class="field">
+            <label for="company">نام شرکت</label>
+            <input
+              id="company"
+              type="text"
+              name="company"
+              placeholder="نام شرکت"
+            >
+          </div>
 
-<div class="number">03</div>
 
-<h3>طراحی و مستندسازی</h3>
+          <div class="field">
+            <label for="mobile">شماره موبایل *</label>
+            <input
+              id="mobile"
+              type="tel"
+              name="mobile"
+              placeholder="09xxxxxxxxx"
+              required
+            >
+          </div>
 
-<p>
-تبدیل اطلاعات پروژه به نقشه‌ها و مستندات دقیق
-برای تصمیم‌گیری، ساخت و اجرای صحیح.
-</p>
 
-</div>
+          <div class="field">
+            <label for="city">شهر / منطقه *</label>
+            <input
+              id="city"
+              type="text"
+              name="city"
+              placeholder="مثلاً کرج / تهران"
+              required
+            >
+          </div>
 
 
-<div class="step glass">
+          <div class="field full">
+            <label for="address">آدرس پروژه *</label>
+            <input
+              id="address"
+              type="text"
+              name="address"
+              placeholder="آدرس یا محدوده پروژه"
+              required
+            >
+          </div>
 
-<div class="number">04</div>
 
-<h3>آنالیز ساخت</h3>
+          <div class="field">
+            <label for="project_type">نوع پروژه</label>
 
-<p>
-بررسی جزئیات ساخت، تفکیک اجزا، محاسبه متریال،
-یراق‌آلات و ملزومات مورد نیاز برای تولید.
-</p>
+            <select
+              id="project_type"
+              name="project_type"
+            >
+              <option value="">انتخاب کنید</option>
+              <option value="پارتیشن اداری">پارتیشن اداری</option>
+              <option value="مبلمان اداری">مبلمان اداری</option>
+              <option value="طراحی داخلی">طراحی داخلی</option>
+              <option value="بازطراحی فضای اداری">بازطراحی فضای اداری</option>
+              <option value="سایر">سایر</option>
+            </select>
+          </div>
 
-</div>
 
+          <div class="field">
+            <label for="area">متراژ تقریبی</label>
+            <input
+              id="area"
+              type="text"
+              name="area"
+              placeholder="مثلاً 500 متر"
+            >
+          </div>
 
-<div class="step glass">
 
-<div class="number">05</div>
+          <div class="field full">
+            <label for="description">توضیحات پروژه</label>
 
-<h3>سفارش مواد و متریال</h3>
+            <textarea
+              id="description"
+              name="description"
+              placeholder="هر توضیحی که درباره پروژه لازم است بدانیم..."
+            ></textarea>
+          </div>
 
-<p>
-تهیه لیست سفارش و هماهنگی برای تأمین شیشه،
-پروفیل، مواد اولیه، یراق‌آلات و ملزومات ساخت و نصب.
-</p>
+        </div>
 
-</div>
 
+        <button
+          type="submit"
+          class="btn btn-primary form-submit"
+        >
+          ارسال درخواست بازدید
+        </button>
 
-<div class="step glass">
+        <div class="form-note">
+          اطلاعات این فرم فقط برای بررسی و هماهنگی پروژه استفاده می‌شود.
+        </div>
 
-<div class="number">06</div>
+      </form>
 
-<h3>هماهنگی تولید و اجرا</h3>
+    </div>
 
-<p>
-هماهنگی بین تولید، حمل، تیم اجرایی و شرایط پروژه
-برای اجرای منظم و بدون دوباره‌کاری.
-</p>
-
-</div>
-
-
-<div class="step glass">
-
-<div class="number">07</div>
-
-<h3>کنترل و تحویل نهایی</h3>
-
-<p>
-کنترل کیفیت اجرا، رعایت ایمنی، نظافت، ثبت متراژ
-و تحویل نهایی پروژه با تأیید کارفرما.
-</p>
-
-</div>
-
-
-</div>
-
-
-<div class="material-box glass">
-
-<h3>
-آنالیز ساخت و تأمین متریال
-</h3>
-
-<p>
-یکی از بخش‌های مهم سیستم هوران، تبدیل اطلاعات برداشت و
-نقشه‌های پروژه به اطلاعات قابل استفاده برای ساخت و سفارش است.
-در این مرحله مقدار و نوع متریال، شیشه، پروفیل، مواد اولیه،
-یراق‌آلات و ملزومات ساخت و نصب مشخص و برای سفارش و تولید آماده می‌شود.
-</p>
-
-<div class="material-list">
-
-<span>شیشه</span>
-<span>پروفیل</span>
-<span>مواد اولیه</span>
-<span>یراق‌آلات</span>
-<span>ملزومات ساخت</span>
-<span>ملزومات نصب</span>
-<span>لیست سفارش</span>
-<span>آنالیز ساخت</span>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= SERVICES ================= -->
-
-<section id="services">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>SERVICES</span>
-
-<h2>
-خدمات تخصصی هوران
-</h2>
-
-<p>
-خدمات پروژه بر اساس یک زنجیره مشخص از اطلاعات،
-طراحی، ساخت و اجرا ارائه می‌شود.
-</p>
-
-</div>
-
-
-<div class="services">
-
-
-<div class="service glass">
-
-<div class="service-icon">⌖</div>
-
-<h3>
-برداشت و اندازه‌برداری
-</h3>
-
-<p>
-برداشت دقیق فضا و ثبت اطلاعات مؤثر در طراحی،
-ساخت، حمل و نصب.
-</p>
-
-</div>
-
-
-<div class="service glass">
-
-<div class="service-icon">⌘</div>
-
-<h3>
-طراحی و مستندسازی
-</h3>
-
-<p>
-تهیه نقشه و مستندات مورد نیاز برای تصمیم‌گیری
-و اجرای دقیق پروژه.
-</p>
-
-</div>
-
-
-<div class="service glass">
-
-<div class="service-icon">▦</div>
-
-<h3>
-آنالیز ساخت
-</h3>
-
-<p>
-تبدیل نقشه‌ها و اندازه‌ها به اطلاعات ساخت،
-قطعات، متریال و ملزومات تولید.
-</p>
-
-</div>
-
-
-<div class="service glass">
-
-<div class="service-icon">◇</div>
-
-<h3>
-سفارش شیشه و متریال
-</h3>
-
-<p>
-تهیه لیست سفارش و هماهنگی تأمین شیشه،
-پروفیل، مواد اولیه و یراق‌آلات.
-</p>
-
-</div>
-
-
-<div class="service glass">
-
-<div class="service-icon">⚙</div>
-
-<h3>
-هماهنگی تولید و اجرا
-</h3>
-
-<p>
-هماهنگی میان تولید، حمل و تیم اجرایی
-متناسب با شرایط واقعی پروژه.
-</p>
-
-</div>
-
-
-<div class="service glass">
-
-<div class="service-icon">✓</div>
-
-<h3>
-کنترل کیفیت و تحویل
-</h3>
-
-<p>
-کنترل کیفیت، ایمنی، نظافت و تحویل نهایی
-پروژه با ثبت اطلاعات مورد نیاز.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>ABOUT HOORAN</span>
-
-<h2>
-تجربه‌ای که تبدیل به سیستم شده است
-</h2>
-
-<p>
-هدف هوران، ارائه خدمات پروژه‌ای بر پایه تجربه عملی،
-نظم اطلاعاتی و کنترل مراحل مختلف پروژه است.
-</p>
-
-</div>
-
-
-<div class="about-grid">
-
-
-<div class="about-card glass">
-
-<h3>
-از اندازه‌برداری تا اجرای دقیق
-</h3>
-
-<p>
-تجربه عملی در پروژه‌های اداری به ما نشان داده است
-که بسیاری از خطاهای پروژه از یک برداشت ناقص،
-محاسبه اشتباه یا هماهنگی ضعیف بین طراحی، ساخت و اجرا
-شروع می‌شوند.
-<br><br>
-سیستم تخصصی هوران برای ایجاد یک مسیر منظم میان
-برداشت، طراحی، آنالیز، ساخت، سفارش متریال،
-تولید و اجرای پروژه شکل گرفته است.
-</p>
-
-</div>
-
-
-<div class="stats">
-
-
-<div class="stat glass">
-
-<strong>15+</strong>
-
-<span>
-سال تجربه عملی
-</span>
-
-</div>
-
-
-<div class="stat glass">
-
-<strong>11</strong>
-
-<span>
-فرم و مرحله کنترلی
-</span>
-
-</div>
-
-
-<div class="stat glass">
-
-<strong>0→100</strong>
-
-<span>
-از برداشت تا تحویل
-</span>
-
-</div>
-
-
-<div class="stat glass">
-
-<strong>1</strong>
-
-<span>
-فرآیند یکپارچه پروژه
-</span>
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= COMPLEX ================= -->
-
-<section class="complex">
-
-<div class="container">
-
-<div class="complex-card glass">
-
-<h2>
-پروژه‌های پیچیده، نیازمند برداشت دقیق‌تر هستند.
-</h2>
-
-<p>
-شرایط واقعی هر ساختمان همیشه ساده و استاندارد نیست.
-سقف‌های شیب‌دار و چندارتفاعی، پارتیشن‌های قوسی،
-شکست‌های معماری، ستون‌ها، محدودیت‌های حمل و
-شرایط خاص تأسیسات می‌توانند روی طراحی، ساخت و نصب اثر بگذارند.
-سیستم هوران این محدودیت‌ها را از مرحله برداشت
-وارد فرآیند طراحی و اجرا می‌کند.
-</p>
-
-
-<div class="complex-list">
-
-<span>سقف‌های شیب‌دار</span>
-<span>چندارتفاعی</span>
-<span>پارتیشن‌های قوسی</span>
-<span>شکست‌های معماری</span>
-<span>محدودیت حمل</span>
-<span>تأسیسات</span>
-<span>کف و قرنیز</span>
-<span>آسانسور و راه‌پله</span>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= REQUEST ================= -->
-
-<section id="request">
-
-<div class="container">
-
-<div class="section-title">
-
-<span>PROJECT REQUEST</span>
-
-<h2>
-پروژه خود را برای بررسی ارسال کنید
-</h2>
-
-<p>
-اطلاعات اولیه پروژه را وارد کنید تا برای بررسی
-و هماهنگی بازدید مورد استفاده قرار گیرد.
-</p>
-
-</div>
-
-
-<div class="request-box">
-
-
-<div class="request-info glass">
-
-<h3>
-درخواست بازدید
-</h3>
-
-<p>
-اطلاعاتی که در این فرم وارد می‌کنید، مبنای
-بررسی اولیه پروژه و هماهنگی مراحل بعدی خواهد بود.
-</p>
-
-<a class="contact-phone" href="tel:02191694592">
-۰۲۱۹۱۶۹۴۵۹۲
-</a>
-
-</div>
-
-
-<form class="form-card glass">
-
-<div class="form-grid">
-
-
-<div class="field">
-
-<label>
-نام و نام خانوادگی
-</label>
-
-<input
-type="text"
-name="name"
-placeholder="نام شما"
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-نام شرکت
-</label>
-
-<input
-type="text"
-name="company"
-placeholder="نام شرکت"
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-شماره موبایل
-</label>
-
-<input
-type="tel"
-name="mobile"
-placeholder="09xxxxxxxxx"
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-شهر / منطقه
-</label>
-
-<input
-type="text"
-name="city"
-placeholder="مثلاً کرج"
->
-
-</div>
-
-
-<div class="field full">
-
-<label>
-آدرس پروژه
-</label>
-
-<input
-type="text"
-name="address"
-placeholder="آدرس پروژه"
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-نوع پروژه
-</label>
-
-<select name="project-type">
-
-<option value="">
-انتخاب کنید
-</option>
-
-<option>
-پارتیشن اداری
-</option>
-
-<option>
-مبلمان اداری
-</option>
-
-<option>
-طراحی داخلی
-</option>
-
-<option>
-پروژه ترکیبی
-</option>
-
-<option>
-سایر
-</option>
-
-</select>
-
-</div>
-
-
-<div class="field">
-
-<label>
-متراژ تقریبی
-</label>
-
-<input
-type="text"
-name="area"
-placeholder="مثلاً 500 متر"
->
-
-</div>
-
-
-<div class="field full">
-
-<label>
-توضیحات پروژه
-</label>
-
-<textarea
-name="description"
-placeholder="توضیحات اولیه پروژه، نیازها یا محدودیت‌های مهم را بنویسید."
-></textarea>
-
-</div>
-
-
-</div>
-
-
-<div class="form-submit">
-
-<button
-type="submit"
-class="btn btn-primary"
->
-ارسال درخواست
-</button>
-
-</div>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
+  </section>
 
 </main>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer>
 
-<div class="container footer-inner">
+  <div class="container footer-inner">
 
-<div class="footer-brand">
-هوران هنر ماندگار البرز
-</div>
+    <p>
+      © هوران هنر ماندگار البرز — سیستم تخصصی هوران
+    </p>
 
-<div>
-سیستم تخصصی پروژه‌های اداری
-</div>
+    <p class="footer-phone">
+      02191694592
+    </p>
 
-<div>
-۰۲۱۹۱۶۹۴۵۹۲
-</div>
-
-</div>
+  </div>
 
 </footer>
 
 
 <script>
 
-document.querySelector("form").addEventListener("submit",function(e){
+  const params = new URLSearchParams(window.location.search);
 
-e.preventDefault();
+  if(params.get("sent") === "1"){
 
-alert("درخواست شما ثبت شد. برای فعال شدن ارسال واقعی اطلاعات، فرم باید به سرویس دریافت فرم متصل شود.");
+    const successMessage =
+      document.getElementById("successMessage");
 
-});
+    if(successMessage){
+      successMessage.classList.add("show");
+      successMessage.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+      });
+    }
+
+    window.history.replaceState(
+      {},
+      document.title,
+      window.location.pathname
+    );
+  }
 
 </script>
 
