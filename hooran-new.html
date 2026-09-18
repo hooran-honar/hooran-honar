@@ -58,19 +58,37 @@ header{
     align-items:center;
     gap:12px;
     font-weight:bold;
-    font-size:20px;
+    color:#fff;
 }
 
 .logo-mark{
-    width:44px;
-    height:44px;
-    border-radius:12px;
+    width:46px;
+    height:46px;
+    border-radius:14px;
     display:grid;
     place-items:center;
-    background:linear-gradient(135deg,#23d6c5,#1486a0);
+    background:linear-gradient(135deg,#35d9c8,#1687a1);
     color:#061014;
-    font-size:23px;
+    font-size:24px;
     font-weight:bold;
+    box-shadow:0 8px 25px rgba(35,214,197,.16);
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    line-height:1.35;
+}
+
+.logo-text strong{
+    font-size:20px;
+    letter-spacing:-.5px;
+}
+
+.logo-text span{
+    font-size:11px;
+    color:#8fa5a9;
+    font-weight:normal;
 }
 
 .nav-links{
@@ -495,8 +513,11 @@ footer{
 <div class="container nav">
 
 <a href="#home" class="logo">
-<div class="logo-mark">ه</div>
-<div>هوران هنر ماندگار البرز</div>
+    <div class="logo-mark">ه</div>
+    <div class="logo-text">
+        <strong>هوران</strong>
+        <span>هنر ماندگار البرز</span>
+    </div>
 </a>
 
 <nav class="nav-links">
