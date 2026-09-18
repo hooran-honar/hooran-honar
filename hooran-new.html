@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -47,72 +48,93 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(7,17,22,.90);
-    backdrop-filter:blur(16px);
-    -webkit-backdrop-filter:blur(16px);
-    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(5,14,18,.88);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.07);
 }
 
 .nav{
-    min-height:82px;
+    min-height:88px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:25px;
+    gap:30px;
 }
 
 .logo{
     display:flex;
     align-items:center;
-    gap:13px;
+    gap:14px;
     color:#fff;
 }
 
 .logo-mark{
-    width:48px;
-    height:48px;
-    border-radius:15px;
+    width:50px;
+    height:50px;
+    border-radius:16px;
     display:grid;
     place-items:center;
-    background:linear-gradient(135deg,#35d9c8,#1687a1);
+    background:linear-gradient(135deg,#55e2d4,#16879f);
     color:#061014;
-    font-size:25px;
+    font-size:26px;
     font-weight:800;
-    box-shadow:0 8px 28px rgba(35,214,197,.18);
+    box-shadow:
+        0 8px 30px rgba(53,215,198,.20),
+        inset 0 1px 0 rgba(255,255,255,.30);
 }
 
 .logo-text{
     display:flex;
     flex-direction:column;
-    line-height:1.35;
+    line-height:1.3;
 }
 
 .logo-text strong{
-    font-size:21px;
+    font-size:22px;
     font-weight:800;
-    letter-spacing:-.6px;
+    letter-spacing:-.7px;
 }
 
 .logo-text span{
-    font-size:11px;
-    color:#91a6aa;
+    font-size:10px;
+    color:#8fa5a9;
     font-weight:400;
-    margin-top:2px;
+    margin-top:4px;
 }
 
 .nav-links{
     display:flex;
-    gap:27px;
+    align-items:center;
+    gap:30px;
     font-size:13px;
-    color:#b9cbce;
+    color:#b8cacc;
 }
 
 .nav-links a{
+    position:relative;
+    transition:.25s ease;
+    padding:8px 0;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    border-radius:5px;
+    background:#42d8ca;
     transition:.25s ease;
 }
 
 .nav-links a:hover{
-    color:#35d7c6;
+    color:#55e0d2;
+}
+
+.nav-links a:hover::after{
+    width:100%;
 }
 
 /* HERO */
@@ -672,644 +694,714 @@ footer{
         text-align:center;
     }
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <div class="container nav">
 
-        <a href="#home" class="logo">
-            <div class="logo-mark">ه</div>
+<div class="container nav">
 
-            <div class="logo-text">
-                <strong>هوران</strong>
-                <span>هنر ماندگار البرز</span>
-            </div>
-        </a>
+<a href="#home" class="logo">
 
-        <nav class="nav-links">
-            <a href="#system">سیستم تخصصی</a>
-            <a href="#services">خدمات</a>
-            <a href="#about">درباره هوران</a>
-            <a href="#request">درخواست بازدید</a>
-        </nav>
+<div class="logo-mark">ه</div>
 
-    </div>
+<div class="logo-text">
+<strong>هوران</strong>
+<span>هنر ماندگار البرز</span>
+</div>
+
+</a>
+
+<nav class="nav-links">
+
+<a href="#system">سیستم تخصصی</a>
+<a href="#services">خدمات</a>
+<a href="#about">درباره هوران</a>
+<a href="#request">درخواست بازدید</a>
+
+</nav>
+
+</div>
+
 </header>
+
 
 <main>
 
+
 <section class="hero" id="home">
-    <div class="container">
-        <div class="hero-content">
 
-            <span class="badge">سیستم تخصصی هوران</span>
+<div class="container">
 
-            <h1>
-                پروژه اداری را
-                <span class="gradient">سیستماتیک</span>
-                پیش ببرید.
-            </h1>
+<div class="hero-content">
 
-            <p>
-                از برداشت دقیق و اندازه‌برداری تا طراحی، آنالیز ساخت،
-                سفارش شیشه و مواد اولیه، تأمین متریال، هماهنگی تولید،
-                اجرا و تحویل نهایی؛ همه‌چیز بر پایه یک فرآیند منظم و قابل کنترل.
-            </p>
+<span class="badge">
+سیستم تخصصی هوران
+</span>
 
-            <div class="buttons">
-                <a href="#request" class="btn btn-primary">
-                    درخواست بازدید پروژه
-                </a>
+<h1>
+پروژه اداری را
+<span class="gradient">سیستماتیک</span>
+پیش ببرید.
+</h1>
 
-                <a href="#system" class="btn btn-secondary">
-                    آشنایی با سیستم هوران
-                </a>
-            </div>
+<p>
+از برداشت دقیق و اندازه‌برداری تا طراحی، آنالیز ساخت،
+سفارش شیشه و مواد اولیه، تأمین متریال، هماهنگی تولید،
+اجرا و تحویل نهایی؛ همه‌چیز بر پایه یک فرآیند منظم و قابل کنترل.
+</p>
 
-        </div>
-    </div>
+<div class="buttons">
+
+<a href="#request" class="btn btn-primary">
+درخواست بازدید پروژه
+</a>
+
+<a href="#system" class="btn btn-secondary">
+آشنایی با سیستم هوران
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
 <section id="system">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
-            <span>HOORAN SYSTEM</span>
+<div class="section-title">
 
-            <h2>
-                مسیر پروژه از برداشت تا تحویل
-            </h2>
+<span>HOORAN SYSTEM</span>
 
-            <p>
-                یک فرآیند مرحله‌بندی‌شده برای کاهش خطا،
-                کنترل بهتر هزینه و زمان و هماهنگی دقیق‌تر بین طراحی،
-                ساخت و اجرا.
-            </p>
-        </div>
+<h2>
+مسیر پروژه از برداشت تا تحویل
+</h2>
 
+<p>
+یک فرآیند مرحله‌بندی‌شده برای کاهش خطا،
+کنترل بهتر هزینه و زمان و هماهنگی دقیق‌تر بین طراحی،
+ساخت و اجرا.
+</p>
 
-        <div class="steps">
-
-            <div class="step glass">
-                <div class="number">01</div>
-
-                <h3>شناخت پروژه</h3>
-
-                <p>
-                    بررسی نیازهای کارفرما، نوع پروژه، شرایط ساختمان،
-                    مسیر حمل، ورودی، آسانسور و محدودیت‌های اجرایی.
-                </p>
-            </div>
+</div>
 
 
-            <div class="step glass">
-                <div class="number">02</div>
-
-                <h3>برداشت دقیق</h3>
-
-                <p>
-                    اندازه‌برداری، برداشت فضا، ستون‌ها، درب و پنجره،
-                    تأسیسات، کف، سقف، قرنیز و سایر المان‌های مؤثر.
-                </p>
-            </div>
+<div class="steps">
 
 
-            <div class="step glass">
-                <div class="number">03</div>
+<div class="step glass">
 
-                <h3>طراحی و مستندسازی</h3>
+<div class="number">01</div>
 
-                <p>
-                    تبدیل اطلاعات پروژه به نقشه‌ها و مستندات دقیق
-                    برای تصمیم‌گیری، ساخت و اجرای صحیح.
-                </p>
-            </div>
+<h3>شناخت پروژه</h3>
 
+<p>
+بررسی نیازهای کارفرما، نوع پروژه، شرایط ساختمان،
+مسیر حمل، ورودی، آسانسور و محدودیت‌های اجرایی.
+</p>
 
-            <div class="step glass">
-                <div class="number">04</div>
-
-                <h3>آنالیز ساخت</h3>
-
-                <p>
-                    بررسی جزئیات ساخت، تفکیک اجزا، محاسبه متریال،
-                    یراق‌آلات و ملزومات مورد نیاز برای تولید.
-                </p>
-            </div>
+</div>
 
 
-            <div class="step glass">
-                <div class="number">05</div>
+<div class="step glass">
 
-                <h3>سفارش مواد و متریال</h3>
+<div class="number">02</div>
 
-                <p>
-                    تهیه لیست سفارش و هماهنگی برای تأمین شیشه،
-                    پروفیل، مواد اولیه، یراق‌آلات و ملزومات ساخت و نصب.
-                </p>
-            </div>
+<h3>برداشت دقیق</h3>
 
+<p>
+اندازه‌برداری، برداشت فضا، ستون‌ها، درب و پنجره،
+تأسیسات، کف، سقف، قرنیز و سایر المان‌های مؤثر.
+</p>
 
-            <div class="step glass">
-                <div class="number">06</div>
-
-                <h3>هماهنگی تولید و اجرا</h3>
-
-                <p>
-                    هماهنگی بین تولید، حمل، تیم اجرایی و شرایط پروژه
-                    برای اجرای منظم و بدون دوباره‌کاری.
-                </p>
-            </div>
+</div>
 
 
-            <div class="step glass">
-                <div class="number">07</div>
+<div class="step glass">
 
-                <h3>کنترل و تحویل نهایی</h3>
+<div class="number">03</div>
 
-                <p>
-                    کنترل کیفیت اجرا، رعایت ایمنی، نظافت، ثبت متراژ
-                    و تحویل نهایی پروژه با تأیید کارفرما.
-                </p>
-            </div>
+<h3>طراحی و مستندسازی</h3>
 
-        </div>
+<p>
+تبدیل اطلاعات پروژه به نقشه‌ها و مستندات دقیق
+برای تصمیم‌گیری، ساخت و اجرای صحیح.
+</p>
+
+</div>
 
 
-        <div class="material-box glass">
+<div class="step glass">
 
-            <h3>
-                آنالیز ساخت و تأمین متریال
-            </h3>
+<div class="number">04</div>
 
-            <p>
-                یکی از بخش‌های مهم سیستم هوران، تبدیل اطلاعات برداشت و
-                نقشه‌های پروژه به اطلاعات قابل استفاده برای ساخت و سفارش است.
-                در این مرحله مقدار و نوع متریال، شیشه، پروفیل، مواد اولیه،
-                یراق‌آلات و ملزومات ساخت و نصب مشخص و برای سفارش و تولید آماده می‌شود.
-            </p>
+<h3>آنالیز ساخت</h3>
 
-            <div class="material-list">
+<p>
+بررسی جزئیات ساخت، تفکیک اجزا، محاسبه متریال،
+یراق‌آلات و ملزومات مورد نیاز برای تولید.
+</p>
 
-                <span>شیشه</span>
-                <span>پروفیل</span>
-                <span>مواد اولیه</span>
-                <span>یراق‌آلات</span>
-                <span>ملزومات ساخت</span>
-                <span>ملزومات نصب</span>
-                <span>لیست سفارش</span>
-                <span>آنالیز ساخت</span>
+</div>
 
-            </div>
 
-        </div>
+<div class="step glass">
 
-    </div>
+<div class="number">05</div>
+
+<h3>سفارش مواد و متریال</h3>
+
+<p>
+تهیه لیست سفارش و هماهنگی برای تأمین شیشه،
+پروفیل، مواد اولیه، یراق‌آلات و ملزومات ساخت و نصب.
+</p>
+
+</div>
+
+
+<div class="step glass">
+
+<div class="number">06</div>
+
+<h3>هماهنگی تولید و اجرا</h3>
+
+<p>
+هماهنگی بین تولید، حمل، تیم اجرایی و شرایط پروژه
+برای اجرای منظم و بدون دوباره‌کاری.
+</p>
+
+</div>
+
+
+<div class="step glass">
+
+<div class="number">07</div>
+
+<h3>کنترل و تحویل نهایی</h3>
+
+<p>
+کنترل کیفیت اجرا، رعایت ایمنی، نظافت، ثبت متراژ
+و تحویل نهایی پروژه با تأیید کارفرما.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="material-box glass">
+
+<h3>
+آنالیز ساخت و تأمین متریال
+</h3>
+
+<p>
+یکی از بخش‌های مهم سیستم هوران، تبدیل اطلاعات برداشت و
+نقشه‌های پروژه به اطلاعات قابل استفاده برای ساخت و سفارش است.
+در این مرحله مقدار و نوع متریال، شیشه، پروفیل، مواد اولیه،
+یراق‌آلات و ملزومات ساخت و نصب مشخص و برای سفارش و تولید آماده می‌شود.
+</p>
+
+<div class="material-list">
+
+<span>شیشه</span>
+<span>پروفیل</span>
+<span>مواد اولیه</span>
+<span>یراق‌آلات</span>
+<span>ملزومات ساخت</span>
+<span>ملزومات نصب</span>
+<span>لیست سفارش</span>
+<span>آنالیز ساخت</span>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
 <section id="services">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
-            <span>SERVICES</span>
+<div class="section-title">
 
-            <h2>
-                خدمات تخصصی هوران
-            </h2>
+<span>SERVICES</span>
 
-            <p>
-                خدمات پروژه بر اساس یک زنجیره مشخص از اطلاعات،
-                طراحی، ساخت و اجرا ارائه می‌شود.
-            </p>
-        </div>
+<h2>
+خدمات تخصصی هوران
+</h2>
 
+<p>
+خدمات پروژه بر اساس یک زنجیره مشخص از اطلاعات،
+طراحی، ساخت و اجرا ارائه می‌شود.
+</p>
 
-        <div class="services">
-
-            <div class="service glass">
-
-                <div class="service-icon">⌖</div>
-
-                <h3>
-                    برداشت و اندازه‌برداری
-                </h3>
-
-                <p>
-                    برداشت دقیق فضا و ثبت اطلاعات مؤثر در طراحی،
-                    ساخت، حمل و نصب.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="service glass">
-
-                <div class="service-icon">⌘</div>
-
-                <h3>
-                    طراحی و مستندسازی
-                </h3>
-
-                <p>
-                    تهیه نقشه و مستندات مورد نیاز برای تصمیم‌گیری
-                    و اجرای دقیق پروژه.
-                </p>
-
-            </div>
+<div class="services">
 
 
-            <div class="service glass">
+<div class="service glass">
 
-                <div class="service-icon">▦</div>
+<div class="service-icon">⌖</div>
 
-                <h3>
-                    آنالیز ساخت
-                </h3>
+<h3>
+برداشت و اندازه‌برداری
+</h3>
 
-                <p>
-                    تبدیل نقشه‌ها و اندازه‌ها به اطلاعات ساخت،
-                    قطعات، متریال و ملزومات تولید.
-                </p>
+<p>
+برداشت دقیق فضا و ثبت اطلاعات مؤثر در طراحی،
+ساخت، حمل و نصب.
+</p>
 
-            </div>
-
-
-            <div class="service glass">
-
-                <div class="service-icon">◇</div>
-
-                <h3>
-                    سفارش شیشه و متریال
-                </h3>
-
-                <p>
-                    تهیه لیست سفارش و هماهنگی تأمین شیشه،
-                    پروفیل، مواد اولیه و یراق‌آلات.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="service glass">
+<div class="service glass">
 
-                <div class="service-icon">⚙</div>
+<div class="service-icon">⌘</div>
 
-                <h3>
-                    هماهنگی تولید و اجرا
-                </h3>
+<h3>
+طراحی و مستندسازی
+</h3>
 
-                <p>
-                    هماهنگی میان تولید، حمل و تیم اجرایی
-                    متناسب با شرایط واقعی پروژه.
-                </p>
+<p>
+تهیه نقشه و مستندات مورد نیاز برای تصمیم‌گیری
+و اجرای دقیق پروژه.
+</p>
 
-            </div>
+</div>
 
 
-            <div class="service glass">
+<div class="service glass">
 
-                <div class="service-icon">✓</div>
+<div class="service-icon">▦</div>
 
-                <h3>
-                    کنترل کیفیت و تحویل
-                </h3>
+<h3>
+آنالیز ساخت
+</h3>
 
-                <p>
-                    کنترل کیفیت، ایمنی، نظافت و تحویل نهایی
-                    پروژه با ثبت اطلاعات مورد نیاز.
-                </p>
+<p>
+تبدیل نقشه‌ها و اندازه‌ها به اطلاعات ساخت،
+قطعات، متریال و ملزومات تولید.
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-    </div>
+<div class="service glass">
+
+<div class="service-icon">◇</div>
+
+<h3>
+سفارش شیشه و متریال
+</h3>
+
+<p>
+تهیه لیست سفارش و هماهنگی تأمین شیشه،
+پروفیل، مواد اولیه و یراق‌آلات.
+</p>
+
+</div>
+
+
+<div class="service glass">
+
+<div class="service-icon">⚙</div>
+
+<h3>
+هماهنگی تولید و اجرا
+</h3>
+
+<p>
+هماهنگی میان تولید، حمل و تیم اجرایی
+متناسب با شرایط واقعی پروژه.
+</p>
+
+</div>
+
+
+<div class="service glass">
+
+<div class="service-icon">✓</div>
+
+<h3>
+کنترل کیفیت و تحویل
+</h3>
+
+<p>
+کنترل کیفیت، ایمنی، نظافت و تحویل نهایی
+پروژه با ثبت اطلاعات مورد نیاز.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
 <section id="about">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
-            <span>ABOUT HOORAN</span>
+<div class="section-title">
 
-            <h2>
-                تجربه‌ای که تبدیل به سیستم شده است
-            </h2>
+<span>ABOUT HOORAN</span>
 
-            <p>
-                هدف هوران، ارائه خدمات پروژه‌ای بر پایه تجربه عملی،
-                نظم اطلاعاتی و کنترل مراحل مختلف پروژه است.
-            </p>
-        </div>
+<h2>
+تجربه‌ای که تبدیل به سیستم شده است
+</h2>
 
+<p>
+هدف هوران، ارائه خدمات پروژه‌ای بر پایه تجربه عملی،
+نظم اطلاعاتی و کنترل مراحل مختلف پروژه است.
+</p>
 
-        <div class="about-grid">
-
-            <div class="about-card glass">
-
-                <h3>
-                    از اندازه‌برداری تا اجرای دقیق
-                </h3>
-
-                <p>
-                    تجربه عملی در پروژه‌های اداری به ما نشان داده است
-                    که بسیاری از خطاهای پروژه از یک برداشت ناقص،
-                    محاسبه اشتباه یا هماهنگی ضعیف بین طراحی، ساخت و اجرا
-                    شروع می‌شوند.
-                    <br><br>
-                    سیستم تخصصی هوران برای ایجاد یک مسیر منظم میان
-                    برداشت، طراحی، آنالیز، ساخت، سفارش متریال،
-                    تولید و اجرای پروژه شکل گرفته است.
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="stats">
+<div class="about-grid">
 
-                <div class="stat glass">
-                    <strong>15+</strong>
-                    <span>سال تجربه عملی</span>
-                </div>
 
-                <div class="stat glass">
-                    <strong>11</strong>
-                    <span>فرم و مرحله کنترلی</span>
-                </div>
+<div class="about-card glass">
 
-                <div class="stat glass">
-                    <strong>0→100</strong>
-                    <span>از برداشت تا تحویل</span>
-                </div>
+<h3>
+از اندازه‌برداری تا اجرای دقیق
+</h3>
 
-                <div class="stat glass">
-                    <strong>1</strong>
-                    <span>فرآیند یکپارچه پروژه</span>
-                </div>
+<p>
+تجربه عملی در پروژه‌های اداری به ما نشان داده است
+که بسیاری از خطاهای پروژه از یک برداشت ناقص،
+محاسبه اشتباه یا هماهنگی ضعیف بین طراحی، ساخت و اجرا
+شروع می‌شوند.
+<br><br>
+سیستم تخصصی هوران برای ایجاد یک مسیر منظم میان
+برداشت، طراحی، آنالیز، ساخت، سفارش متریال،
+تولید و اجرای پروژه شکل گرفته است.
+</p>
 
-            </div>
+</div>
 
-        </div>
 
-    </div>
+<div class="stats">
+
+
+<div class="stat glass">
+
+<strong>15+</strong>
+
+<span>
+سال تجربه عملی
+</span>
+
+</div>
+
+
+<div class="stat glass">
+
+<strong>11</strong>
+
+<span>
+فرم و مرحله کنترلی
+</span>
+
+</div>
+
+
+<div class="stat glass">
+
+<strong>0→100</strong>
+
+<span>
+از برداشت تا تحویل
+</span>
+
+</div>
+
+
+<div class="stat glass">
+
+<strong>1</strong>
+
+<span>
+فرآیند یکپارچه پروژه
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
 <section class="complex">
 
-    <div class="container">
+<div class="container">
 
-        <div class="complex-card glass">
+<div class="complex-card glass">
 
-            <h2>
-                پروژه‌های پیچیده، نیازمند برداشت دقیق‌تر هستند.
-            </h2>
+<h2>
+پروژه‌های پیچیده، نیازمند برداشت دقیق‌تر هستند.
+</h2>
 
-            <p>
-                شرایط واقعی هر ساختمان همیشه ساده و استاندارد نیست.
-                سقف‌های شیب‌دار و چندارتفاعی، پارتیشن‌های قوسی،
-                شکست‌های معماری، ستون‌ها، محدودیت‌های حمل و
-                شرایط خاص تأسیسات می‌توانند روی طراحی، ساخت و نصب اثر بگذارند.
-                سیستم هوران این محدودیت‌ها را از مرحله برداشت
-                وارد فرآیند طراحی و اجرا می‌کند.
-            </p>
+<p>
+شرایط واقعی هر ساختمان همیشه ساده و استاندارد نیست.
+سقف‌های شیب‌دار و چندارتفاعی، پارتیشن‌های قوسی،
+شکست‌های معماری، ستون‌ها، محدودیت‌های حمل و
+شرایط خاص تأسیسات می‌توانند روی طراحی، ساخت و نصب اثر بگذارند.
+سیستم هوران این محدودیت‌ها را از مرحله برداشت
+وارد فرآیند طراحی و اجرا می‌کند.
+</p>
 
 
-            <div class="complex-list">
+<div class="complex-list">
 
-                <span>سقف‌های شیب‌دار</span>
-                <span>چندارتفاعی</span>
-                <span>پارتیشن‌های قوسی</span>
-                <span>شکست‌های معماری</span>
-                <span>محدودیت حمل</span>
-                <span>تأسیسات</span>
-                <span>کف و قرنیز</span>
-                <span>آسانسور و راه‌پله</span>
+<span>سقف‌های شیب‌دار</span>
+<span>چندارتفاعی</span>
+<span>پارتیشن‌های قوسی</span>
+<span>شکست‌های معماری</span>
+<span>محدودیت حمل</span>
+<span>تأسیسات</span>
+<span>کف و قرنیز</span>
+<span>آسانسور و راه‌پله</span>
 
-            </div>
+</div>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 
 <section id="request">
 
-    <div class="container">
+<div class="container">
 
-        <div class="section-title">
+<div class="section-title">
 
-            <span>PROJECT REQUEST</span>
+<span>PROJECT REQUEST</span>
 
-            <h2>
-                پروژه خود را برای بررسی ارسال کنید
-            </h2>
+<h2>
+پروژه خود را برای بررسی ارسال کنید
+</h2>
 
-            <p>
-                اطلاعات اولیه پروژه را وارد کنید تا برای بررسی
-                و هماهنگی بازدید مورد استفاده قرار گیرد.
-            </p>
+<p>
+اطلاعات اولیه پروژه را وارد کنید تا برای بررسی
+و هماهنگی بازدید مورد استفاده قرار گیرد.
+</p>
 
-        </div>
+</div>
 
 
-        <div class="request-box">
+<div class="request-box">
 
-            <div class="request-info glass">
 
-                <h3>
-                    درخواست بازدید
-                </h3>
+<div class="request-info glass">
 
-                <p>
-                    اطلاعاتی که در این فرم وارد می‌کنید، مبنای
-                    بررسی اولیه پروژه و هماهنگی مراحل بعدی خواهد بود.
-                </p>
+<h3>
+درخواست بازدید
+</h3>
 
-                <a class="contact-phone" href="tel:02191694592">
-                    ۰۲۱۹۱۶۹۴۵۹۲
-                </a>
+<p>
+اطلاعاتی که در این فرم وارد می‌کنید، مبنای
+بررسی اولیه پروژه و هماهنگی مراحل بعدی خواهد بود.
+</p>
 
-            </div>
+<a class="contact-phone" href="tel:02191694592">
+۰۲۱۹۱۶۹۴۵۹۲
+</a>
 
+</div>
 
-            <form class="form-card glass">
 
-                <div class="form-grid">
+<form class="form-card glass">
 
-                    <div class="field">
+<div class="form-grid">
 
-                        <label>
-                            نام و نام خانوادگی
-                        </label>
 
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="نام شما"
-                        >
+<div class="field">
 
-                    </div>
+<label>
+نام و نام خانوادگی
+</label>
 
+<input
+type="text"
+name="name"
+placeholder="نام شما"
+>
 
-                    <div class="field">
+</div>
 
-                        <label>
-                            نام شرکت
-                        </label>
 
-                        <input
-                            type="text"
-                            name="company"
-                            placeholder="نام شرکت"
-                        >
+<div class="field">
 
-                    </div>
+<label>
+نام شرکت
+</label>
 
+<input
+type="text"
+name="company"
+placeholder="نام شرکت"
+>
 
-                    <div class="field">
+</div>
 
-                        <label>
-                            شماره موبایل
-                        </label>
 
-                        <input
-                            type="tel"
-                            name="mobile"
-                            placeholder="09xxxxxxxxx"
-                        >
+<div class="field">
 
-                    </div>
+<label>
+شماره موبایل
+</label>
 
+<input
+type="tel"
+name="mobile"
+placeholder="09xxxxxxxxx"
+>
 
-                    <div class="field">
+</div>
 
-                        <label>
-                            شهر / منطقه
-                        </label>
 
-                        <input
-                            type="text"
-                            name="city"
-                            placeholder="مثلاً کرج"
-                        >
+<div class="field">
 
-                    </div>
+<label>
+شهر / منطقه
+</label>
 
+<input
+type="text"
+name="city"
+placeholder="مثلاً کرج"
+>
 
-                    <div class="field full">
+</div>
 
-                        <label>
-                            آدرس پروژه
-                        </label>
 
-                        <input
-                            type="text"
-                            name="address"
-                            placeholder="آدرس پروژه"
-                        >
+<div class="field full">
 
-                    </div>
+<label>
+آدرس پروژه
+</label>
 
+<input
+type="text"
+name="address"
+placeholder="آدرس پروژه"
+>
 
-                    <div class="field">
+</div>
 
-                        <label>
-                            نوع پروژه
-                        </label>
 
-                        <select name="project-type">
+<div class="field">
 
-                            <option value="">
-                                انتخاب کنید
-                            </option>
+<label>
+نوع پروژه
+</label>
 
-                            <option>
-                                پارتیشن اداری
-                            </option>
+<select name="project-type">
 
-                            <option>
-                                مبلمان اداری
-                            </option>
+<option value="">
+انتخاب کنید
+</option>
 
-                            <option>
-                                طراحی داخلی
-                            </option>
+<option>
+پارتیشن اداری
+</option>
 
-                            <option>
-                                پروژه ترکیبی
-                            </option>
+<option>
+مبلمان اداری
+</option>
 
-                            <option>
-                                سایر
-                            </option>
+<option>
+طراحی داخلی
+</option>
 
-                        </select>
+<option>
+پروژه ترکیبی
+</option>
 
-                    </div>
+<option>
+سایر
+</option>
 
+</select>
 
-                    <div class="field">
+</div>
 
-                        <label>
-                            متراژ تقریبی
-                        </label>
 
-                        <input
-                            type="text"
-                            name="area"
-                            placeholder="مثلاً 500 متر"
-                        >
+<div class="field">
 
-                    </div>
+<label>
+متراژ تقریبی
+</label>
 
+<input
+type="text"
+name="area"
+placeholder="مثلاً 500 متر"
+>
 
-                    <div class="field full">
+</div>
 
-                        <label>
-                            توضیحات پروژه
-                        </label>
 
-                        <textarea
-                            name="description"
-                            placeholder="توضیحات اولیه پروژه، نیازها یا محدودیت‌های مهم را بنویسید."
-                        ></textarea>
+<div class="field full">
 
-                    </div>
+<label>
+توضیحات پروژه
+</label>
 
-                </div>
+<textarea
+name="description"
+placeholder="توضیحات اولیه پروژه، نیازها یا محدودیت‌های مهم را بنویسید."
+></textarea>
 
+</div>
 
-                <div class="form-submit">
 
-                    <button
-                        type="submit"
-                        class="btn btn-primary"
-                    >
-                        ارسال درخواست
-                    </button>
+</div>
 
-                </div>
 
-            </form>
+<div class="form-submit">
 
-        </div>
+<button
+type="submit"
+class="btn btn-primary"
+>
+ارسال درخواست
+</button>
 
-    </div>
+</div>
+
+</form>
+
+</div>
+
+</div>
 
 </section>
 
@@ -1318,31 +1410,35 @@ footer{
 
 <footer>
 
-    <div class="container footer-inner">
+<div class="container footer-inner">
 
-        <div class="footer-brand">
-            هوران هنر ماندگار البرز
-        </div>
+<div class="footer-brand">
+هوران هنر ماندگار البرز
+</div>
 
-        <div>
-            سیستم تخصصی پروژه‌های اداری
-        </div>
+<div>
+سیستم تخصصی پروژه‌های اداری
+</div>
 
-        <div>
-            ۰۲۱۹۱۶۹۴۵۹۲
-        </div>
+<div>
+۰۲۱۹۱۶۹۴۵۹۲
+</div>
 
-    </div>
+</div>
 
 </footer>
 
 
 <script>
-document.querySelector("form").addEventListener("submit", function(e){
-    e.preventDefault();
 
-    alert("درخواست شما ثبت شد. برای فعال شدن ارسال واقعی اطلاعات، فرم باید به سرویس دریافت فرم متصل شود.");
+document.querySelector("form").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert("درخواست شما ثبت شد. برای فعال شدن ارسال واقعی اطلاعات، فرم باید به سرویس دریافت فرم متصل شود.");
+
 });
+
 </script>
 
 </body>
