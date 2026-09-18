@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>هوران هنر ماندگار البرز | سیستم تخصصی پروژه‌های اداری</title>
+
+<meta name="description" content="سیستم تخصصی هوران برای اندازه‌برداری، طراحی، تحلیل، مستندسازی، اجرا و تحویل پروژه‌های اداری.">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Tahoma,Arial,sans-serif;
+    background:#071116;
+    color:#eef7f7;
+    line-height:1.9;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(7,17,22,.88);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.logo-mark{
+    width:44px;
+    height:44px;
+    border-radius:12px;
+    display:grid;
+    place-items:center;
+    background:linear-gradient(135deg,#23d6c5,#1486a0);
+    color:#061014;
+    font-size:23px;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    font-size:14px;
+    color:#b9cbce;
+}
+
+.nav-links a:hover{
+    color:#35d7c6;
+}
+
+.hero{
+    min-height:720px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(25,205,190,.10);
+    filter:blur(80px);
+    top:-150px;
+    right:-100px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border-radius:50%;
+    background:rgba(40,120,255,.08);
+    filter:blur(80px);
+    bottom:-180px;
+    left:-100px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 15px;
+    border:1px solid rgba(53,215,198,.35);
+    background:rgba(53,215,198,.07);
+    color:#55dfd0;
+    border-radius:50px;
+    font-size:13px;
+    margin-bottom:22px;
+}
+
+h1{
+    font-size:clamp(38px,6vw,72px);
+    line-height:1.25;
+    margin-bottom:24px;
+    letter-spacing:-1px;
+}
+
+.gradient{
+    background:linear-gradient(90deg,#62e7da,#53aeea);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:#b7c8cb;
+    max-width:700px;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.btn{
+    padding:13px 24px;
+    border-radius:12px;
+    font-weight:bold;
+    display:inline-block;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:linear-gradient(135deg,#2ed8c5,#208faa);
+    color:#061014;
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.14);
+    background:rgba(255,255,255,.04);
+}
+
+.btn-secondary:hover{
+    background:rgba(255,255,255,.08);
+}
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    max-width:720px;
+    margin-bottom:45px;
+}
+
+.section-title span{
+    color:#45d9ca;
+    font-size:14px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin:8px 0 12px;
+}
+
+.section-title p{
+    color:#9eb1b5;
+}
+
+.glass{
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.075),
+        rgba(255,255,255,.025)
+    );
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:22px;
+    backdrop-filter:blur(12px);
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.step{
+    padding:28px;
+    min-height:190px;
+}
+
+.number{
+    font-size:13px;
+    color:#42d8ca;
+    margin-bottom:20px;
+}
+
+.step h3{
+    margin-bottom:10px;
+    font-size:20px;
+}
+
+.step p{
+    color:#9eb1b5;
+    font-size:14px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.service{
+    padding:28px;
+}
+
+.service-icon{
+    width:46px;
+    height:46px;
+    border-radius:13px;
+    background:rgba(53,215,198,.10);
+    display:grid;
+    place-items:center;
+    color:#42d8ca;
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.service h3{
+    margin-bottom:10px;
+}
+
+.service p{
+    color:#9eb1b5;
+    font-size:14px;
+}
+
+.highlight{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.highlight-box{
+    padding:38px;
+}
+
+.highlight-box h3{
+    font-size:27px;
+    margin-bottom:18px;
+}
+
+.highlight-box p{
+    color:#a8b9bc;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:25px;
+}
+
+.stat{
+    padding:20px;
+    border-radius:16px;
+    background:rgba(255,255,255,.04);
+}
+
+.stat strong{
+    display:block;
+    font-size:30px;
+    color:#53ded0;
+}
+
+.stat span{
+    font-size:13px;
+    color:#9eb1b5;
+}
+
+.form-section{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:25px;
+    align-items:start;
+}
+
+.contact-box{
+    padding:35px;
+}
+
+.contact-box h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.contact-box p{
+    color:#a7b8bb;
+    margin-bottom:25px;
+}
+
+.phone{
+    font-size:22px;
+    color:#50ded0;
+    direction:ltr;
+    text-align:right;
+}
+
+.form{
+    padding:35px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+label{
+    font-size:13px;
+    color:#b8c8ca;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    border:1px solid rgba(255,255,255,.10);
+    background:rgba(0,0,0,.18);
+    color:#fff;
+    border-radius:11px;
+    padding:12px 14px;
+    font-family:inherit;
+    outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:rgba(64,216,202,.6);
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+select option{
+    background:#101c21;
+}
+
+.submit{
+    margin-top:20px;
+    border:0;
+    cursor:pointer;
+    width:100%;
+    font-family:inherit;
+    font-size:15px;
+}
+
+.notice{
+    margin-top:15px;
+    padding:12px;
+    border-radius:10px;
+    background:rgba(53,215,198,.07);
+    color:#72dfd4;
+    display:none;
+    font-size:13px;
+}
+
+footer{
+    padding:35px 0;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#82969a;
+    font-size:13px;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        min-height:620px;
+    }
+
+    .steps,
+    .services{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .highlight,
+    .form-section{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:70px 0;
+    }
+
+    h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .steps,
+    .services,
+    .form-grid,
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    .highlight-box,
+    .contact-box,
+    .form{
+        padding:25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<a href="#home" class="logo">
+<div class="logo-mark">ه</div>
+<div>هوران هنر ماندگار البرز</div>
+</a>
+
+<nav class="nav-links">
+<a href="#system">سیستم تخصصی</a>
+<a href="#services">خدمات</a>
+<a href="#about">درباره هوران</a>
+<a href="#request">درخواست بازدید</a>
+</nav>
+
+</div>
+</header>
+
+
+<main>
+
+<section class="hero" id="home">
+<div class="container">
+<div class="hero-content">
+
+<div class="badge">
+سیستم تخصصی هوران
+</div>
+
+<h1>
+پروژه اداری را
+<span class="gradient">سیستماتیک</span>
+پیش ببرید.
+</h1>
+
+<p>
+از برداشت دقیق و اندازه‌برداری تا طراحی، آنالیز، هماهنگی اجرا و تحویل نهایی؛
+یک فرآیند منظم برای کاهش خطا و افزایش کیفیت پروژه‌های اداری.
+</p>
+
+<div class="buttons">
+<a href="#request" class="btn btn-primary">
+درخواست بازدید پروژه
+</a>
+
+<a href="#system" class="btn btn-secondary">
+آشنایی با سیستم هوران
+</a>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="system">
+<div class="container">
+
+<div class="section-title">
+<span>HOORAN SYSTEM</span>
+<h2>سیستم تخصصی هوران</h2>
+<p>
+تجربه اجرایی به یک فرآیند مشخص، قابل کنترل و قابل تکرار تبدیل شده است.
+</p>
+</div>
+
+<div class="steps">
+
+<div class="step glass">
+<div class="number">01</div>
+<h3>شناخت پروژه</h3>
+<p>
+بررسی نیازها، شرایط پروژه، مسیر حمل، دسترسی‌ها و محدودیت‌های اجرایی.
+</p>
+</div>
+
+<div class="step glass">
+<div class="number">02</div>
+<h3>برداشت دقیق</h3>
+<p>
+اندازه‌برداری، بررسی فضا، تأسیسات، کف، سقف، درب‌ها، پنجره‌ها و جزئیات مؤثر.
+</p>
+</div>
+
+<div class="step glass">
+<div class="number">03</div>
+<h3>تحلیل</h3>
+<p>
+تبدیل اطلاعات برداشت‌شده به داده‌های قابل استفاده برای تصمیم‌گیری پروژه.
+</p>
+</div>
+
+<div class="step glass">
+<div class="number">04</div>
+<h3>طراحی و مستندسازی</h3>
+<p>
+تهیه نقشه‌ها و اطلاعات لازم برای اجرای دقیق و هماهنگ پروژه.
+</p>
+</div>
+
+<div class="step glass">
+<div class="number">05</div>
+<h3>اجرا و کنترل</h3>
+<p>
+هماهنگی اجرا، کنترل کیفیت، ایمنی، زمان‌بندی و جلوگیری از آسیب به ساختمان.
+</p>
+</div>
+
+<div class="step glass">
+<div class="number">06</div>
+<h3>تحویل نهایی</h3>
+<p>
+کنترل نهایی، ثبت اطلاعات پروژه و تحویل منظم و مستند به کارفرما.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="services">
+<div class="container">
+
+<div class="section-title">
+<span>SERVICES</span>
+<h2>خدمات تخصصی</h2>
+<p>
+تمرکز هوران بر اجرای دقیق فرآیندهای فنی پروژه‌های اداری است.
+</p>
+</div>
+
+<div class="services">
+
+<div class="service glass">
+<div class="service-icon">⌁</div>
+<h3>برداشت و اندازه‌برداری</h3>
+<p>
+اندازه‌برداری دقیق و بررسی شرایط واقعی پروژه قبل از طراحی و اجرا.
+</p>
+</div>
+
+<div class="service glass">
+<div class="service-icon">⌘</div>
+<h3>طراحی و مستندسازی</h3>
+<p>
+تبدیل اطلاعات پروژه به نقشه و مستندات قابل استفاده در اجرا.
+</p>
+</div>
+
+<div class="service glass">
+<div class="service-icon">◈</div>
+<h3>آنالیز و برآورد</h3>
+<p>
+تحلیل مواد، یراق، ملزومات و نیازهای اجرایی پروژه.
+</p>
+</div>
+
+<div class="service glass">
+<div class="service-icon">↗</div>
+<h3>هماهنگی اجرا</h3>
+<p>
+برنامه‌ریزی و هماهنگی عوامل مختلف برای اجرای منظم پروژه.
+</p>
+</div>
+
+<div class="service glass">
+<div class="service-icon">✓</div>
+<h3>کنترل کیفیت</h3>
+<p>
+کنترل کیفیت اجرا، ایمنی، زمان‌بندی و رعایت الزامات پروژه.
+</p>
+</div>
+
+<div class="service glass">
+<div class="service-icon">□</div>
+<h3>تحویل نهایی</h3>
+<p>
+بررسی نهایی و تحویل پروژه با ثبت اطلاعات مورد نیاز کارفرما.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="about">
+<div class="container">
+
+<div class="highlight">
+
+<div class="highlight-box glass">
+<h3>تجربه‌ای که تبدیل به سیستم شده است.</h3>
+
+<p>
+سیستم تخصصی هوران بر پایه بیش از ۱۵ سال تجربه عملی
+در اندازه‌برداری، طراحی، آنالیز و اجرای پروژه‌های اداری شکل گرفته است.
+هدف، کاهش خطاهای انسانی و ایجاد یک مسیر مشخص از شروع پروژه تا تحویل نهایی است.
+</p>
+
+<div class="stats">
+
+<div class="stat">
+<strong>۱۵+</strong>
+<span>سال تجربه عملی</span>
+</div>
+
+<div class="stat">
+<strong>۱۱</strong>
+<span>فرم تخصصی کنترل فرآیند</span>
+</div>
+
+<div class="stat">
+<strong>۰→۱۰۰</strong>
+<span>نگاه یکپارچه به پروژه</span>
+</div>
+
+</div>
+</div>
+
+
+<div class="highlight-box glass">
+<h3>برای پروژه‌های پیچیده ساخته شده است.</h3>
+
+<p>
+در پروژه‌های اداری، جزئیاتی مانند سقف‌های شیب‌دار،
+چندارتفاعی، قوس‌ها، شکست‌های معماری، مسیر حمل و محدودیت‌های اجرایی
+می‌توانند نتیجه پروژه را تغییر دهند.
+سیستم هوران برای شناسایی و کنترل همین جزئیات طراحی شده است.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="request">
+<div class="container">
+
+<div class="section-title">
+<span>PROJECT REQUEST</span>
+<h2>درخواست بازدید پروژه</h2>
+<p>
+اطلاعات اولیه پروژه را ثبت کنید تا برای بررسی و هماهنگی با شما تماس بگیریم.
+</p>
+</div>
+
+<div class="form-section">
+
+<div class="contact-box glass">
+
+<h3>شروع یک پروژه دقیق</h3>
+
+<p>
+اطلاعات پروژه را وارد کنید. در مرحله بعد،
+فرم به سیستم دریافت اطلاعات و اطلاع‌رسانی متصل خواهد شد.
+</p>
+
+<div class="phone">
+۰۲۱۹۱۶۹۴۵۹۲
+</div>
+
+</div>
+
+
+<form class="form glass" id="projectForm">
+
+<div class="form-grid">
+
+<div class="field">
+<label>نام و نام خانوادگی</label>
+<input type="text" name="name" required>
+</div>
+
+<div class="field">
+<label>نام شرکت / سازمان</label>
+<input type="text" name="company">
+</div>
+
+<div class="field">
+<label>شماره موبایل</label>
+<input type="tel" name="mobile" required>
+</div>
+
+<div class="field">
+<label>شهر / منطقه</label>
+<input type="text" name="city">
+</div>
+
+<div class="field full">
+<label>آدرس پروژه</label>
+<input type="text" name="address">
+</div>
+
+<div class="field">
+<label>نوع پروژه</label>
+<select name="project">
+<option value="">انتخاب کنید</option>
+<option>پارتیشن اداری</option>
+<option>مبلمان اداری</option>
+<option>طراحی و اجرای فضای اداری</option>
+<option>بازطراحی فضای اداری</option>
+<option>سایر</option>
+</select>
+</div>
+
+<div class="field">
+<label>متراژ تقریبی</label>
+<input type="text" name="area" placeholder="مثلاً ۵۰۰ متر">
+</div>
+
+<div class="field full">
+<label>توضیحات پروژه</label>
+<textarea name="description" placeholder="هر توضیحی که درباره پروژه لازم است بدانیم..."></textarea>
+</div>
+
+</div>
+
+<button type="submit" class="btn btn-primary submit">
+ثبت درخواست
+</button>
+
+<div class="notice" id="notice">
+فرم از نظر ظاهری آماده است. در مرحله بعد اتصال واقعی فرم به دریافت اطلاعات و پیامک را فعال می‌کنیم.
+</div>
+
+</form>
+
+</div>
+</div>
+</section>
+
+</main>
+
+
+<footer>
+<div class="container footer-content">
+
+<div>
+© ۱۴۰۵ هوران هنر ماندگار البرز
+</div>
+
+<div>
+سیستم تخصصی خدمات فنی پروژه‌های اداری
+</div>
+
+</div>
+</footer>
+
+
+<script>
+
+document.getElementById("projectForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+document.getElementById("notice").style.display="block";
+
+});
+
+</script>
+
+</body>
+</html>
