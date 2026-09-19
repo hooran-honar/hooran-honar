@@ -10,7 +10,42 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
+
+/* =========================================================
+   STAGE 01 FILE SELECTION — VISUAL ONLY
+   ========================================================= */
+
+document.querySelectorAll(".stage-file-input").forEach(function(input){
+
+  input.addEventListener("change",function(){
+
+    const uploadBox = input.closest(".stage-upload");
+    const fileNameBox = uploadBox.querySelector(".stage-file-name");
+    const uploadButton = uploadBox.querySelector(".stage-upload-btn");
+
+    if(!input.files || input.files.length === 0){
+      fileNameBox.textContent = "هنوز فایلی انتخاب نشده است.";
+      uploadButton.disabled = true;
+      uploadButton.classList.remove("ready");
+      return;
+    }
+
+    const names = Array.from(input.files).map(function(file){
+      return file.name;
+    });
+
+    fileNameBox.textContent =
+      names.length === 1
+        ? names[0]
+        : names.length + " فایل انتخاب شد: " + names.join("، ");
+
+    uploadButton.disabled = false;
+    uploadButton.classList.add("ready");
+  });
+});
+
+</script>
 
 <style>
 :root{
@@ -1008,6 +1043,53 @@ section{
   border:1px solid rgba(255,255,255,.07);
 }
 
+
+.stage-upload{
+  margin-top:16px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.07);
+}
+
+.upload-label{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:38px;
+  padding:0 14px;
+  border-radius:11px;
+  color:#041114;
+  background:var(--accent);
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.stage-file-input{
+  display:none;
+}
+
+.stage-file-name{
+  margin-top:9px;
+  color:var(--muted);
+  font-size:9px;
+  line-height:1.8;
+  word-break:break-word;
+}
+
+.stage-upload-btn{
+  margin-top:10px;
+  min-height:36px;
+  padding:0 14px;
+  font-size:10px;
+  opacity:.5;
+  pointer-events:none;
+}
+
+.stage-upload-btn.ready{
+  opacity:1;
+  pointer-events:auto;
+}
+
 .project-detail-note{
   margin-top:15px;
   padding:15px;
@@ -1900,8 +1982,36 @@ footer{
               </p>
 
               <span class="stage-status">
-                در حال آماده‌سازی
+                آماده دریافت فایل
               </span>
+
+              <div class="stage-upload">
+
+                <label class="upload-label">
+                  📎 انتخاب فایل
+                  <input
+                    type="file"
+                    class="stage-file-input"
+                    data-stage="01"
+                    data-stage-name="برداشت"
+                    multiple
+                  >
+                </label>
+
+                <div class="stage-file-name">
+                  هنوز فایلی انتخاب نشده است.
+                </div>
+
+                <button
+                  type="button"
+                  class="btn btn-primary stage-upload-btn"
+                  data-stage="01"
+                  disabled
+                >
+                  آپلود فایل
+                </button>
+
+              </div>
 
             </div>
 
